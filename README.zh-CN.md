@@ -36,6 +36,12 @@
 
 Agent 交付**来源清单、个人审阅包、分歧比较和决策台账**；codebook 与科学判断由人主导。协调通过本地文件完成，当前没有多人云端账号。如果只想读一篇论文、得到一次摘要，通常用普通精读任务即可。
 
+## 缺全文？先把来源准备好
+
+找 PDF 也是流程的一部分：AI 先尝试可用来源，再根据失败原因和你的学校访问条件调整路径。需要你登录、完成 MFA 或手动保存时，它会给出具体入口和操作；文件交回后，继续核对文章身份、版本和完整性，再进入审阅。
+
+这一步由独立的 **[Literature PDF Retrieval skill](https://github.com/Beeeeeeelle/literature-pdf-retrieval/blob/main/README.zh-CN.md)** 详细说明，包含检索策略、使用示例与人机交接。已有 PDF 可以直接开始核对；未解决的来源会保留原因，不能用“文件已下载”代替“来源已确认”。
+
 ## 看真实工作台怎样运行
 
 **[▶ 真实 Pilot 界面分步演示＋中文解说](docs/demo/README.zh-CN.md)**：从排除与纳入，到四阶段编码、Correct／Revise、页码跳转、原文高亮和 PDF 拖动缩放。
@@ -45,8 +51,6 @@ Agent 交付**来源清单、个人审阅包、分歧比较和决策台账**；c
 ![真实原文第十八页的引文高亮，PDF 已加宽并放大](docs/demo/frames/17-zoom150.jpg)
 
 这是实际 Agency 项目界面；演示反馈独立保存。视频使用真实操作后的截图序列和中文合成解说。下面的彗星图解释方法；[通用模拟包](docs/TRY_DEMOS.md)用于练习。
-
-*实际 v1.1 工作台，使用明确标注的模拟文献和 PDF。审阅者对照原文，选择 Correct / Revise / Unclear，保存进度并导出自己的回传文件。*
 
 ## 跟着 Belle，走完一次 review
 
@@ -138,7 +142,7 @@ python3 examples/make_examples.py --out /tmp/review-workflow-demo --render-pages
 
 **协调端依赖：** Python 3.9+；用 Poppler 核对 PDF、提取文字或渲染页面（`brew install poppler` 或 `sudo apt-get install poppler-utils`）。Python 脚本只使用标准库。已有来源核验的包可以使用浏览器 PDF 查看器，不渲染页面。其他 agent 平台的运行兼容性尚未验证。
 
-**找 PDF 也在流程里。** Agent 可组合可选的 `literature-pdf-retrieval` skill，或使用包内说明的检索、浏览器与本地核对路径。运行示例不需要私有 skill、付费 API key 或机构账号；具体论文能否获取，取决于可用来源和你的合法访问权限。[PDF 交接与待处理清单](review-evidence-workflow/references/pdf-handoff.md)。
+**全文准备是可选的入口。** 可以搭配上面的独立 PDF skill，也可以使用已有文件与包内核对路径。运行模拟示例不需要机构账号或付费 API key。[来源交接与待处理清单](review-evidence-workflow/references/pdf-handoff.md)。
 
 ## 可以直接怎样问？
 

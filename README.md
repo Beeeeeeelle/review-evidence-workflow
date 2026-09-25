@@ -36,6 +36,12 @@ Just want to explore first? [Try a fictional package](docs/TRY_DEMOS.md) without
 
 The agent prepares **source manifests, reviewer packages, comparison reports and a decision ledger**. People develop the codebook and make scientific decisions. Coordination uses local files; the workbench does not provide shared cloud accounts. For a one-off paper summary, a simpler reading task is usually enough.
 
+## Missing full texts? Prepare the sources first
+
+The agent tries available sources, then adapts to failed routes and your institutional access. When login, MFA or manual saving is needed, it gives you a specific page and action. Returned files are checked for identity, version and completeness before review.
+
+The independent **[Literature PDF Retrieval skill](https://github.com/Beeeeeeelle/literature-pdf-retrieval)** explains retrieval strategies, example prompts and human handoffs. Existing PDFs can go straight to checking; unresolved sources retain reasons. A downloaded file is not automatically a confirmed source.
+
 ## Watch the real workbench in use
 
 **[▶ Real Pilot walkthrough with Chinese narration](docs/demo/README.md)**: excluded and included reports, four coding stages, Correct/Revise, source-page jumps, quotation highlights, resizing and zoom.
@@ -45,8 +51,6 @@ The agent prepares **source manifests, reviewer packages, comparison reports and
 ![An actual quotation highlighted on PDF page 18, with the reader widened and zoomed](docs/demo/frames/17-zoom150.jpg)
 
 This is the original Agency project UI, with demonstration responses saved separately. The video combines genuine browser captures and synthetic Chinese narration. The comet panels below explain the method; [synthetic portable examples](docs/TRY_DEMOS.md) provide practice.
-
-*Actual v1.1 workbench, using a clearly fictional review and PDF. Reviewers can inspect the source, choose Correct / Revise / Unclear, save progress and export their own return.*
 
 ## Follow Belle through a review
 
@@ -138,7 +142,7 @@ Use a new output directory. Try `primary-study-assisted/OPEN_ME.html` or `review
 
 **Coordinator requirements:** Python 3.9+ and Poppler for PDF checks/text/page rendering (`brew install poppler` or `sudo apt-get install poppler-utils`). Python helpers use the standard library. A verified-source package can use the browser PDF viewer without rendering. Cross-host agent runtime support has not been verified.
 
-**PDF retrieval is part of the workflow.** The agent can compose the optional `literature-pdf-retrieval` skill, or use the included search/browser fallback and local validator. No private skill, paid API key or institutional account is required for the examples. Access to a particular paper depends on its availability and your authorized access. [PDF handoff and unresolved-source queue](review-evidence-workflow/references/pdf-handoff.md).
+**Source preparation is an optional starting point.** Use the standalone PDF skill above, or bring existing files and use the included checking path. Fictional examples need no institutional account or paid API key. [Source handoff and unresolved queue](review-evidence-workflow/references/pdf-handoff.md).
 
 ## What can I ask the agent?
 

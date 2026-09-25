@@ -5,6 +5,17 @@ bibliographic enrichment, legal retrieval routes, staging/quarantine, record sta
 attempt history and source identity audits. Locate it in the active skill catalog and
 read its SKILL.md; never assume a private absolute path exists on someone else's machine.
 
+Install and read the optional standalone skill at
+[Literature PDF Retrieval](https://github.com/Beeeeeeelle/literature-pdf-retrieval).
+Its route selection and access instructions belong there; this document specifies the
+handoff into review. It is not a mandatory dependency.
+
+If human access is needed, pass a specific record ID/title/DOI, verified landing page,
+routes already tried, observed obstacle, exact login/save action, return location and
+next validation step. Reuse working sessions and continue accessible records. Receiving
+a manually saved file does not establish human identity approval. Deliver current state,
+attempt history, files, validation evidence and remaining reasons as separate artifacts.
+
 The review skill is also usable with local PDFs without that dependency. With no retrieval
 skill, use the agent's available search/browser tools: exact DOI/title → publisher/OA/
 institutional repository → user's authenticated institutional route or supplied PDF.

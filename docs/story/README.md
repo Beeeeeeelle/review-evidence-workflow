@@ -2,6 +2,8 @@
 
 # Follow Belle through a review
 
+**[See the real Pilot UI walkthrough and narrated video](../demo/README.md).** The comet panels here are conceptual illustrations; the walkthrough uses actual interface captures.
+
 **Six illustrated scenes about organizing the work while keeping scientific judgment with people.**
 
 Imagine Belle and her team beginning a literature review. They have a question, some PDFs and research rules they are still developing. This is where the story starts.

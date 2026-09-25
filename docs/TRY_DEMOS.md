@@ -2,7 +2,7 @@
 
 # Try a review package
 
-**No AI account is needed to try the reviewer interface.** Download `review-workflow-synthetic-examples-v1.1.0.zip` from the [release](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/tag/v1.1.0) and unzip it. The six packages contain fictional sources, not TALL/Agency research data.
+**No AI account is needed to try the reviewer interface.** Download `review-workflow-synthetic-examples-v1.2.0.zip` from the [release](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/tag/v1.2.0) and unzip it. The six packages contain fictional sources, not TALL/Agency research data.
 
 Alternatively, from the repository root with Python 3.9+ and Poppler:
 

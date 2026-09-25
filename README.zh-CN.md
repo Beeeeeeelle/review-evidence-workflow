@@ -36,7 +36,15 @@
 
 Agent 交付**来源清单、个人审阅包、分歧比较和决策台账**；codebook 与科学判断由人主导。协调通过本地文件完成，当前没有多人云端账号。如果只想读一篇论文、得到一次摘要，通常用普通精读任务即可。
 
-![AI 辅助审阅界面：左侧是分配的文献，中间是可修订的提案，右侧是完整原文 PDF。](docs/images/workbench-assisted.jpg)
+## 看真实工作台怎样运行
+
+**[▶ 真实 Pilot 界面分步演示＋中文解说](docs/demo/README.zh-CN.md)**：从排除与纳入，到四阶段编码、Correct／Revise、页码跳转、原文高亮和 PDF 拖动缩放。
+
+![真实的 Pilot full-text coding：纳入文献与四个阶段](docs/demo/frames/09-included-screening.jpg)
+
+![真实原文第十八页的引文高亮，PDF 已加宽并放大](docs/demo/frames/17-zoom150.jpg)
+
+这是实际 Agency 项目界面；演示反馈独立保存。视频使用真实操作后的截图序列和中文合成解说。下面的彗星图解释方法；[通用模拟包](docs/TRY_DEMOS.md)用于练习。
 
 *实际 v1.1 工作台，使用明确标注的模拟文献和 PDF。审阅者对照原文，选择 Correct / Revise / Unclear，保存进度并导出自己的回传文件。*
 
@@ -116,7 +124,7 @@ Agent 可以按轮次或审阅者配置**文献、字段、顺序、阶段、分
 
 ## 怎样开始？
 
-**先体验界面：** 从 [v1.1.0 release 下载模拟示例](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/tag/v1.1.0)，解压后打开任一包的 `OPEN_ME.html`。其中有三类模拟项目，每类两种模式。若浏览器限制本地文件，参考[本地服务说明](docs/README.zh-CN.md#运行示例与本地预览)。
+**先体验界面：** 从 [v1.2.0 release 下载模拟示例](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/tag/v1.2.0)，解压后打开任一包的 `OPEN_ME.html`。其中有三类模拟项目，每类两种模式。若浏览器限制本地文件，参考[本地服务说明](docs/README.zh-CN.md#运行示例与本地预览)。
 
 **安装 skill：** 下载或克隆仓库，将其中的 `review-evidence-workflow` 文件夹复制到 Codex skills 目录（本版本使用的环境为 `~/.codex/skills/`）。若已有同名目录，先保留旧版。开启新会话后使用 `$review-evidence-workflow`。
 

@@ -60,6 +60,9 @@ before choosing commands; an unavailable retrieval skill does not block verified
    Record actual model/settings when known. Completion: schema/file checks and source checks.
 4. **Build and inspect personalized packages.** Generate one package per reviewer; select
    records/fields/mode/instructions/labels/groups in profiles. Prefer `--render-pages`.
+   The reader supports a draggable/keyboard-adjustable PDF divider and independent
+   scrolling/zoom. Optional `pdfplumber` in the build environment enables unique exact-quote
+   highlights; inspect actual source alignment and preserve no-match/ambiguous fallbacks.
    Open `OPEN_ME.html`; check source navigation, answer actions, draft saving and JSON
    export/import. Packages contain assigned full texts: distribute through the team's
    authorized channel. Do not send email or messages without the user's instruction.

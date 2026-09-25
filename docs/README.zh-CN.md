@@ -60,7 +60,7 @@ TALL 和 Agency 的案例说明保留它们的研究差异；示例演示如何�
 
 ## 运行示例与本地预览
 
-可以先从 [v1.1.0 release](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/tag/v1.1.0) 下载 `review-workflow-synthetic-examples-v1.1.0.zip` 并解压，无需 AI 账号。也可以用上面的命令生成六份包；生成时需 Python 3.9+ 和 Poppler。
+可以先从 [v1.2.0 release](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/tag/v1.2.0) 下载 `review-workflow-synthetic-examples-v1.2.0.zip` 并解压，无需 AI 账号。也可以用上面的命令生成六份包；生成时需 Python 3.9+ 和 Poppler。
 
 先打开 `review-level-assisted/OPEN_ME.html`：看原文，选 Correct 或填写修订，再点 Export review 导出。将导出的 JSON 导入同一个包，可以恢复进度。再打开 `review-level-independent/OPEN_ME.html`，比较空白表单。这里录入的都是测试响应，请勿混入真实研究。
 

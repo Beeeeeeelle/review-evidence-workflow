@@ -36,7 +36,15 @@ Just want to explore first? [Try a fictional package](docs/TRY_DEMOS.md) without
 
 The agent prepares **source manifests, reviewer packages, comparison reports and a decision ledger**. People develop the codebook and make scientific decisions. Coordination uses local files; the workbench does not provide shared cloud accounts. For a one-off paper summary, a simpler reading task is usually enough.
 
-![The assisted review workbench: assigned records on the left, a correctable proposal in the center, and its source PDF on the right.](docs/images/workbench-assisted.jpg)
+## Watch the real workbench in use
+
+**[▶ Real Pilot walkthrough with Chinese narration](docs/demo/README.md)**: excluded and included reports, four coding stages, Correct/Revise, source-page jumps, quotation highlights, resizing and zoom.
+
+![The actual Pilot full-text coding interface](docs/demo/frames/09-included-screening.jpg)
+
+![An actual quotation highlighted on PDF page 18, with the reader widened and zoomed](docs/demo/frames/17-zoom150.jpg)
+
+This is the original Agency project UI, with demonstration responses saved separately. The video combines genuine browser captures and synthetic Chinese narration. The comet panels below explain the method; [synthetic portable examples](docs/TRY_DEMOS.md) provide practice.
 
 *Actual v1.1 workbench, using a clearly fictional review and PDF. Reviewers can inspect the source, choose Correct / Revise / Unclear, save progress and export their own return.*
 
@@ -116,7 +124,7 @@ The agent can configure **records, fields, order, stages, groups, labels, instru
 
 ## Try it
 
-**Just look around:** [download the synthetic examples from v1.1.0](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/tag/v1.1.0), unzip, and open a package's `OPEN_ME.html`. The release includes three fictional projects in both modes. If your browser restricts local files, follow the [local-server instructions](docs/TRY_DEMOS.md).
+**Just look around:** [download the synthetic examples from v1.2.0](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/tag/v1.2.0), unzip, and open a package's `OPEN_ME.html`. The release includes three fictional projects in both modes. If your browser restricts local files, follow the [local-server instructions](docs/TRY_DEMOS.md).
 
 **Install the skill:** clone or download this repository, then copy its `review-evidence-workflow` folder to your Codex skills directory (`~/.codex/skills/` in the environment used for this release). Preserve any existing folder with that name. Start a new session and invoke `$review-evidence-workflow`.
 

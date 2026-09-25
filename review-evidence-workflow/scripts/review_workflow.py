@@ -3,6 +3,7 @@
 Semantic coding and adjudication remain with the review team, not this script.
 """
 import argparse
+from pdf_text import extract_pdf_words
 import copy
 import hashlib
 import json
@@ -14,7 +15,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '1.1.0'
+VERSION = '1.2.0'
 ACTIONS = {'accept', 'revise', 'unclear'}
 LAYERS = {'source_extraction', 'descriptive_coding', 'synthesis'}
 
@@ -420,6 +421,9 @@ def build(project,out,reviewer,render_pages=False):
     for r in data['bundle']['records']:
         original=source_path(project,r['source']['path']);target=out/'sources'/f"{r['record_id']}.pdf";target.parent.mkdir(exist_ok=True);shutil.copy2(original,target);r['source']['path']='sources/'+target.name
         if render_pages:
+            if shutil.which('pdftotext'):
+                try: r['source']['text_coordinates']=extract_pdf_words(target)
+                except (ImportError, subprocess.SubprocessError, ValueError, OSError): pass
             pages=out/'pages'/r['record_id'];pages.mkdir(parents=True)
             subprocess.run(['pdftoppm','-jpeg','-scale-to','1500',str(original),str(pages/'p')],check=True,capture_output=True)
             generated=sorted(pages.glob('p-*.jpg'),key=lambda p:int(p.stem.split('-')[-1]))
@@ -427,7 +431,7 @@ def build(project,out,reviewer,render_pages=False):
             for i,p in enumerate(generated,1):p.rename(pages/f'{i}.jpg')
     payload=json.dumps(data,ensure_ascii=False).replace('<','\\u003c').replace('\u2028','\\u2028').replace('\u2029','\\u2029')
     (out/'data.js').write_text('window.REVIEW_DATA = '+payload+';\n',encoding='utf-8')
-    for name in ('OPEN_ME.html','app.js','styles.css'):shutil.copy2(ROOT/'assets'/name,out/name)
+    for name in ('OPEN_ME.html','app.js','styles.css','evidence-reader.js','evidence-reader.css'):shutil.copy2(ROOT/'assets'/name,out/name)
     save(out/'package-manifest.json',{**data['binding'],'reviewer_id':reviewer,'tool_version':VERSION,'built_at':now(),'rendered_pages':render_pages})
     (out/'READ_FIRST.txt').write_text('Open OPEN_ME.html. Use the human-developed codebook and complete source.\nMode: '+data['review_mode']+'\nIndependent packages omit AI proposals and all other reviewer feedback.\nExport JSON to return your work to the coordinator; import your own JSON to resume.\nA sent package or matching answers do not prove independent reviewer conduct.\nActivity estimates are not total work time or measured time savings.\n',encoding='utf-8')
     return {'package':str(out),'records':len(data['bundle']['records']),'fields':len(assigned_keys(c,b,items,reviewer)),'mode':data['review_mode']}

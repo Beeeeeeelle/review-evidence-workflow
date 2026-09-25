@@ -3,3 +3,5 @@
 .mode-banner{padding:12px 14px;background:#e8eff5;border-left:3px solid #315f89;border-radius:4px;margin-bottom:20px;font-size:11px}.mode-banner p{margin:6px 0}.mode-banner small{color:#536477}.independent-form label{display:block;font-size:11px;margin:10px 0}.independent-form input,.independent-form select,.independent-form textarea{display:block;width:100%;padding:8px;border:1px solid #bac6d1;border-radius:5px;background:#fff;margin-top:4px}.independent-form textarea{min-height:64px;resize:vertical}.evidence-inputs{display:grid;grid-template-columns:80px 1fr;gap:10px}.save-status{font-size:11px;color:#345e76}.independent-form .actions{flex-wrap:wrap}
 
 .evidence-row{border:1px solid #d9dde2;border-radius:6px;padding:12px;margin-bottom:10px}.evidence-row [data-remove-evidence]{font-size:11px;margin-top:8px}.independent-form [data-add-evidence]{justify-self:start}
+
+@media(min-width:1051px) and (max-width:1120px){.workspace{grid-template-columns:220px minmax(0,1fr) minmax(320px,40vw)}}

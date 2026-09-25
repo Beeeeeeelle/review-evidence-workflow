@@ -84,3 +84,19 @@ research, autonomous eligibility decisions or automatic codebook authorship. It 
 not provide a hosted multiuser app, identity verification, OCR, arbitrary synthesis,
 interrater statistics, or measured efficiency benefits. Use a separate appropriately
 validated analysis for those tasks.
+
+## Reader controls and source quotation location
+
+Drag the divider to adjust PDF width; arrow keys adjust a focused divider, Shift
+uses a larger step, Home/End move to limits, and double-click resets. Rendered-page
+packages support 100–200% zoom and independent horizontal/vertical scrolling.
+
+Install optional `pdfplumber` in the coordinator build environment, then rebuild with
+`--render-pages` for source glyph coordinates. Reviewers do not install Python. The
+coordinate index is generated from the same source copied to the package and carries
+its SHA-256. A changed PDF requires a new package/round under the source contract.
+
+An evidence button opens its physical PDF page and highlights a unique normalized
+quotation. Missing text, short quotes, paraphrases and duplicate matches produce an
+explicit manual-check message. This is not OCR or semantic matching. With native PDF
+embedding, use the browser's PDF controls; custom highlights require rendered pages.

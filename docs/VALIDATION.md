@@ -1,4 +1,4 @@
-# Validation record — version 1.1.0
+# Validation record — v1.1.0 baseline and v1.2.0 reader
 
 Validation date: 2026-09-25. This report concerns reusable software behavior and guided
 workflow execution. It does not establish scientific validity, reviewer independence,
@@ -141,3 +141,22 @@ tables, a large multi-reviewer cohort, all target browsers and real efficiency/e
 outcomes were not evaluated in these release checks. Manual identity/authorization
 records assert human actions; they do not authenticate them. Registered dependencies
 can be invalidated; undeclared dependencies require review. The [first GitHub Actions run](https://github.com/Beeeeeeelle/review-evidence-workflow/actions/runs/36186782098) passed on Ubuntu/Python 3.11 for commit `21466df`. This adds a Linux execution check; it does not expand the scientific or browser claims above.
+
+## v1.2.0 reader and real UI demonstration (2026-09-25)
+
+42 automated tests passed on Python 3.12 with the optional pdfplumber indexer,
+including source-hash binding, glyph coordinates and both portable modes. Node
+checks cover exact normalized matching, line breaks, hyphenation, ligatures, missing
+text, short quotes and repeated matches. No semantic similarity is used.
+
+Browser verification: actual Pilot MR00047 exclusion; isolated Correct/Revise
+responses; all five filters; MR00265's four stages, conditions/pathways; real PDF p.18
+and MR00574 p.3 unique highlights; 512→612 px divider drag; 150% zoom; independent
+PDF scroll; next/previous page clearing highlights. Shared portable reader also
+verified on a newly built synthetic review with keyboard width 512→532 px and a
+1,000 px viewport retaining the PDF while hiding the desktop divider. An updated
+coauthor package rendered its own page image and quote overlay without a PDF server.
+
+These are functional checks, not accuracy, agreement, or time-saving estimates.
+The public video uses real browser captures and synthetic Chinese narration; it
+contains demonstration responses, not human coauthor returns.

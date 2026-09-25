@@ -1,3 +1,5 @@
+[← 中文项目首页与案例](../README.zh-CN.md) · [English demo guide](TRY_DEMOS.md)
+
 # 用这个 skill 带领一项 review
 
 这个 skill 把“找全文 → 核对 PDF → 按人制定的 codebook 编码 → 人审阅 → 汇总回传 → 裁决与版本更新”连成可复用流程。你不需要先学 JSON；把现有材料交给 agent，它负责配置与打包。
@@ -54,3 +56,22 @@ python3 examples/make_examples.py --out /tmp/review-workflow-demo --render-pages
 它生成 primary-study、review-level、field-report 三种项目、每种两种模式，共六个包。打开任一 `OPEN_ME.html`，试着保存、导出和重新导入。示例资料均为模拟，不是 TALL/Agency 的真实文献或 reviewer 结果。
 
 TALL 和 Agency 的案例说明保留它们的研究差异；示例演示如何迁移 UI、字段结构和回传流程。验证结果见 [VALIDATION.md](VALIDATION.md)。目前能证明哪些技术路径跑通，就只报告哪些；不会把脚本通过写成“所有 review 都适用”或“已经证明提速”。
+
+
+## 运行示例与本地预览
+
+可以先从 [v1.1.0 release](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/tag/v1.1.0) 下载 `review-workflow-synthetic-examples-v1.1.0.zip` 并解压，无需 AI 账号。也可以用上面的命令生成六份包；生成时需 Python 3.9+ 和 Poppler。
+
+先打开 `review-level-assisted/OPEN_ME.html`：看原文，选 Correct 或填写修订，再点 Export review 导出。将导出的 JSON 导入同一个包，可以恢复进度。再打开 `review-level-independent/OPEN_ME.html`，比较空白表单。这里录入的都是测试响应，请勿混入真实研究。
+
+若浏览器限制本地文件，可以运行：
+
+```bash
+python3 -m http.server 8000 --bind 127.0.0.1 --directory /tmp/review-workflow-demo
+```
+
+在命令运行期间，打开 [AI 辅助包](http://127.0.0.1:8000/review-level-assisted/OPEN_ME.html) 或 [独立包](http://127.0.0.1:8000/review-level-independent/OPEN_ME.html)。如果使用下载的 ZIP，把命令末尾替换成实际解压后包含这些包的目录。完成后用 Ctrl+C 停止。这个本地服务只用于预览文件，不收集或上传答案。
+
+本次浏览器验证使用本地 HTTP 服务；直接双击文件和所有浏览器／设备组合尚未全面验证。保存和回传步骤见 [英文示例指南](TRY_DEMOS.md)。
+
+**AI in learning. Humans in charge.**

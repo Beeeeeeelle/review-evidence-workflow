@@ -1,0 +1,137 @@
+<p align="right"><a href="README.md">English</a> · <strong>中文</strong></p>
+
+# Review Evidence Workflow
+
+**把团队制定的 codebook 和 PDF，变成每位审阅者自己的工作台：看原文、做判断、回传结果，并保留可追溯的记录。**
+
+这是一个支持全文筛选、质量评价和信息提取的可复用 agent skill。人制定和发展规则；AI 整理证据、提出编码建议；审阅者在浏览器中核验，或先独立编码。你发包，他们导出 JSON 发还，再由团队对照证据解决分歧。
+
+**[试用示例](#怎样开始) · [看两个案例](#两个案例复用一套流程) · [看人机分工](#怎样让人持续参与判断) · [逐步使用指南](docs/README.zh-CN.md)**
+
+![AI 辅助审阅界面：左侧是分配的文献，中间是可修订的提案，右侧是完整原文 PDF。](docs/images/workbench-assisted.jpg)
+
+*实际 v1.1 工作台，使用明确标注的模拟文献和 PDF。审阅者对照原文，选择 Correct / Revise / Unclear，保存进度并导出自己的回传文件。*
+
+## 什么时候用它？
+
+如果你已有文献清单，正在发展或已经制定了研究规则，可以让它帮助团队：
+
+- 找到并核对全文，把缺失或身份不确定的 PDF 留在待处理清单。
+- 先用自选样本发展 codebook，再让 AI 处理后续批次，由人核验。
+- 按审阅者分配不同文献、字段、说明和审阅模式。
+- 比较回传判断，同时保留原文出处、规则版本和未解决问题。
+
+你提供研究问题、人主导的规则和现有材料。Agent 引导当前步骤，生成**来源清单、个人审阅包、分歧比较和决策台账**。审阅者只需要浏览器，不需要 Python 或 AI 账号。协调通过本地文件完成，目前没有多人云端服务。
+
+## 两个案例，复用一套流程
+
+案例展示这个 skill 从哪里来，以及研究单位改变后，哪些东西要重新配置。点击图片可以看具体过程。
+
+| TALL · 原始实证研究 | Agency · 对研究综述进行再综述 |
+|---|---|
+| [![TALL 案例：有原文定位的研究设计字段。](docs/images/tall-workbench.jpg)](docs/cases/tall.zh-CN.md) | [![Agency 案例：将测量方式的原文报告与团队编码区分。](docs/images/agency-workbench.jpg)](docs/cases/agency.zh-CN.md) |
+| **人的判断改了，后面的工作怎么办？** 保留记录中的一次质量评价修订改变了项目 gate，但筛选仍为 Include。这说明为什么需要明确当前版本，并检查受影响的工作。 | **原文说了什么，团队又解释了什么？** 将某篇 review 报告的测量方式、团队的描述性编码、后续跨 review 综合分开。 |
+| 技术辅助二语学习中的历史实施案例。 | AI 支持教育与学习者 agency 的试点适配。 |
+| [展开 TALL 案例 →](docs/cases/tall.zh-CN.md) | [展开 Agency 案例 →](docs/cases/agency.zh-CN.md) |
+
+*案例图把真实来源资料呈现在可复用的 v1.1 工作台中，公开原文区显示带出处的短摘录。这是案例适配展示，并非历史审阅现场截图。[图片来源说明](docs/images/PROVENANCE.md)。*
+
+| 区别 | TALL | Agency |
+|---|---|---|
+| 编码单位 | 原始实证研究 | Review 报告 |
+| 质量评价规则 | 项目自己的 MMAT Q2/Q4 gate | 11 项 JBI 判断，不按总分自动排除 |
+| 关键判断边界 | 纳入、质量评价、是否进入提取 | 原文报告、描述性编码、跨 review 综合 |
+| 当前证据状态 | 回顾性的实施案例 | 已实施的试点，综合尚待继续 |
+
+**可以复用：** PDF 核对、字段与原文关联、可配置 UI、个人回传、人裁决和版本记录。**由新项目重新制定：** 纳入标准、codebook、评价规则、分析单位和覆盖要求。这是两个有不同进度的案例，不是两个已经完成的同等验证实验。
+
+## 怎样让人持续参与判断？
+
+![流程图：人发展 codebook，AI 与软件准备全文；每轮可选 AI 辅助核验或独立编码；分别回传并核对后，由人裁决。规则或 PDF 改变时开启新版本。](docs/images/workflow-zh.svg)
+
+| 阶段 | AI 与软件帮助做什么 | 人负责什么 |
+|---|---|---|
+| 研究范围与校准 | 把已有规则映射为字段，指出缺失定义 | 制定、发展和修改 codebook，选择样本与轮次 |
+| 全文准备 | 找合法可获取的全文，核对身份、完整性和文件版本 | 必要时提供访问途径，处理来源歧义 |
+| 审阅 | 按规则准备有出处的提案或空白表单，分配个性化任务 | 阅读原文，核验或独立编码，说明不确定性 |
+| 回传与决策 | 核对版本和覆盖，整理分歧，保留决策记录 | 解决分歧，授权当前结果 |
+| 修订 | 标记已登记的依赖，准备受影响的工作 | 判断哪些编码、核验或结论需要重做 |
+
+可以先做 10 篇、5 篇或其他合适的样本；再用 AI 编码加人核验，加入独立审阅，或回到校准。**样本量、轮次数和质量门槛都由项目决定。** AI 不代替人作出最终科学判断，也不生成虚假的人工确认。软件能标记已经登记的依赖关系，未登记的关系仍需人检查。
+
+## 两种审阅模式，以及你自己的 UI 设置
+
+| | AI 辅助核验 | 独立审阅 |
+|---|---|---|
+| 看到的内容 | AI 提案、理由、证据和原始 PDF | 人的 codebook、原始 PDF 和空白表单 |
+| 人怎样做 | Correct / Revise / Unclear，填写理由 | 自己填写值、理由、原文位置，保存或延后 |
+| 包内数据 | 本人获分配的提案 | 不含 AI 建议与他人反馈 |
+| 适合何时 | 把校准后的规则应用于下一批文献 | 希望审阅者先形成自己的编码 |
+
+<details>
+<summary><strong>展开看独立模式</strong>：同一工作台，答案从空白开始</summary>
+
+![独立审阅模式：空白答案与理由输入区，旁边是模拟原文 PDF。](docs/images/workbench-independent.jpg)
+
+*同一模拟文献，分配给另一位审阅者。个人包可以支持独立作业，但软件无法消除审阅者过去接触建议的经历，也不能证明人的行为独立。*
+
+</details>
+
+Agent 可以按轮次或审阅者配置**文献、字段、顺序、阶段、分组、标签、说明、模式和覆盖要求**。v1.1 通过配置文件调整，尚无可视化设置编辑器。审阅者拿到自己的包，完成后发还文件。[模式、设置与轮次转换](review-evidence-workflow/references/rounds.md)。
+
+## 怎样开始？
+
+**先体验界面：** 从 [v1.1.0 release 下载模拟示例](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/tag/v1.1.0)，解压后打开任一包的 `OPEN_ME.html`。其中有三类模拟项目，每类两种模式。若浏览器限制本地文件，参考[本地服务说明](docs/README.zh-CN.md#运行示例与本地预览)。
+
+**安装 skill：** 下载或克隆仓库，将其中的 `review-evidence-workflow` 文件夹复制到 Codex skills 目录（本版本使用的环境为 `~/.codex/skills/`）。若已有同名目录，先保留旧版。开启新会话后使用 `$review-evidence-workflow`。
+
+```bash
+git clone https://github.com/Beeeeeeelle/review-evidence-workflow.git
+cd review-evidence-workflow
+python3 examples/make_examples.py --out /tmp/review-workflow-demo --render-pages
+```
+
+请使用新的输出目录。打开其中的 `primary-study-assisted/OPEN_ME.html` 或 `review-level-independent/OPEN_ME.html`，尝试保存、导出 JSON、再导入。
+
+**协调端依赖：** Python 3.9+；用 Poppler 核对 PDF、提取文字或渲染页面（`brew install poppler` 或 `sudo apt-get install poppler-utils`）。Python 脚本只使用标准库。已有来源核验的包可以使用浏览器 PDF 查看器，不渲染页面。其他 agent 平台的运行兼容性尚未验证。
+
+**找 PDF 也在流程里。** Agent 可组合可选的 `literature-pdf-retrieval` skill，或使用包内说明的检索、浏览器与本地核对路径。运行示例不需要私有 skill、付费 API key 或机构账号；具体论文能否获取，取决于可用来源和你的合法访问权限。[PDF 交接与待处理清单](review-evidence-workflow/references/pdf-handoff.md)。
+
+## 可以直接怎样问？
+
+**先由人发展规则**
+
+> 用 $review-evidence-workflow。我们想用这批样本发展 codebook。按当前定义制作独立空白包，不含 AI 建议和他人反馈。等我们回传后，先比较，再由我们修改规则。
+
+**让 AI 应用规则，人来 verify**
+
+> 我们已经校准了 codebook v2。请处理其余 PDF，把方法和测量分给 A，其他字段分给 B，做成有原文定位的核验包。保留不确定项。
+
+**收到反馈后继续**
+
+> 这些是返回的 JSON。请核对版本和覆盖，把分歧与原文证据列在一起，说明哪些需要我们决定，再形成获授权的结果台账。
+
+[逐步使用说明](docs/README.zh-CN.md) · [更多提问示例、审阅者说明与排错](review-evidence-workflow/references/getting-started.md)。
+
+## 验证到了什么程度？
+
+已完成 **40 项不同的自动测试**、本地 Python 3.9/3.12 检查、一次独立新上下文执行、浏览器交互检查，以及三个领域的六份模拟包。[发布提交的 CI](https://github.com/Beeeeeeelle/review-evidence-workflow/actions/runs/36187005213) 也在 Ubuntu/Python 3.11 通过。[完整验证记录与边界](docs/VALIDATION.md)。
+
+这些检查验证了特定软件行为，例如拒绝版本不匹配的回传、独立包移除建议、更换来源后处理受影响字段，以及保留未解决状态。它们不等于证明 AI 准确率、所有综述都适用，或已经测得节省多少时间。减少准备工作、帮助人更快核验是设计目标，效率仍需比较研究来测量。
+
+## 继续了解或参与改进
+
+- [Skill 执行说明](review-evidence-workflow/SKILL.md) · [数据约定](review-evidence-workflow/references/contracts.md) · [人的工作流程](review-evidence-workflow/references/human-workflow.md)
+- [相关工具与定位](docs/RELATED_WORK.md)：已有工作、这里连接的环节，以及还需验证的地方。
+- [流程图源码与截图来源](docs/images/PROVENANCE.md)
+
+```bash
+python3 -m unittest discover -s tests -v
+node --check review-evidence-workflow/assets/app.js
+```
+
+贡献测试和示例时请使用模拟资料；报告问题时提供最小匿名样例及预期、实际结果。代码、说明和模拟示例使用 MIT 许可；第三方原文摘录保留原权利。该许可不授予项目所用 PDF 的再分发权。
+
+---
+
+**AI in learning. Humans in charge.**

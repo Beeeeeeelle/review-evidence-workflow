@@ -1,146 +1,137 @@
+<p align="right"><strong>English</strong> · <a href="README.zh-CN.md">中文</a></p>
+
 # Review Evidence Workflow
 
-**A reusable agent skill for human-led literature review: full-text retrieval and checks, flexible coding rounds, personalized reviewer UI, and traceable decisions.**
+**Turn your team's codebook and PDFs into personalized review packages—with source evidence, human decisions and a traceable return path.**
 
-Humans develop the codebook and make scientific decisions. AI applies the current rules,
-organizes source evidence and helps people verify it. The helper scripts handle packaging,
-version checks, returned files and change tracking.
+A reusable agent skill for full-text screening, appraisal and extraction. Humans develop the rules; AI prepares evidence and proposals; reviewers verify or code independently in a browser. Send each person a package, receive their JSON, then resolve differences with the evidence in view.
 
-[Download v1.1.0 and runnable demos](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/tag/v1.1.0) · [中文使用说明](docs/README.zh-CN.md) · [Step-by-step guide and sample prompts](review-evidence-workflow/references/getting-started.md) · [Workflow and human/AI roles](review-evidence-workflow/references/rounds.md) · [Validation](docs/VALIDATION.md)
+**[Try the runnable demos](#try-it) · [Explore the two cases](#two-cases-one-reusable-workflow) · [See the workflow](#how-humans-stay-in-the-loop) · [Read the guide](review-evidence-workflow/references/getting-started.md)**
 
-## When to use it
+![The assisted review workbench: assigned records on the left, a correctable proposal in the center, and its source PDF on the right.](docs/images/workbench-assisted.jpg)
 
-- You have a study list, protocol/codebook and some PDFs, and want repeatable full-text screening, appraisal or extraction.
-- Your team is developing a codebook on a chosen pilot sample, then wants AI to apply it to later batches for human verification.
-- Different reviewers need different records, fields, instructions or review modes.
-- Reviewers receive separate packages and return JSON files; you need to compare them without losing source/version provenance.
+*Actual v1.1 workbench, using a clearly fictional review and PDF. Reviewers can inspect the source, choose Correct / Revise / Unclear, save progress and export their own return.*
 
-This is an offline review workbench, not a hosted multiuser service. It does not decide
-scientific eligibility, write/approve a human codebook autonomously, or prove AI accuracy
-or time savings.
+## Is this for your review?
 
-## Two modes, chosen by round or reviewer
+Use it when your team has a study list and developing or established criteria, and needs to:
 
-| Mode | Reviewer sees | Reviewer does | Coordinator receives |
-|---|---|---|---|
-| Assisted verification | AI proposal, rationale, page-linked evidence, original PDF | Correct / Revise / Unclear, with reasons | Source-bound verification responses |
-| Independent review | Human codebook definitions, original PDF, blank form; AI/peer feedback omitted from package data | Enter value, rationale and evidence; save or defer | Independent entries for comparison/adjudication |
+- Find and check full texts, keeping missing or uncertain sources visible.
+- Develop a codebook on a chosen sample, then apply it to further batches for human verification.
+- Give different reviewers different records, fields, instructions or review modes.
+- Compare returned judgments without losing their source, codebook version or unresolved questions.
 
-A team may start with 10 papers, 5 papers or another sample to develop its codebook.
-It may then use AI coding plus human verification, add an independent check, or return
-to calibration. No fixed sample size, number of rounds or universal quality threshold
-is imposed. Independent packages support independent conduct; they cannot prove it or
-remove prior exposure to suggestions.
+You provide the research question, human-led rules and available materials. The agent guides the current step and prepares **source manifests, reviewer packages, comparison reports and a decision ledger**. Reviewers need a browser; they do not need Python or an AI account. Coordination runs through local files rather than a hosted multiuser service.
 
-## Install in Codex
+## Two cases, one reusable workflow
 
-Download a release or clone this repository:
+The cases show why the skill exists and what changes when the research unit changes. Click either image for its walkthrough.
+
+| TALL · primary studies | Agency · reviews of research |
+|---|---|
+| [![TALL case illustration with a source-linked study-design field.](docs/images/tall-workbench.jpg)](docs/cases/tall.md) | [![Agency case illustration distinguishing measurement reporting from descriptive coding.](docs/images/agency-workbench.jpg)](docs/cases/agency.md) |
+| **What happens after a human changes a judgment?** A retained appraisal revision changes a project gate while screening remains Include. The case motivates explicit versions and review of affected work. | **What did the source say, and what did we infer?** A review's reported measurement types are kept separate from team coding and later cross-review synthesis. |
+| Historical implementation in technology-assisted L2 learning. | Pilot adaptation for AI-supported education and learner agency. |
+| [Read the TALL case →](docs/cases/tall.md) | [Read the Agency case →](docs/cases/agency.md) |
+
+*Case images render real source material in the reusable v1.1 workbench. The public source pane uses attributed excerpts. These are illustrative adaptations, not historical reviewer-session screenshots. [Image provenance](docs/images/PROVENANCE.md).*
+
+| What differs | TALL | Agency |
+|---|---|---|
+| Unit being coded | Original empirical study | Review report |
+| Appraisal rule | Project-specific MMAT Q2/Q4 gate | 11 JBI items; no automatic numerical exclusion |
+| Main reasoning boundary | Eligibility, appraisal and extraction membership | Source wording, descriptive coding and synthesis |
+| Evidence status | Retrospective implementation case | Implemented pilot; synthesis still to follow |
+
+**What transfers:** PDF checks, source-linked fields, configurable UI, separate reviewer returns, human adjudication and version tracking. **What you define again:** eligibility, codebook, appraisal rules, unit of analysis and review coverage. These are two motivating cases, not two equivalent completed validation experiments.
+
+## How humans stay in the loop
+
+![Workflow: humans develop the codebook; AI and software prepare full texts; each round branches to assisted verification or independent coding; separate returns are checked before human adjudication. Rule or PDF changes start another version.](docs/images/workflow-en.svg)
+
+| Stage | AI and software help with | People are responsible for |
+|---|---|---|
+| Scope and calibration | Map supplied rules to fields; expose missing definitions | Develop and revise the codebook; choose sample and round |
+| Full texts | Locate lawful copies; check identity, completeness and file versions | Provide access when needed; resolve ambiguous sources |
+| Review | Prepare grounded proposals or blank forms; personalize assignments | Read sources; verify or independently code; explain uncertainty |
+| Returns and decisions | Check versions/coverage; align differences; retain a decision record | Resolve disagreements and authorize the current result |
+| Revisions | Flag registered dependencies after changes; prepare affected work | Decide what needs recoding, rechecking or a revised conclusion |
+
+Start with ten papers, five, or another useful sample. Continue with AI coding plus human verification, add an independent round, or revisit calibration. **The sample size, number of rounds and appraisal threshold are project choices.** AI does not invent human approvals or make final scientific decisions. Registered dependencies can be flagged; undeclared relationships still need human review.
+
+## Two review modes—and your own UI settings
+
+| | Assisted verification | Independent review |
+|---|---|---|
+| Visible material | AI proposal, reason, evidence and original PDF | Human codebook, original PDF and blank form |
+| Reviewer action | Correct / Revise / Unclear, with reasons | Enter value, rationale and source locations; save or defer |
+| Package contents | Assigned proposals | AI suggestions and peer feedback omitted from the data |
+| Useful when | Applying calibrated rules to another batch | People should code before seeing suggestions |
+
+<details>
+<summary><strong>See the independent mode</strong> — the same workbench with blank answers</summary>
+
+![Independent review workbench with a blank answer and rationale form beside the fictional source PDF.](docs/images/workbench-independent.jpg)
+
+*The same synthetic example, assigned to a different reviewer. Independent packages support independent conduct; software cannot remove prior exposure to suggestions or prove reviewer independence.*
+
+</details>
+
+The agent can configure **records, fields, order, stages, groups, labels, instructions, mode and coverage requirements** per round or reviewer. Settings are supplied through configuration files; there is no visual settings editor in v1.1. Reviewers receive their own package and return files to the coordinator. [Modes, settings and round transitions](review-evidence-workflow/references/rounds.md).
+
+## Try it
+
+**Just look around:** [download the synthetic examples from v1.1.0](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/tag/v1.1.0), unzip, and open a package's `OPEN_ME.html`. The release includes three fictional projects in both modes. If your browser restricts local files, follow the [local-server instructions](docs/TRY_DEMOS.md).
+
+**Install the skill:** clone or download this repository, then copy its `review-evidence-workflow` folder to your Codex skills directory (`~/.codex/skills/` in the environment used for this release). Preserve any existing folder with that name. Start a new session and invoke `$review-evidence-workflow`.
 
 ```bash
 git clone https://github.com/Beeeeeeelle/review-evidence-workflow.git
 cd review-evidence-workflow
-```
-
-Copy the `review-evidence-workflow` folder to your
-Codex skills directory (`~/.codex/skills/` in the environment used for this release).
-If that name already exists, preserve it before replacing it. Start a new session so
-Codex discovers the installed skill, then invoke `$review-evidence-workflow`.
-
-The skill uses relative internal paths; it does not require this author's projects.
-For another agent host, follow that host's skill installation conventions. Cross-host
-runtime support has not been verified in this release.
-
-**Requirements:** Python 3.9+; Poppler for PDF checks/text/page images (`brew install
-poppler` on macOS, or `sudo apt-get install poppler-utils` on Debian/Ubuntu). The Python
-helpers use only the standard library. Reviewers need only a current browser, not Python
-or an AI account. With verified sources, packages can use the browser PDF viewer without
-rendering; rendered pages give a more consistent offline experience.
-
-**PDF retrieval:** If `literature-pdf-retrieval` is installed, the agent composes that
-skill for finding and validating full texts. It is optional: this package includes a
-local PDF handoff validator and a documented search/browser fallback. No paid API key,
-institutional account or inaccessible private skill is required to run the examples.
-
-## Try six runnable packages
-
-From the repository root:
-
-```bash
 python3 examples/make_examples.py --out /tmp/review-workflow-demo --render-pages
 ```
 
-Use a new output directory for each run. Open, for example:
+Use a new output directory. Try `primary-study-assisted/OPEN_ME.html` or `review-level-independent/OPEN_ME.html` inside it: save an answer, export JSON and import it again.
 
-- `/tmp/review-workflow-demo/primary-study-assisted/OPEN_ME.html`
-- `/tmp/review-workflow-demo/primary-study-independent/OPEN_ME.html`
-- `/tmp/review-workflow-demo/review-level-independent/OPEN_ME.html`
-- `/tmp/review-workflow-demo/field-report-assisted/OPEN_ME.html`
+**Coordinator requirements:** Python 3.9+ and Poppler for PDF checks/text/page rendering (`brew install poppler` or `sudo apt-get install poppler-utils`). Python helpers use the standard library. A verified-source package can use the browser PDF viewer without rendering. Cross-host agent runtime support has not been verified.
 
-The generator creates three projects, each in both modes. All PDFs, coding values and
-codebook providers are **explicitly fictional**. You can change a field, save progress,
-export a JSON and import it to resume. The examples are not research findings or actual
-human reviewer judgments.
+**PDF retrieval is part of the workflow.** The agent can compose the optional `literature-pdf-retrieval` skill, or use the included search/browser fallback and local validator. No private skill, paid API key or institutional account is required for the examples. Access to a particular paper depends on its availability and your authorized access. [PDF handoff and unresolved-source queue](review-evidence-workflow/references/pdf-handoff.md).
 
-For actual projects, give the agent your materials and a request such as:
+## What can I ask the agent?
 
-> Use $review-evidence-workflow. Our team developed this codebook on a pilot sample.
-> Apply v2 to the remaining PDFs and make separate source-linked verification packages
-> for reviewers A and B. Preserve uncertainty and return a coverage report.
+**Develop rules with people**
 
-Or:
+> Use $review-evidence-workflow. Our team is developing a codebook on this pilot sample. Make separate blank packages with our current definitions. Omit AI suggestions and other reviewers' feedback; compare our returns before we revise the rules.
 
-> Use $review-evidence-workflow to prepare blank independent packages for our calibration
-> sample. Do not include AI suggestions or other reviewers' feedback. Help us compare
-> returned files before we revise the codebook.
+**Apply rules and verify**
 
-[More prompts and reviewer instructions](review-evidence-workflow/references/getting-started.md).
+> Our team has calibrated codebook v2. Apply it to the remaining PDFs. Assign methods and measures to reviewer A, other fields to reviewer B, and prepare source-linked verification packages. Keep uncertain cases visible.
 
-## From input to review output
+**Resume after feedback**
 
-| Step | AI/software assistance | Human responsibility | Output |
-|---|---|---|---|
-| 1. Scope and codebook | Map supplied rules to fields; expose ambiguities | Develop criteria/codebook; choose current sample/mode | Round configuration |
-| 2. Full texts | Locate legal copies; record attempts; check DOI/title/pages/hash | Supply access if needed; resolve ambiguous identity/completeness | Accepted manifest + remaining queue |
-| 3. Coding | Apply current human-led rules with source evidence, or prepare blank forms | Calibrate meanings and decide rule revisions | Proposals or blank assignment |
-| 4. Reviewer package | Select records/fields; build offline UI and source navigation | Read full sources, verify or independently code | Reviewer JSON |
-| 5. Comparison | Validate versions/coverage; align differences and evidence | Resolve disagreement; authorize release | Decision record and ledger |
-| 6. Change | Detect replaced hashes; invalidate registered dependencies | Decide/review revised coding and conclusions | New round and recomputed outputs |
+> These are the returned JSON files. Check versions and coverage, show disagreements with their source evidence, and list what needs our decision before producing the authorized ledger.
 
-The exact command sequence, inputs and next-person instructions are in
-[SKILL.md](review-evidence-workflow/SKILL.md), [contracts](review-evidence-workflow/references/contracts.md),
-[PDF handoff](review-evidence-workflow/references/pdf-handoff.md) and
-[round settings](review-evidence-workflow/references/rounds.md).
+[More sample prompts, reviewer instructions and troubleshooting](review-evidence-workflow/references/getting-started.md).
 
-## Cases and distinction from related tools
+## What has been checked?
 
-[TALL](review-evidence-workflow/references/cases/tall.md) supplies a retrospective
-primary-study implementation case. [Agency](review-evidence-workflow/references/cases/agency.md)
-supplies a review-level pilot adaptation. They motivate reusable design; they are not
-two completed, equivalent validation experiments. The archaeology example tests technical
-transfer to a third unit and vocabulary, not scientific generalizability.
+**40 distinct automated tests**, local Python 3.9/3.12 checks, a fresh-context workflow trial, browser interactions, and six synthetic packages across three domains. The [release-commit CI run](https://github.com/Beeeeeeelle/review-evidence-workflow/actions/runs/36187005213) also passed on Ubuntu/Python 3.11. [Validation record and limits](docs/VALIDATION.md).
 
-Literature search, evidence ledgers, annotation UIs and human approval gates already
-exist. This skill connects them through configurable rounds, source-bound field judgments,
-content-separated reviewer packages, offline JSON returns and downstream invalidation.
-See [related work and positioning](docs/RELATED_WORK.md). No priority or superiority claim
-is made.
+These checks establish specific software behaviors, including mismatched-return rejection, independent-package omission, source replacement handling and unresolved-state preservation. They do not establish AI accuracy, universal scientific validity or measured time savings. The intended benefit is less manual preparation and easier verification; that efficiency claim still needs a comparative study.
 
-## Validate or contribute
+## Explore or contribute
+
+- [Skill instructions](review-evidence-workflow/SKILL.md) · [Data contracts](review-evidence-workflow/references/contracts.md) · [Human workflow](review-evidence-workflow/references/human-workflow.md)
+- [Related tools and positioning](docs/RELATED_WORK.md): what already exists, what this workflow connects, and what remains to evaluate.
+- [Diagram sources and screenshot provenance](docs/images/PROVENANCE.md)
 
 ```bash
 python3 -m unittest discover -s tests -v
 node --check review-evidence-workflow/assets/app.js
 ```
 
-Tests cover version rejection, incomplete coverage, independent data omission, human
-release requirements, source replacement, draft handling and cross-domain examples.
-The [first GitHub Actions run](https://github.com/Beeeeeeelle/review-evidence-workflow/actions/runs/36186782098) passed on Ubuntu/Python 3.11. The workflow continues to check new pushes. [Validation report](docs/VALIDATION.md) distinguishes local
-checks, browser observations and untested claims.
+Keep contributed tests and examples synthetic. Include a minimal anonymized fixture and expected/actual result in bug reports. MIT covers the code, documentation and synthetic fixtures; third-party source excerpts retain their original rights. The license grants no rights to PDFs added to a project.
 
-Keep tests and examples synthetic. Do not commit real reviewer returns, institutional
-credentials or third-party full texts. Report the command, expected/actual result and
-an anonymized minimal fixture when filing a bug. Suggested improvements should preserve
-human authority, configurable research rules and source/version provenance.
+---
 
-MIT license applies to this code, documentation and synthetic fixtures. It grants no
-rights to PDFs a user retrieves or adds to their own project.
+**AI in learning. Humans in charge.**

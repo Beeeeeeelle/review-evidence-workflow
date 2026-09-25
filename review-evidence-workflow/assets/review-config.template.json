@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "project_id": "new-review",
+  "title": "Evidence review",
+  "status": "draft",
+  "protocol_version": "1",
+  "codebook_version": "1",
+  "unit_of_analysis": "",
+  "research": {
+    "decision_rule": ""
+  },
+  "verification": {
+    "mode": "assisted_verification",
+    "reviewers": [
+      "reviewer-a",
+      "reviewer-b"
+    ],
+    "min_reviewers": 2
+  },
+  "evidence": {
+    "quote_word_limit": 45
+  },
+  "ui": {
+    "stages": [
+      {
+        "id": "screening",
+        "label": "Eligibility"
+      },
+      {
+        "id": "extraction",
+        "label": "Extraction"
+      }
+    ],
+    "action_labels": {
+      "accept": "Correct",
+      "revise": "Revise",
+      "unclear": "Unclear / defer"
+    },
+    "expand_all_groups": true,
+    "collapsed_groups": []
+  },
+  "fields": [
+    {
+      "id": "design",
+      "label": "Reported design",
+      "definition": "Extract the study or review design from the source methods.",
+      "stage": "extraction",
+      "layer": "source_extraction",
+      "required": true
+    },
+    {
+      "id": "eligibility",
+      "label": "Eligibility proposal",
+      "definition": "Apply the project criteria to the source evidence; this is a proposal for human verification.",
+      "stage": "screening",
+      "layer": "descriptive_coding",
+      "options": [
+        "Include",
+        "Exclude",
+        "Unclear"
+      ],
+      "required": true
+    }
+  ],
+  "derived_rules": [],
+  "codebook_governance": {
+    "origin": "human_led",
+    "provided_by": "",
+    "source": "",
+    "development_status": "developing"
+  },
+  "review_round": {
+    "id": "pilot-v1",
+    "purpose": "Human calibration or AI-assisted verification, as selected by the team."
+  }
+}

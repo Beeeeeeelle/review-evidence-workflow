@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Evidence Workflow"
+  short_description: "Build personalized, source-linked human review rounds"
+  default_prompt: "Use $review-evidence-workflow to guide my human-led review from the materials I have: source retrieval/checks, flexible codebook rounds, independent or assisted reviewer packages, validated returns and human adjudication."

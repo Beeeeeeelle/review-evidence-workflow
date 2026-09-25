@@ -1,0 +1,2 @@
+# No third-party Python packages. Python >=3.9.
+# System dependency for PDF processing: Poppler (pdfinfo, pdftotext, pdftoppm).

@@ -6,7 +6,7 @@ Humans develop the codebook and make scientific decisions. AI applies the curren
 organizes source evidence and helps people verify it. The helper scripts handle packaging,
 version checks, returned files and change tracking.
 
-[中文使用说明](docs/README.zh-CN.md) · [Step-by-step guide and sample prompts](review-evidence-workflow/references/getting-started.md) · [Workflow and human/AI roles](review-evidence-workflow/references/rounds.md) · [Validation](docs/VALIDATION.md)
+[Download v1.1.0 and runnable demos](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/tag/v1.1.0) · [中文使用说明](docs/README.zh-CN.md) · [Step-by-step guide and sample prompts](review-evidence-workflow/references/getting-started.md) · [Workflow and human/AI roles](review-evidence-workflow/references/rounds.md) · [Validation](docs/VALIDATION.md)
 
 ## When to use it
 
@@ -34,7 +34,14 @@ remove prior exposure to suggestions.
 
 ## Install in Codex
 
-Download or clone this repository. Copy the `review-evidence-workflow` folder to your
+Download a release or clone this repository:
+
+```bash
+git clone https://github.com/Beeeeeeelle/review-evidence-workflow.git
+cd review-evidence-workflow
+```
+
+Copy the `review-evidence-workflow` folder to your
 Codex skills directory (`~/.codex/skills/` in the environment used for this release).
 If that name already exists, preserve it before replacing it. Start a new session so
 Codex discovers the installed skill, then invoke `$review-evidence-workflow`.
@@ -127,8 +134,7 @@ node --check review-evidence-workflow/assets/app.js
 
 Tests cover version rejection, incomplete coverage, independent data omission, human
 release requirements, source replacement, draft handling and cross-domain examples.
-GitHub Actions runs the same portable checks; a configured workflow is not a claim that
-cloud CI has already run. [Validation report](docs/VALIDATION.md) distinguishes local
+The [first GitHub Actions run](https://github.com/Beeeeeeelle/review-evidence-workflow/actions/runs/36186782098) passed on Ubuntu/Python 3.11. The workflow continues to check new pushes. [Validation report](docs/VALIDATION.md) distinguishes local
 checks, browser observations and untested claims.
 
 Keep tests and examples synthetic. Do not commit real reviewer returns, institutional

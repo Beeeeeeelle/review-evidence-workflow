@@ -140,5 +140,4 @@ Live online retrieval, institutional-login routes, OCR/scanned PDFs, complex mul
 tables, a large multi-reviewer cohort, all target browsers and real efficiency/error-rate
 outcomes were not evaluated in these release checks. Manual identity/authorization
 records assert human actions; they do not authenticate them. Registered dependencies
-can be invalidated; undeclared dependencies require review. GitHub Actions is configured;
-its actual run status must be checked separately from the local results in this report.
+can be invalidated; undeclared dependencies require review. The [first GitHub Actions run](https://github.com/Beeeeeeelle/review-evidence-workflow/actions/runs/36186782098) passed on Ubuntu/Python 3.11 for commit `21466df`. This adds a Linux execution check; it does not expand the scientific or browser claims above.

@@ -6,11 +6,29 @@
 
 这是一个支持全文筛选、质量评价和信息提取的可复用 agent skill。人制定和发展规则；AI 整理证据、提出编码建议；审阅者在浏览器中核验，或先独立编码。你发包，他们导出 JSON 发还，再由团队对照证据解决分歧。
 
-**[试用示例](#怎样开始) · [看两个案例](#两个案例复用一套流程) · [看人机分工](#怎样让人持续参与判断) · [逐步使用指南](docs/README.zh-CN.md)**
+**[六幕故事图解](docs/story/README.zh-CN.md) · [试用示例](#怎样开始) · [看两个案例](#两个案例复用一套流程) · [看人机分工](#怎样让人持续参与判断) · [逐步使用指南](docs/README.zh-CN.md)**
 
 ![AI 辅助审阅界面：左侧是分配的文献，中间是可修订的提案，右侧是完整原文 PDF。](docs/images/workbench-assisted.jpg)
 
 *实际 v1.1 工作台，使用明确标注的模拟文献和 PDF。审阅者对照原文，选择 Correct / Revise / Unclear，保存进度并导出自己的回传文件。*
+
+## 跟着 Belle，走完一次 review
+
+一个团队带着散落的文献和正在发展的规则开始研究。跟着 Belle 看六幕故事：skill 怎样准备工作，人在哪里判断，材料或规则改变后又怎样继续。
+
+| 01 · 从一个问题开始 | 02 · 人发展规则 |
+|---|---|
+| [![01 · 从一个问题开始](assets/review-evidence-story-belle黑色彗星/01-the-question.png)](docs/story/README.zh-CN.md) | [![02 · 人发展规则](assets/review-evidence-story-belle黑色彗星/02-people-write-the-rules.png)](docs/story/README.zh-CN.md) |
+
+| 03 · 找到并核对全文 | 04 · 选择审阅方式 |
+|---|---|
+| [![03 · 找到并核对全文](assets/review-evidence-story-belle黑色彗星/03-find-the-right-source.png)](docs/story/README.zh-CN.md) | [![04 · 选择审阅方式](assets/review-evidence-story-belle黑色彗星/04-two-ways-to-review.png)](docs/story/README.zh-CN.md) |
+
+| 05 · 回传与裁决 | 06 · 回看与复用 |
+|---|---|
+| [![05 · 回传与裁决](assets/review-evidence-story-belle黑色彗星/05-return-and-resolve.png)](docs/story/README.zh-CN.md) | [![06 · 回看与复用](assets/review-evidence-story-belle黑色彗星/06-a-traceable-next-round.png)](docs/story/README.zh-CN.md) |
+
+**[展开阅读六幕图解 →](docs/story/README.zh-CN.md)** 每幕都有简短解释，并连接到实际操作。这里是概念插画，上方是实际工作台。
 
 ## 什么时候用它？
 

@@ -1,0 +1,58 @@
+{
+  "style": "Generate ONE standalone 16:9 horizontal editorial story illustration, 1536x864 or equivalent exact 16:9. This is one scene in a six-image narrative about a human-led literature-review skill. Use the supplied image ONLY as the Belle character identity reference; do not reproduce its composition.\nPure white #FFFFFF background, sparse black slightly wobbly pen line art, 40–55% drawn area and at least 35% empty white space, academically readable, dry understated visual wit. Small orange paths/actions, muted blue explanatory notes. No gradient, shadows, paper texture, gray hatching, commercial flat vector, PPT infographic, formal flowchart, children's poster, photoreal UI, panel grid, big title, scene number, or watermark. This is conceptual illustration, not a screenshot or empirical finding.\nOne full Belle performs the main action: match reference's continuous solid-black compact messy hair swept up-left, tiny gold stars, tiny black body with simple black clothing and thin limbs, two tiny vertical dot eyes, faint small blush, serious deadpan face. Exactly ONE small butterfly clip with FOUR rounded wings in 2x2: top-left dusty blue, top-right muted rose, bottom-left soft green, bottom-right warm ochre, tiny black center. No fifth wing, flower, big eyes, detached hair cloud, long tail, or robot.\nRecurring objects: a simple ring-bound codebook with a thin ORANGE cover edge, physical white source-paper cards, pale BLUE proposal slips. The codebook represents HUMAN rules, not an AI rule writer. AI is represented only by a small labeled mechanical paper-sorting aid if needed, never as a person or robot. No human names, sample numbers, accuracy or speed claims.\nAll labels English, short hand-lettered, verbatim from allowed labels. Do not add paragraphs. Do not use comet trails as connectors.\n",
+  "input_reference_roles": [
+    "Author's canonical Belle Black Comet character reference; identity only, not redistributed.",
+    "Selected Scene 01 is also supplied to Scenes 03–06 for visual continuity, not composition."
+  ],
+  "continuity_note_for_scenes_3_to_6": "The second reference is the selected first scene for visual continuity only: match its sparse line style and character identity, but draw the NEW scene below, not that composition.",
+  "scenes": [
+    {
+      "n": 1,
+      "file": "01-the-question.png",
+      "title": "A pile of papers is only the beginning",
+      "intent": "A review starts with a research question, while papers, proposals and source locations can be scattered. Human judgment needs an organized evidence path.",
+      "prompt": "Scene: an absurd but simple desk built from a low pile of loose papers. Three little clusters of source pages and detached annotation slips drift around it, their loose string ends fail to connect. Belle is in the center actively pulling ONE useful paper out of the pile with one hand, while firmly planting a small orange-edged notebook with a question mark on the desk using the other hand. Her gaze follows the chosen paper, not the viewer. A small otherwise blank destination tray to the right labeled \"A review\" has a red handwritten question mark: the paper pile alone has not produced a defensible review. A few orange string segments signal the path she is about to build, without yet suggesting completed evidence. Keep the absurd paper pile low, sparse and clear, not a huge city of paper. The only allowed labels: \"Our question\", \"Papers\", \"Which evidence?\", \"A review\". No blame or exaggerated time burden. The core action is choosing the research question and finding the relevant evidence among disconnected materials."
+    },
+    {
+      "n": 2,
+      "file": "02-people-write-the-rules.png",
+      "title": "People develop the rules",
+      "intent": "The team develops and revises a codebook using its chosen pilot sample; AI may organize material but has no authority to authoritatively decide the rules.",
+      "prompt": "Scene: a large open orange-edged ring binder becomes a small workbench, labeled \"Our codebook\". Belle leans over it actively writing a rule with an orange pencil after comparing a few small paper examples spread on the left. The pencil must be in Belle's own hand. A small removable tab \"v1\" rests at the binder edge, with a loose new tab and a blue curved arrow that means revisable, not frozen forever. At the far right, a tiny blue mechanical paper clip labeled \"AI\" arranges supporting papers into a neat row but is physically distant from the writing pencil; it cannot stamp or approve the rules. If representing team discussion, use only two tiny short-haired front-facing bodyless head markers on margin notes, not complete extra characters. The only allowed labels: \"Our codebook\", \"Chosen sample\", \"Discuss + revise\", \"AI\", \"v1\". No fixed ten-paper threshold, no sample counts, no automated approval. The core action is HUMAN codebook development."
+    },
+    {
+      "n": 3,
+      "file": "03-find-the-right-source.png",
+      "title": "Find the paper, then check it",
+      "intent": "Retrieval and identity checking form one handoff; uncertain or missing full texts remain visible, and a matching identifier is not a validity judgment.",
+      "prompt": "Scene: a small low-tech document inspection station. A tiny blue mechanical sorting aid labeled \"AI\" brings paper candidates from the left along a thin orange line. At the center, Belle holds a wide simple magnifying lens over a study-list card and a full-text booklet laid side by side, comparing their title and DOI. On the right are two modest physical trays: \"Matched source\" holding a page plus its identity tag, and \"Needs checking\" holding a page with a question mark. An unfilled outlined page in the second tray represents a missing source. Belle actively points the uncertain candidate toward the second tray, not rubber-stamping everything. Her orange-edged codebook is at her side. Only permitted labels: \"AI\", \"Study list\", \"Full text\", \"Title / DOI\", \"Matched source\", \"Needs checking\". No green success icons, no scientific inclusion decision, no claim all PDFs can be found. The core action is checking that the full text belongs to the intended study and keeping unresolved sources visible."
+    },
+    {
+      "n": 4,
+      "file": "04-two-ways-to-review.png",
+      "title": "Choose how people will review",
+      "intent": "Mode is selectable by round/reviewer: AI proposal with human verification, or blank independent coding with AI and peer suggestions excluded.",
+      "prompt": "Scene: one conceptual scene, not a comic grid or formal flowchart. Belle stands actively at a simple fork in a thin orange desk-track, holding her orange-edged codebook and moving a small physical selector between two alternative workstations. The upper-left workstation has an open source booklet beside a BLUE slip labeled \"AI draft\", a small hand-drawn magnifying glass and orange pencil, under the brief label \"Check + revise\". The lower-right workstation has the same type of source booklet next to a clearly BLANK answer sheet and pencil under \"Code independently\"; its only content is empty ruled lines, absolutely no blue suggestion slip. A plain separator between desks means separate assignments. One tiny bodyless reviewer head marker per desk, front-facing black haircap and two point eyes, no bodies or colored clips. A small orange note attached to the selector says \"Choose this round\". Allowed labels only: \"Choose this round\", \"Source\", \"AI draft\", \"Check + revise\", \"Blank form\", \"Code independently\". Indicate the routes as alternatives, not sequential stages. Do not depict independent mode as blindfolds or anonymized-author review. Core action: people choose a review mode and inspect source material."
+    },
+    {
+      "n": 5,
+      "file": "05-return-and-resolve.png",
+      "title": "Separate returns, shared judgment",
+      "intent": "Personal reviewer returns are compared with evidence; people resolve disagreement, while unresolved matters remain open.",
+      "prompt": "Scene: two slim envelopes labeled \"A\" and \"B\", each holding a small white response card, arrive from left along separate short orange paths at Belle's desk. Belle opens them and lays the differing notes beside the same open source booklet; her orange-edged codebook rests above. Show her physically using an orange pencil to connect a human decision to the source, and placing a clearly uncertain card marked \"?\" on a small separate ledge at right labeled \"Still open\". Near the source is a small low-tech blue comparison ruler, organizing two positions without selecting a winner. A small stamped note under Belle's hand says \"Human decision\". A neat return-file tag says \"JSON\", modest and not dominant. Only allowed labels: \"A\", \"B\", \"JSON\", \"Compare with source\", \"Human decision\", \"Still open\". No majority-vote machine, no AI stamp, no automatic agreement, no fake quotations or study-specific values. Core action: returning personal judgments enables evidence-grounded HUMAN adjudication, with uncertainty preserved."
+    },
+    {
+      "n": 6,
+      "file": "06-a-traceable-next-round.png",
+      "title": "A result you can revisit and reuse",
+      "intent": "Authorized judgments remain linked to sources and rule versions; changes require rechecking affected work; reuse transfers mechanics while each project defines its own rules.",
+      "prompt": "Scene: an open simple evidence ledger is a small bridge made of three physically linked paper cards labeled \"Source\", \"Rule\", \"Decision\". Thin orange thread connects them. Belle actively replaces the removable rule tab \"v1\" with \"v2\"; this movement lifts a small blue flag on the linked decision card reading \"Recheck\", rather than preserving an old approval. The earlier v1 tab is kept in a small history pocket, not erased. At the far right two modest folder destinations labeled \"TALL\" and \"Agency\" contain differently shaped codebook tabs, with one small blue note \"Your rules\". They indicate the workflow can be adapted, not completed or proven equally in both projects. The orange-edged codebook, physical source pages and Belle are the same motifs as the other scenes. Do not show a finished published paper, trophy, rocket, stopwatch or numerical improvement. Only allowed labels: \"Source\", \"Rule\", \"Decision\", \"v1\", \"v2\", \"Recheck\", \"TALL\", \"Agency\", \"Your rules\". Core action: when the human rules change, the traceable record points the team back to affected judgments, and the process can be reused with project-specific rules."
+    }
+  ],
+  "repairs": [
+    {
+      "scene": 2,
+      "prompt": "Edit this illustration with ONE localized text correction only: on the loose orange-bordered tab below the curved blue arrow at the lower right of the codebook, replace the existing text 'v1' with exactly 'v2'. Keep the attached upper tab 'v1' unchanged. Keep all composition, Belle character identity, four-wing butterfly clip, objects, lettering, colors, line art, white background, dimensions and every other detail unchanged. The intended meaning is that the human-developed codebook may be revised from v1 to v2. Do not add or remove anything else."
+    }
+  ]
+}

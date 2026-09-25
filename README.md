@@ -6,11 +6,29 @@
 
 A reusable agent skill for full-text screening, appraisal and extraction. Humans develop the rules; AI prepares evidence and proposals; reviewers verify or code independently in a browser. Send each person a package, receive their JSON, then resolve differences with the evidence in view.
 
-**[Try the runnable demos](#try-it) · [Explore the two cases](#two-cases-one-reusable-workflow) · [See the workflow](#how-humans-stay-in-the-loop) · [Read the guide](review-evidence-workflow/references/getting-started.md)**
+**[Follow the illustrated story](docs/story/README.md) · [Try the runnable demos](#try-it) · [Explore the two cases](#two-cases-one-reusable-workflow) · [See the workflow](#how-humans-stay-in-the-loop) · [Read the guide](review-evidence-workflow/references/getting-started.md)**
 
 ![The assisted review workbench: assigned records on the left, a correctable proposal in the center, and its source PDF on the right.](docs/images/workbench-assisted.jpg)
 
 *Actual v1.1 workbench, using a clearly fictional review and PDF. Reviewers can inspect the source, choose Correct / Revise / Unclear, save progress and export their own return.*
+
+## Follow Belle through a review
+
+A team begins with scattered papers and developing rules. Follow Belle through six scenes to see how the skill prepares the work, where people judge, and what happens when something changes.
+
+| 01 · Start with a question | 02 · People develop the rules |
+|---|---|
+| [![01 · Start with a question](assets/review-evidence-story-belle黑色彗星/01-the-question.png)](docs/story/README.md) | [![02 · People develop the rules](assets/review-evidence-story-belle黑色彗星/02-people-write-the-rules.png)](docs/story/README.md) |
+
+| 03 · Check the full text | 04 · Choose how to review |
+|---|---|
+| [![03 · Check the full text](assets/review-evidence-story-belle黑色彗星/03-find-the-right-source.png)](docs/story/README.md) | [![04 · Choose how to review](assets/review-evidence-story-belle黑色彗星/04-two-ways-to-review.png)](docs/story/README.md) |
+
+| 05 · Return and resolve | 06 · Revisit and reuse |
+|---|---|
+| [![05 · Return and resolve](assets/review-evidence-story-belle黑色彗星/05-return-and-resolve.png)](docs/story/README.md) | [![06 · Revisit and reuse](assets/review-evidence-story-belle黑色彗星/06-a-traceable-next-round.png)](docs/story/README.md) |
+
+**[Read the illustrated story →](docs/story/README.md)** Each scene has a short explanation and a link to the real workflow. These are conceptual illustrations; the workbench above is the actual application.
 
 ## Is this for your review?
 

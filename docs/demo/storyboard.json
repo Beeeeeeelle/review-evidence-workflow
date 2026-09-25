@@ -1,0 +1,685 @@
+[
+  {
+    "title": "这条编码，原文真的支持吗？",
+    "stage": "先看证据",
+    "parts": [
+      {
+        "frame": "20-page3-highlight",
+        "speech": "看到一条编码，你最想确认的，可能就是：原文真的是这么说的吗？",
+        "label": "先看这条证据",
+        "box": [
+          257,
+          375,
+          485,
+          440
+        ],
+        "camera": [
+          180,
+          80,
+          1180,
+          642
+        ]
+      },
+      {
+        "frame": "20-page3-highlight",
+        "speech": "点一下页码，右边就能找到对应的原文。我们从这里，走一遍审阅过程。",
+        "label": "对应原文在这里",
+        "box": [
+          748,
+          270,
+          1041,
+          309
+        ],
+        "link": [
+          291,
+          389
+        ],
+        "camera": [
+          180,
+          80,
+          1180,
+          642
+        ],
+        "click": [
+          291,
+          389
+        ]
+      }
+    ]
+  },
+  {
+    "title": "先认三个地方",
+    "stage": "认识工作台",
+    "parts": [
+      {
+        "frame": "09-included-screening",
+        "speech": "这个工作台，先看三个地方。左边选文献，",
+        "label": "① 在这里选文献",
+        "box": [
+          5,
+          194,
+          214,
+          626
+        ]
+      },
+      {
+        "frame": "09-included-screening",
+        "speech": "中间核对编码，右边随时看原文。",
+        "label": "② 核对编码",
+        "box": [
+          234,
+          247,
+          742,
+          628
+        ],
+        "second": [
+          775,
+          131,
+          1270,
+          710
+        ],
+        "second_label": "③ 对照原文"
+      }
+    ]
+  },
+  {
+    "title": "先挑出这轮要看的文献",
+    "stage": "选文献",
+    "parts": [
+      {
+        "frame": "01-real-pilot",
+        "speech": "左上角可以切换列表。全部文献，都在这里。",
+        "label": "All pilot reports · 全部文献",
+        "box": [
+          8,
+          145,
+          209,
+          184
+        ],
+        "camera": [
+          0,
+          40,
+          1030,
+          619
+        ],
+        "shape": "circle"
+      },
+      {
+        "frame": "08-verification-pending",
+        "speech": "想接着上次的进度，就选待核验。",
+        "label": "Verification pending · 继续核对",
+        "box": [
+          8,
+          145,
+          209,
+          184
+        ],
+        "camera": [
+          0,
+          40,
+          1030,
+          619
+        ],
+        "shape": "circle"
+      },
+      {
+        "frame": "03-excluded",
+        "speech": "也可以只看纳入，或者排除的文献。",
+        "label": "Excluded · 查看排除记录",
+        "box": [
+          8,
+          145,
+          209,
+          184
+        ],
+        "camera": [
+          0,
+          40,
+          1030,
+          619
+        ],
+        "shape": "circle"
+      }
+    ]
+  },
+  {
+    "title": "排除了，也要留下依据",
+    "stage": "看筛选依据",
+    "parts": [
+      {
+        "frame": "03-excluded",
+        "speech": "比如这篇，被标成了排除。后面的提取就停在这里。",
+        "label": "后续提取已停止",
+        "box": [
+          235,
+          285,
+          741,
+          326
+        ],
+        "camera": [
+          80,
+          80,
+          1120,
+          665
+        ]
+      },
+      {
+        "frame": "04-source-evidence",
+        "speech": "但为什么排除，依据是哪一句，仍然可以回到原文核对。",
+        "label": "理由和出处都保留",
+        "box": [
+          255,
+          397,
+          586,
+          575
+        ],
+        "second": [
+          809,
+          551,
+          1241,
+          590
+        ],
+        "second_label": "回到原文核对",
+        "link": [
+          291,
+          505
+        ]
+      }
+    ]
+  },
+  {
+    "title": "没问题，就确认；有问题，就说明",
+    "stage": "留下人的判断",
+    "parts": [
+      {
+        "frame": "05-correct",
+        "speech": "核对完，觉得这条没问题，就点 Correct。",
+        "label": "没问题 → Correct",
+        "box": [
+          592,
+          371,
+          656,
+          407
+        ],
+        "camera": [
+          195,
+          242,
+          1095,
+          748
+        ],
+        "shape": "circle",
+        "click": [
+          624,
+          389
+        ]
+      },
+      {
+        "frame": "06-revise",
+        "speech": "需要改，就点旁边的 Revise。",
+        "label": "需要改 → Revise",
+        "box": [
+          654,
+          325,
+          719,
+          359
+        ],
+        "camera": [
+          190,
+          186,
+          1090,
+          692
+        ],
+        "shape": "circle",
+        "click": [
+          687,
+          342
+        ]
+      },
+      {
+        "frame": "06-revise",
+        "speech": "下面会展开说明框。把哪里不对、建议怎么改，写在这里。",
+        "label": "写下原因和修改建议",
+        "box": [
+          588,
+          355,
+          721,
+          430
+        ],
+        "camera": [
+          190,
+          186,
+          1090,
+          692
+        ]
+      }
+    ]
+  },
+  {
+    "title": "已核验，不等于分歧已解决",
+    "stage": "看进度",
+    "parts": [
+      {
+        "frame": "07-verification-complete",
+        "speech": "每一条都留下反馈后，这篇就会进入已核验列表。",
+        "label": "Verification complete · 已反馈",
+        "box": [
+          8,
+          145,
+          209,
+          184
+        ],
+        "camera": [
+          0,
+          60,
+          1120,
+          690
+        ]
+      },
+      {
+        "frame": "07-verification-complete",
+        "speech": "注意这里，还有一条修改意见。团队仍然要讨论它。",
+        "label": "还有 1 条修改意见",
+        "box": [
+          235,
+          671,
+          452,
+          708
+        ],
+        "camera": [
+          140,
+          175,
+          1100,
+          715
+        ]
+      }
+    ]
+  },
+  {
+    "title": "纳入之后，分四步继续",
+    "stage": "继续提取",
+    "parts": [
+      {
+        "frame": "09-included-screening",
+        "speech": "再看一篇纳入的文献。中间这四个入口，把审阅内容分开了。",
+        "label": "四个入口 · 按当前任务切换",
+        "box": [
+          235,
+          248,
+          742,
+          358
+        ],
+        "camera": [
+          180,
+          75,
+          1180,
+          637
+        ]
+      },
+      {
+        "frame": "10-foundational-conditions",
+        "speech": "先在 Screening 里，展开基础条件，逐项看是否满足。",
+        "label": "展开 Foundational conditions",
+        "box": [
+          238,
+          210,
+          740,
+          275
+        ],
+        "camera": [
+          180,
+          75,
+          1180,
+          637
+        ]
+      }
+    ]
+  },
+  {
+    "title": "规则要清楚，判断要有出处",
+    "stage": "检查规则与证据",
+    "parts": [
+      {
+        "frame": "10-foundational-conditions",
+        "speech": "每个判断下面，都有理由和出处，可以继续追到原文。",
+        "label": "判断 → 理由 → 原文",
+        "box": [
+          255,
+          344,
+          586,
+          583
+        ],
+        "camera": [
+          170,
+          130,
+          1170,
+          692
+        ]
+      },
+      {
+        "frame": "11-construct-pathways",
+        "speech": "再看构念路径。这些条件和路径，来自团队发展的 codebook。",
+        "label": "Construct pathways · 团队规则",
+        "box": [
+          239,
+          316,
+          738,
+          385
+        ],
+        "camera": [
+          180,
+          100,
+          1180,
+          662
+        ]
+      }
+    ]
+  },
+  {
+    "title": "这篇综述，具体怎么做的？",
+    "stage": "Review profile",
+    "parts": [
+      {
+        "frame": "12-review-profile",
+        "speech": "Review profile 帮你看清：它研究什么问题，用了什么方法。",
+        "label": "Review profile · 综述概况",
+        "box": [
+          487,
+          268,
+          742,
+          322
+        ],
+        "camera": [
+          180,
+          100,
+          1180,
+          662
+        ],
+        "shape": "circle"
+      },
+      {
+        "frame": "12-review-profile",
+        "speech": "看完概况，再往下核对具体条目。",
+        "label": "从概况进入具体条目",
+        "box": [
+          247,
+          478,
+          730,
+          640
+        ],
+        "camera": [
+          180,
+          130,
+          1180,
+          692
+        ]
+      }
+    ]
+  },
+  {
+    "title": "原文的概念，和我们的编码对得上吗？",
+    "stage": "Concepts",
+    "parts": [
+      {
+        "frame": "13-concepts",
+        "speech": "到了 Concepts，要把原文怎么定义，和团队怎么编码，对照着看。",
+        "label": "Concepts · 核对概念对应",
+        "box": [
+          238,
+          322,
+          488,
+          376
+        ],
+        "camera": [
+          180,
+          100,
+          1180,
+          662
+        ],
+        "shape": "circle"
+      },
+      {
+        "frame": "13-concepts",
+        "speech": "这个对应合不合理，需要人来判断。",
+        "label": "概念对应由人判断",
+        "box": [
+          250,
+          468,
+          582,
+          655
+        ],
+        "camera": [
+          180,
+          130,
+          1180,
+          692
+        ]
+      }
+    ]
+  },
+  {
+    "title": "先看这一篇综述说了什么",
+    "stage": "Review-level synthesis",
+    "parts": [
+      {
+        "frame": "14-review-level-synthesis",
+        "speech": "这里整理的是，这一篇综述提出了什么观点、条件和解释。",
+        "label": "这篇综述的综合结果",
+        "box": [
+          238,
+          394,
+          740,
+          487
+        ],
+        "camera": [
+          180,
+          100,
+          1180,
+          662
+        ]
+      },
+      {
+        "frame": "14-review-level-synthesis",
+        "speech": "读到这些结论，还要看清它们的证据层级。",
+        "label": "观点也要核对证据层级",
+        "box": [
+          251,
+          495,
+          582,
+          659
+        ],
+        "camera": [
+          180,
+          130,
+          1180,
+          692
+        ]
+      }
+    ]
+  },
+  {
+    "title": "从页码，直接回到那句话",
+    "stage": "核对原文",
+    "parts": [
+      {
+        "frame": "15-page18-highlight",
+        "speech": "比如这条证据，点第十八页，就能找到这句话。",
+        "label": "① 点 PDF p. 18",
+        "box": [
+          263,
+          425,
+          322,
+          448
+        ],
+        "click": [
+          291,
+          437
+        ],
+        "shape": "circle"
+      },
+      {
+        "frame": "15-page18-highlight",
+        "speech": "黄色帮我们找到位置。判断是不是对的，还是要读上下文。",
+        "label": "② 找到原文，再读上下文",
+        "box": [
+          809,
+          239,
+          1241,
+          263
+        ],
+        "link": [
+          291,
+          437
+        ],
+        "camera": [
+          180,
+          60,
+          1280,
+          679
+        ]
+      }
+    ]
+  },
+  {
+    "title": "原文太窄？把中间这条线往左拖",
+    "stage": "调整阅读空间",
+    "parts": [
+      {
+        "frame": "15-page18-highlight",
+        "speech": "右边太窄的话，找到中间这条分隔线，往左拖。",
+        "label": "拖动这里 ←",
+        "box": [
+          756,
+          340,
+          770,
+          427
+        ],
+        "drag": [
+          763,
+          663,
+          390
+        ]
+      },
+      {
+        "frame": "16-wider-pdf",
+        "speech": "这样，原文就多了一点空间。",
+        "label": "PDF 阅读区变宽",
+        "box": [
+          676,
+          139,
+          1268,
+          710
+        ]
+      }
+    ]
+  },
+  {
+    "title": "放大一点，再往下读",
+    "stage": "缩放与滚动",
+    "parts": [
+      {
+        "frame": "16-wider-pdf",
+        "speech": "字太小，就用右上角的缩放。",
+        "label": "在这里调整大小",
+        "box": [
+          1141,
+          61,
+          1204,
+          98
+        ],
+        "shape": "circle"
+      },
+      {
+        "frame": "17-zoom150",
+        "speech": "现在放大到一百五十。原文和高亮一起变大。",
+        "label": "150% · 原文更清楚",
+        "box": [
+          740,
+          404,
+          1266,
+          435
+        ],
+        "second": [
+          1141,
+          61,
+          1204,
+          98
+        ],
+        "second_label": "150%"
+      },
+      {
+        "frame": "18-scroll-pdf",
+        "speech": "在右边继续滚动，就能读到上下文，中间的编码不用跟着动。",
+        "label": "只滚动右侧原文",
+        "box": [
+          680,
+          129,
+          1278,
+          709
+        ],
+        "scroll": true
+      }
+    ]
+  },
+  {
+    "title": "读完这一页，再把反馈交回去",
+    "stage": "翻页与回传",
+    "parts": [
+      {
+        "frame": "19-next-page",
+        "speech": "上面的箭头可以继续翻页，旧高亮也会清掉。",
+        "label": "继续翻页",
+        "box": [
+          1110,
+          61,
+          1141,
+          98
+        ],
+        "shape": "circle",
+        "click": [
+          1126,
+          79
+        ]
+      },
+      {
+        "frame": "19-next-page",
+        "speech": "这一轮看完，导出反馈，交回团队汇总和讨论。",
+        "label": "Export verification · 导出反馈",
+        "box": [
+          1119,
+          7,
+          1271,
+          50
+        ],
+        "shape": "circle"
+      }
+    ]
+  },
+  {
+    "title": "AI 帮你准备，人把判断握在手里",
+    "stage": "人和 AI 怎样分工",
+    "parts": [
+      {
+        "frame": "09-included-screening",
+        "speech": "规则可以从小批样本慢慢发展。规则明确后，再让 AI 继续整理，交给人核验。",
+        "label": "人发展规则 · AI 协助整理 · 人核验",
+        "box": [
+          234,
+          247,
+          742,
+          628
+        ]
+      },
+      {
+        "frame": "09-included-screening",
+        "speech": "这个工作台想省下的是找资料和来回对照的时间，让人更容易做出有依据的判断。",
+        "label": "让人的判断，更容易回到证据",
+        "box": [
+          772,
+          131,
+          1271,
+          710
+        ]
+      }
+    ]
+  }
+]

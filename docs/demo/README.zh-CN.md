@@ -1,14 +1,20 @@
-# 真实 Pilot 工作台：跟着一篇文献走一遍
+# 这条编码，原文真的支持吗？
 
 这里展示的是 Belle 实际使用的 **Pilot full-text coding** 界面、真实项目编码提案和对应 PDF。此前的黑色彗星图是概念插画；通用试用包使用模拟资料。它们与这里的真实界面演示分别标注。
 
-**[▶ 播放／下载中文解说视频](pilot-walkthrough.zh-CN.mp4)** · [English guide](README.md)
+**[▶ 播放／下载新版中文引导视频](pilot-guided-walkthrough.zh-CN.mp4)** · [直接下载](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.zh-CN.mp4) · [English guide](README.md)
 
-视频由 20 个实际浏览器操作后的画面组成，配有中文合成语音与字幕说明，属于**分步操作演示，不是连续录屏**。截图没有重绘界面或替换原文。画面中的 Correct／Revise 是隔离演示模式里的练习反馈，不能当作研究者的真实核验记录。
+跟着一篇文献，看看怎样找证据、留下判断，再把反馈交回团队。新版约 **3 分 36 秒**，把过程分成 16 章、35 个讲解步骤，配有更口语化的中文解说、合成配音和同步字幕。
 
-![实际的纳入文献与四阶段工作台](frames/09-included-screening.jpg)
+**橙色圈框**告诉你现在看哪里，**青色箭头**把证据页码与原文连起来，按钮和说明框会局部放大。**黄色引文高亮**来自真正运行的阅读器。
 
-![点击 PDF 第十八页后，匹配引文在真实原文中高亮](frames/17-zoom150.jpg)
+![引导画面：从证据页码找到对应原文](guided-preview-evidence.jpg)
+
+![引导画面：圈出 Revise，再解释修改说明框](guided-preview-revise.jpg)
+
+底图来自实际浏览器操作后的截图，界面和原文没有重绘。圈线、指示点和镜头放大是后期讲解层；这是**剪辑导览，不是连续录屏**。Correct／Revise 使用隔离演示反馈，不代表正式研究核验。原始画面保留在 [frames](frames/) 中。
+
+本地查看带章节跳转的播放器：在仓库目录运行 `python3 docs/demo/serve.py --port 8940`，然后打开 [本地导览](http://127.0.0.1:8940/)。
 
 ## 什么时候用，怎么开始？
 
@@ -40,6 +46,6 @@
 
 高亮仅在指定页上做规范化文字匹配，处理空白、标点、断词和连字；不做语义猜测。扫描页、无字形索引、不连续或改写的引文、重复匹配会提示人工查看，不会伪造一个高亮位置。完整原始 PDF、私有研究包、真实审阅者回传不随公开演示发布。
 
-[画面与来源记录](PROVENANCE.md) · [全部分镜](chapters.json) · [六幕概念故事](../story/README.zh-CN.md)
+[画面与来源记录](PROVENANCE.md) · [全部章节](chapters.json) · [导览制作方法](MAKING-OF.zh-CN.md) · [六幕概念故事](../story/README.zh-CN.md)
 
 [中文解说全文 / narration transcript](TRANSCRIPT.zh-CN.md)

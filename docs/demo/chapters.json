@@ -1,162 +1,181 @@
 [
   {
-    "start_seconds": 0,
-    "duration": 12.0,
-    "frame": "01-real-pilot.jpg",
-    "title": "真实工作台：从一篇文献开始",
-    "caption": "Pilot 10 · 实际项目界面与资料 · 演示反馈单独保存",
-    "narration": "这是实际使用的全文编码工作台。画面来自真实项目和原文。我们在独立的演示模式中操作，不会改动正式审阅记录。"
+    "chapter": 1,
+    "start": 0,
+    "title": "这条编码，原文真的支持吗？",
+    "stage": "先看证据",
+    "narration": [
+      "看到一条编码，你最想确认的，可能就是：原文真的是这么说的吗？",
+      "点一下页码，右边就能找到对应的原文。我们从这里，走一遍审阅过程。"
+    ],
+    "end": 15.79167
   },
   {
-    "start_seconds": 12.0,
-    "duration": 10.92,
-    "frame": "02-filters.jpg",
-    "title": "先选择你要处理的文献",
-    "caption": "All pilot reports / Verification pending / Verification complete / Included / Excluded",
-    "narration": "左侧可以查看全部文献、尚未核验、已经核验、纳入或排除。核验进度和纳入结果是两个不同维度。"
+    "chapter": 2,
+    "start": 15.79167,
+    "title": "先认三个地方",
+    "stage": "认识工作台",
+    "narration": [
+      "这个工作台，先看三个地方。左边选文献，",
+      "中间核对编码，右边随时看原文。"
+    ],
+    "end": 26.41667
   },
   {
-    "start_seconds": 22.92,
-    "duration": 12.07,
-    "frame": "03-excluded.jpg",
-    "title": "排除：保留理由，停止后续提取",
-    "caption": "Excluded · 决定性筛选证据仍然可查",
-    "narration": "这篇文献已被提议排除。界面保留排除理由和关键证据，并隐藏后续提取字段。这里应用的是本项目的人制定的规则。"
+    "chapter": 3,
+    "start": 26.41667,
+    "title": "先挑出这轮要看的文献",
+    "stage": "选文献",
+    "narration": [
+      "左上角可以切换列表。全部文献，都在这里。",
+      "想接着上次的进度，就选待核验。",
+      "也可以只看纳入，或者排除的文献。"
+    ],
+    "end": 41.75
   },
   {
-    "start_seconds": 35.0,
-    "duration": 12.58,
-    "frame": "04-source-evidence.jpg",
-    "title": "回到原文，核对排除依据",
-    "caption": "PDF p. 2 → 实际第二页 → 黄色引文定位",
-    "narration": "点击证据页码，右侧跳到对应的原文页面，并把找到的引文标黄。人要核对的不只是结论，还包括引文是否支持这个判断。"
+    "chapter": 4,
+    "start": 41.75,
+    "title": "排除了，也要留下依据",
+    "stage": "看筛选依据",
+    "narration": [
+      "比如这篇，被标成了排除。后面的提取就停在这里。",
+      "但为什么排除，依据是哪一句，仍然可以回到原文核对。"
+    ],
+    "end": 54.875
   },
   {
-    "start_seconds": 47.58,
-    "duration": 11.47,
-    "frame": "05-correct.jpg",
-    "title": "Correct：记录审阅者的确认",
-    "caption": "核对提取值、编码判断和原文证据后，再确认",
-    "narration": "选择正确，表示审阅者确认这个条目。演示中的点击只用于说明操作，不代表一位研究者实际完成了审核。"
+    "chapter": 5,
+    "start": 54.875,
+    "title": "没问题，就确认；有问题，就说明",
+    "stage": "留下人的判断",
+    "narration": [
+      "核对完，觉得这条没问题，就点 Correct。",
+      "需要改，就点旁边的 Revise。",
+      "下面会展开说明框。把哪里不对、建议怎么改，写在这里。"
+    ],
+    "end": 71.95833
   },
   {
-    "start_seconds": 59.04,
-    "duration": 11.86,
-    "frame": "06-revise.jpg",
-    "title": "Revise：把修改理由留下来",
-    "caption": "选择 Revise 后，说明框自动展开",
-    "narration": "需要修改时，选择修订，说明框会自动展开。人可以写下哪里不准确、怎样改，以及需要协调者核对什么。"
+    "chapter": 6,
+    "start": 71.95833,
+    "title": "已核验，不等于分歧已解决",
+    "stage": "看进度",
+    "narration": [
+      "每一条都留下反馈后，这篇就会进入已核验列表。",
+      "注意这里，还有一条修改意见。团队仍然要讨论它。"
+    ],
+    "end": 84.20833
   },
   {
-    "start_seconds": 70.9,
-    "duration": 12.61,
-    "frame": "07-verification-complete.jpg",
-    "title": "完成核验，不等于没有分歧",
-    "caption": "3/3 已反馈 · 仍有 1 条修订意见",
-    "narration": "当每个条目都有反馈，这篇文献会出现在核验完成列表。这里仍有一条修订意见，所以完成核验不等于分歧已经解决。"
+    "chapter": 7,
+    "start": 84.20833,
+    "title": "纳入之后，分四步继续",
+    "stage": "继续提取",
+    "narration": [
+      "再看一篇纳入的文献。中间这四个入口，把审阅内容分开了。",
+      "先在 Screening 里，展开基础条件，逐项看是否满足。"
+    ],
+    "end": 97.58333
   },
   {
-    "start_seconds": 83.52,
-    "duration": 9.72,
-    "frame": "08-verification-pending.jpg",
-    "title": "用待核验列表继续工作",
-    "caption": "Verification pending · 快速找到剩余文献",
-    "narration": "切换到待核验，可以继续处理剩下的文献。进度帮助协调工作，但最终判断仍由人负责。"
+    "chapter": 8,
+    "start": 97.58333,
+    "title": "规则要清楚，判断要有出处",
+    "stage": "检查规则与证据",
+    "narration": [
+      "每个判断下面，都有理由和出处，可以继续追到原文。",
+      "再看构念路径。这些条件和路径，来自团队发展的 codebook。"
+    ],
+    "end": 111.125
   },
   {
-    "start_seconds": 93.24,
-    "duration": 11.08,
-    "frame": "09-included-screening.jpg",
-    "title": "纳入：进入四个编码阶段",
-    "caption": "Screening → Review profile → Concepts → Review-level synthesis",
-    "narration": "对纳入的文献，工作台提供四个阶段：全文筛选、综述概况、概念编码，以及单篇综述层面的综合。"
+    "chapter": 9,
+    "start": 111.125,
+    "title": "这篇综述，具体怎么做的？",
+    "stage": "Review profile",
+    "narration": [
+      "Review profile 帮你看清：它研究什么问题，用了什么方法。",
+      "看完概况，再往下核对具体条目。"
+    ],
+    "end": 122.20833
   },
   {
-    "start_seconds": 104.33,
-    "duration": 11.49,
-    "frame": "10-foundational-conditions.jpg",
-    "title": "Screening：展开基础条件",
-    "caption": "Foundational conditions · 每个判断连接来源",
-    "narration": "基础条件可以展开。每项判断都有解释和证据。这个案例要求六项条件都满足；其他研究应使用自己的规则。"
+    "chapter": 10,
+    "start": 122.20833,
+    "title": "原文的概念，和我们的编码对得上吗？",
+    "stage": "Concepts",
+    "narration": [
+      "到了 Concepts，要把原文怎么定义，和团队怎么编码，对照着看。",
+      "这个对应合不合理，需要人来判断。"
+    ],
+    "end": 134.04167
   },
   {
-    "start_seconds": 115.81,
-    "duration": 11.6,
-    "frame": "11-construct-pathways.jpg",
-    "title": "Screening：查看构念路径",
-    "caption": "Construct pathways · 保留规则与证据之间的关系",
-    "narration": "构念路径说明为什么一篇文献与研究问题有关。路径和定义来自人的代码本，人工智能协助整理提案，人再核对。"
+    "chapter": 11,
+    "start": 134.04167,
+    "title": "先看这一篇综述说了什么",
+    "stage": "Review-level synthesis",
+    "narration": [
+      "这里整理的是，这一篇综述提出了什么观点、条件和解释。",
+      "读到这些结论，还要看清它们的证据层级。"
+    ],
+    "end": 146.04167
   },
   {
-    "start_seconds": 127.41,
-    "duration": 10.85,
-    "frame": "12-review-profile.jpg",
-    "title": "Review profile：核对综述的方法和范围",
-    "caption": "综述类型、证据范围、检索策略、方法与逐项评价",
-    "narration": "综述概况汇集研究范围、检索策略、方法和质量评价。展开相关部分，就能继续核对具体条目。"
+    "chapter": 12,
+    "start": 146.04167,
+    "title": "从页码，直接回到那句话",
+    "stage": "核对原文",
+    "narration": [
+      "比如这条证据，点第十八页，就能找到这句话。",
+      "黄色帮我们找到位置。判断是不是对的，还是要读上下文。"
+    ],
+    "end": 158.70833
   },
   {
-    "start_seconds": 138.26,
-    "duration": 10.94,
-    "frame": "13-concepts.jpg",
-    "title": "Concepts：区分原文定义与团队编码",
-    "caption": "原文措辞 · 理论 · 操作化 · 团队的概念对应",
-    "narration": "概念部分把原文定义、理论和操作化，与综述团队的概念对应分开呈现。人需要判断这种对应是否合理。"
+    "chapter": 13,
+    "start": 158.70833,
+    "title": "原文太窄？把中间这条线往左拖",
+    "stage": "调整阅读空间",
+    "narration": [
+      "右边太窄的话，找到中间这条分隔线，往左拖。",
+      "这样，原文就多了一点空间。"
+    ],
+    "end": 169.0
   },
   {
-    "start_seconds": 149.2,
-    "duration": 12.82,
-    "frame": "14-review-level-synthesis.jpg",
-    "title": "单篇综述的综合：保留证据层级",
-    "caption": "这篇 review 报告了什么，不等于重新分析其原始研究",
-    "narration": "这里呈现的是这篇综述报告的命题、角色分配和条件。它不等于重新分析了所有原始研究，也不是已经完成的跨综述综合。"
+    "chapter": 14,
+    "start": 169.0,
+    "title": "放大一点，再往下读",
+    "stage": "缩放与滚动",
+    "narration": [
+      "字太小，就用右上角的缩放。",
+      "现在放大到一百五十。原文和高亮一起变大。",
+      "在右边继续滚动，就能读到上下文，中间的编码不用跟着动。"
+    ],
+    "end": 186.33333
   },
   {
-    "start_seconds": 162.02,
-    "duration": 13.29,
-    "frame": "20-page3-highlight.jpg",
-    "title": "页码是入口：第三页的真实证据",
-    "caption": "PDF p. 3 → 第三页中的匹配文字",
-    "narration": "这是另一篇真实文献。点击第三页的证据，页面跳转到第三页，相应的文字同时高亮。页码指的是物理页码，不一定等于印刷页码。"
+    "chapter": 15,
+    "start": 186.33333,
+    "title": "读完这一页，再把反馈交回去",
+    "stage": "翻页与回传",
+    "narration": [
+      "上面的箭头可以继续翻页，旧高亮也会清掉。",
+      "这一轮看完，导出反馈，交回团队汇总和讨论。"
+    ],
+    "end": 197.91667
   },
   {
-    "start_seconds": 175.31,
-    "duration": 12.28,
-    "frame": "15-page18-highlight.jpg",
-    "title": "第十八页：从编码判断回到原文",
-    "caption": "PDF p. 18 → Implications 中的对应句子",
-    "narration": "再回到这篇综述。点击第十八页的证据，系统定位到启示部分的对应句子。高亮只是定位辅助，不表示这个编码一定正确。"
-  },
-  {
-    "start_seconds": 187.59,
-    "duration": 11.31,
-    "frame": "16-wider-pdf.jpg",
-    "title": "拖动中间分隔线，给原文更多空间",
-    "caption": "PDF 面板从 512 px 调整到 612 px",
-    "narration": "现在把中间的分隔线向左拖，原文区域就变宽了。分隔线也支持键盘方向键，双击可以恢复默认宽度。"
-  },
-  {
-    "start_seconds": 198.91,
-    "duration": 10.85,
-    "frame": "17-zoom150.jpg",
-    "title": "放大后，高亮仍然跟随原文",
-    "caption": "150% · 同一页、同一引文、同一组坐标",
-    "narration": "选择百分之一百五十，原文进一步放大。高亮按照原文坐标同比例变化，不是固定贴在画面上的色块。"
-  },
-  {
-    "start_seconds": 209.76,
-    "duration": 11.31,
-    "frame": "18-scroll-pdf.jpg",
-    "title": "在 PDF 区域独立滚动阅读",
-    "caption": "放大后可上下、左右滚动；中间编码区域保持独立",
-    "narration": "放大后的页面可以在右侧独立滚动，包括上下和左右查看。这样，人可以留在同一个工作台里核对上下文。"
-  },
-  {
-    "start_seconds": 221.07,
-    "duration": 15.69,
-    "frame": "19-next-page.jpg",
-    "title": "继续翻页，再把反馈交还团队",
-    "caption": "翻页清除旧高亮 · 导出 JSON · 人解决分歧",
-    "narration": "工具栏可以继续翻页，旧的高亮会清除。完成后导出反馈，交给团队比较和解决分歧。人工智能减少整理和查找工作，人保留规则、核验和裁决。"
+    "chapter": 16,
+    "start": 197.91667,
+    "title": "AI 帮你准备，人把判断握在手里",
+    "stage": "人和 AI 怎样分工",
+    "narration": [
+      "规则可以从小批样本慢慢发展。规则明确后，再让 AI 继续整理，交给人核验。",
+      "这个工作台想省下的是找资料和来回对照的时间，让人更容易做出有依据的判断。"
+    ],
+    "end": 216.208
   }
 ]

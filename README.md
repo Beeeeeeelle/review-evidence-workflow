@@ -2,11 +2,39 @@
 
 # Review Evidence Workflow
 
-**Turn your team's codebook and PDFs into personalized review packages—with source evidence, human decisions and a traceable return path.**
+**For research teams preparing full texts, developing a codebook, or coordinating human screening, appraisal and extraction—with source evidence and traceable decisions.**
 
 A reusable agent skill for full-text screening, appraisal and extraction. Humans develop the rules; AI prepares evidence and proposals; reviewers verify or code independently in a browser. Send each person a package, receive their JSON, then resolve differences with the evidence in view.
 
-**[Follow the illustrated story](docs/story/README.md) · [Try the runnable demos](#try-it) · [Explore the two cases](#two-cases-one-reusable-workflow) · [See the workflow](#how-humans-stay-in-the-loop) · [Read the guide](review-evidence-workflow/references/getting-started.md)**
+**[When to use it](#is-this-for-your-review) · [Start here](#how-do-i-start) · [Follow the illustrated story](docs/story/README.md) · [Try the runnable demos](#try-it) · [Explore the two cases](#two-cases-one-reusable-workflow) · [See the workflow](#how-humans-stay-in-the-loop) · [Read the guide](review-evidence-workflow/references/getting-started.md)**
+
+## Is this for your review?
+
+Use it when a literature review needs **explicit coding rules, source-linked judgments or coordinated reviewer feedback**. It supports primary-study reviews and review-level projects such as meta-reviews. Start at your current stage; you do not have to run the entire workflow.
+
+| Your current situation | Start here—and receive |
+|---|---|
+| A study list, with missing or uncertain PDFs | Retrieve/check full texts → matched-source manifest and unresolved queue |
+| A codebook still being developed | Use your draft and chosen sample → blank calibration packages for people to develop the rules |
+| Usable rules and PDFs; another batch to code | Prepare source-linked AI proposals for human verification, or independent blank packages |
+| Different people need different tasks | Assign records, fields, instructions and modes → one package per reviewer |
+| Feedback has returned, or rules/sources changed | Compare compatible returns, or identify affected work → decisions for people to resolve and a new round where needed |
+
+**Bring what you have:** your research question, study list, current protocol/codebook (a draft is fine), available PDFs and any prior project/returns. Tell the agent which stage you want help with. Missing PDFs or an unfinished codebook do not prevent source preparation; coding awaits usable human-led rules and the relevant evidence.
+
+### How do I start?
+
+1. **Coordinator:** [install the skill](#try-it), start a new agent session, and supply your current materials. You can describe the task in ordinary language; the agent prepares the configuration.
+2. **Reviewers:** receive their personal package, open `OPEN_ME.html`, review the evidence, and export JSON to return. They need a browser, not Python or an AI account.
+3. **Team:** give the agent the returns and matching project. It checks versions/coverage and organizes differences; people adjudicate and authorize the result.
+
+**Copy this first request:**
+
+> Use $review-evidence-workflow. Here are our research question, study list, draft codebook and available PDFs. We are still calibrating our rules. First check the sources and identify gaps; then use our chosen sample and current definitions to prepare separate blank reviewer packages. Tell us what to do next and which decisions remain with our team.
+
+Just want to explore first? [Try a fictional package](docs/TRY_DEMOS.md) without supplying research data. Need another starting point? [Copy a stage-specific prompt](review-evidence-workflow/references/getting-started.md).
+
+The agent prepares **source manifests, reviewer packages, comparison reports and a decision ledger**. People develop the codebook and make scientific decisions. Coordination uses local files; the workbench does not provide shared cloud accounts. For a one-off paper summary, a simpler reading task is usually enough.
 
 ![The assisted review workbench: assigned records on the left, a correctable proposal in the center, and its source PDF on the right.](docs/images/workbench-assisted.jpg)
 
@@ -29,17 +57,6 @@ A team begins with scattered papers and developing rules. Follow Belle through s
 | [![05 · Return and resolve](assets/review-evidence-story-belle黑色彗星/05-return-and-resolve.png)](docs/story/README.md) | [![06 · Revisit and reuse](assets/review-evidence-story-belle黑色彗星/06-a-traceable-next-round.png)](docs/story/README.md) |
 
 **[Read the illustrated story →](docs/story/README.md)** Each scene has a short explanation and a link to the real workflow. These are conceptual illustrations; the workbench above is the actual application.
-
-## Is this for your review?
-
-Use it when your team has a study list and developing or established criteria, and needs to:
-
-- Find and check full texts, keeping missing or uncertain sources visible.
-- Develop a codebook on a chosen sample, then apply it to further batches for human verification.
-- Give different reviewers different records, fields, instructions or review modes.
-- Compare returned judgments without losing their source, codebook version or unresolved questions.
-
-You provide the research question, human-led rules and available materials. The agent guides the current step and prepares **source manifests, reviewer packages, comparison reports and a decision ledger**. Reviewers need a browser; they do not need Python or an AI account. Coordination runs through local files rather than a hosted multiuser service.
 
 ## Two cases, one reusable workflow
 

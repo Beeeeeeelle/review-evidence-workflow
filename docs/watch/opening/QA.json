@@ -1,26 +1,57 @@
 {
+  "revision": "layered-v2",
   "media": [
     {
       "language": "zh-CN",
-      "duration": 54.791666666666664,
+      "duration": 54.791667,
       "first_real_ui": 11.25,
-      "size": 4802450,
-      "sha256": "b0b22da3aa723c12a782fcbff9353b49b5af440b70fe30ba0d676b23b632dcb5",
-      "full_decode": "pass"
+      "size": 4797903,
+      "sha256": "bc72f386354f8a85f344a64386d2af5ef12df386a1732e4aa86228193f2beecf",
+      "full_decode": "pass",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1600,
+          "height": 900,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        },
+        {
+          "codec_name": "aac",
+          "r_frame_rate": "0/0"
+        }
+      ]
     },
     {
       "language": "en",
-      "duration": 61.291666666666664,
+      "duration": 61.291667,
       "first_real_ui": 16.208333333333332,
-      "size": 4794856,
-      "sha256": "22fba33466ffca6bfcef47411406f0393438c858d482e73429b7752648f797e1",
-      "full_decode": "pass"
+      "size": 4794248,
+      "sha256": "25603e2cf260ae12a1988538550e097ad3bb4927ed894cfd7525e6f6c210051e",
+      "full_decode": "pass",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1600,
+          "height": 900,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        },
+        {
+          "codec_name": "aac",
+          "r_frame_rate": "0/0"
+        }
+      ]
     }
   ],
   "original_four_videos": "sha256 matches existing embeds manifest",
-  "animation": "encoded frame samples at 0.25, 0.8, 1.5, 2.8, 4.3, 5.2, 6.1, 7.0, 8.1, 8.7, 9.5, 10.5 seconds visually inspected",
-  "belle": "full illustrations and transparent characters inspected against canonical; rejected generations documented with assets",
+  "opening_captions": "SRT and VTT byte-identical to layered-v1; timeline retained",
+  "animation": "Encoded Chinese output inspected at 0.8, 1.8, 2.35, 3.0, 4.3, 5.25, 5.7, 6.5, 8.0, 8.85, 9.45 and 10.5 seconds. Enlarged crops checked all six connector endpoint pairs.",
+  "belle": "Two character layers regenerated; active scenes reviewed against canonical. Original full illustrations retained as concept drafts; blanket approval corrected in artwork QA.",
   "browser": [
+    "Chinese local player loaded and visibly played through the new opening into the real UI."
+  ],
+  "unchanged_player_regressions_from_v1": [
     "Chinese opening readyState 4; playback verified",
     "English language switch preserved From code to source chapter at 22.08333s",
     "continuous playback opening → introduction verified",
@@ -28,5 +59,9 @@
     "390px/1024px/1440px no horizontal overflow; episode content fits",
     "keyboard episode/chapter navigation verified"
   ],
-  "design_audit": "pass, zero errors or warnings"
+  "scope": "Renderer, artwork and media only; player implementation unchanged.",
+  "publication": [
+    "English and Chinese watch README each render three native video players.",
+    "Six layered-v2 release assets verified against local sizes; layered-v1 assets retained."
+  ]
 }

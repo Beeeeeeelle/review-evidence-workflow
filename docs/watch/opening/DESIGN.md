@@ -12,11 +12,13 @@ The first edition explained the two skills before showing a detailed example. Th
 
 The first static cut is retained in the local build archive. The published opening uses six transparent generated assets with independent position/opacity timelines, plus simple editorial feedback tokens and progressively drawn paths. It does not merely zoom an entire image. Each entrance settles in roughly 0.65 seconds. Full compositions hold briefly for reading before the real UI appears.
 
-Characters were checked against the current Belle canonical reference. Rejected generations included oversized eyes, a smile, and horizontally stretched hair. The final artwork keeps the continuous up-left black hair, tiny eyes, deadpan face, small black body, internal stars and one four-wing butterfly. See the asset folder’s QA record.
+The second layered edition fixes disconnected, jagged routes identified in viewer feedback. Each connection starts and ends on a specific object: paper → paper, paper → hand, paper → lock, code → inspection lens, and A/B returns → the notebook's margins. Object-relative anchors share the artwork's crop and scale. Cubic curves reveal by distance, with rounded ends and 4× antialiasing; they start after the objects settle. The oversized enclosing circle and long line crossing the first scene are removed.
+
+Two character layers were regenerated against the current Belle canonical reference. The evidence-checking pose has a clearer black body and smaller face details. In the feedback scene, a smaller Belle touches both notebook pages instead of sitting with empty hands above disconnected paths. The notebook carries the comparison. Original drawings and the first layered edition are retained, with their shortcomings explicitly recorded in the asset folder's QA record.
 
 ## Preservation and playback
 
-The four approved detailed films are byte-for-byte unchanged. New narration, bilingual captions, six chapter markers and renderer are separate. Native GitHub attachments play directly in README pages. The local player defaults to this new opening and offers three episodes; continuous playback can be switched off. Language switching keeps the corresponding chapter. Older `video=intro` and `video=pilot` links still work.
+The four approved detailed films are byte-for-byte unchanged. This revision also keeps the opening's narration, captions, chapter times and eleven-beat sequence unchanged. Native GitHub attachments play directly in README pages. The local player defaults to this new opening and offers three episodes; continuous playback can be switched off. Language switching keeps the corresponding chapter. Older `video=intro` and `video=pilot` links still work. The `layered` release files retain the first edition; `layered-v2` files contain the corrected connectors and poses.
 
 The UI uses genuine existing public captures, with editorial circles, arrows and camera movement. No scientific decisions or source PDFs were changed. This is a narrated capture sequence, not a continuous screen recording. No measured time saving or accuracy gain is asserted.
 

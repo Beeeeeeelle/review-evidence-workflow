@@ -8,7 +8,7 @@
 
 找全文来回换入口，填编码反复翻原文，收到不同反馈又得重新对齐。开场用分层 Belle 动画带出这三个问题，**第 11 秒就进入真实 Pilot 工作台**：点页码找证据，再看人怎样 Revise 或 Correct。
 
-https://github.com/user-attachments/assets/19c1eacb-9f9b-45ab-9fdb-a27d7f50d160
+https://github.com/user-attachments/assets/053342e2-b9c2-439d-9d5e-732d117daafc
 
 [阅读开场解说](opening/TRANSCRIPT.zh-CN.md)
 
@@ -33,7 +33,7 @@ https://github.com/user-attachments/assets/e597f1ef-8880-42ca-ad89-cf71f6cf5bee
 
 | 视频 | 中文 | English |
 |---|---|---|
-| 从痛点到真实例子 | [0:55](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/problem-first-opening.layered.zh-CN.mp4) | [1:01](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/problem-first-opening.layered.en.mp4) |
+| 从痛点到真实例子 | [0:55](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/problem-first-opening.layered-v2.zh-CN.mp4) | [1:01](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/problem-first-opening.layered-v2.en.mp4) |
 | 认识两个 skill | [5:04](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.zh-CN.mp4) | [4:57](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.en.mp4) |
 | 跟着真实工作台走一遍 | [3:36](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.zh-CN.mp4) | [3:40](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.en.mp4) |
 

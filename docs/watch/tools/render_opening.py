@@ -4,7 +4,7 @@ Uses generated Belle concept art and unchanged public Pilot captures.
 Requires Pillow, edge-tts (voice step only), ffmpeg and the companion
 render_belle.py. All annotations and camera moves are editorial overlays.
 """
-import argparse, asyncio, functools, hashlib, json, math, subprocess, wave
+import argparse, asyncio, bisect, functools, hashlib, json, math, subprocess, wave
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageOps
 import render_belle as b
@@ -21,40 +21,65 @@ def layer_asset(name):
     bounds=im.getchannel('A').point(lambda a:255 if a>96 else 0).getbbox()
     return im.crop(bounds)
 
+@functools.lru_cache(maxsize=24)
+def placed_asset(name,box):
+    obj=ImageOps.contain(layer_asset(name),(box[2]-box[0],box[3]-box[1]),Image.Resampling.LANCZOS)
+    return obj,box[0]+(box[2]-box[0]-obj.width)/2,box[1]+(box[3]-box[1]-obj.height)/2
+
+def anchor(name,box,u,v):
+    # Anchors use the same alpha crop and fit as the visible object, not its canvas.
+    obj,x,y=placed_asset(name,box)
+    return (x+obj.width*u,y+obj.height*v)
+
 def layer(im,name,box,t,delay=0,direction=(0,30),duration=.65):
     k=b.ease((t-delay)/duration)
     if k<=0:return
-    obj=ImageOps.contain(layer_asset(name),(box[2]-box[0],box[3]-box[1]),Image.Resampling.LANCZOS)
+    original,x,y=placed_asset(name,box);obj=original.copy()
     alpha=obj.getchannel('A').point(lambda a:round(a*k));obj.putalpha(alpha)
-    x=round(box[0]+(box[2]-box[0]-obj.width)/2+direction[0]*(1-k))
-    y=round(box[1]+(box[3]-box[1]-obj.height)/2+direction[1]*(1-k))
+    x=round(x+direction[0]*(1-k));y=round(y+direction[1]*(1-k))
     im.paste(obj,(x,y),obj)
 
-def path(d,points,progress,color=b.ORANGE,width=3):
+@functools.lru_cache(maxsize=32)
+def curve(points):
+    a,c,e,f=points
+    samples=[tuple((1-t)**3*a[k]+3*(1-t)**2*t*c[k]+3*(1-t)*t*t*e[k]+t**3*f[k] for k in (0,1)) for t in (j/240 for j in range(241))]
+    lengths=[0.]
+    for p,q in zip(samples,samples[1:]):lengths.append(lengths[-1]+math.dist(p,q))
+    return samples,lengths
+
+def stroke(im,points,progress,color=b.ORANGE,width=2.5):
+    """Reveal by distance, then antialias at 4x; a thin stroke never pixel-steps."""
     if progress<=0:return
-    smooth=[]
-    for i in range(len(points)-1):
-        a=points[max(0,i-1)];c=points[i];e=points[i+1];f=points[min(len(points)-1,i+2)]
-        for j in range(20):
-            t=j/20
-            smooth.append(tuple(.5*((2*c[k])+(-a[k]+e[k])*t+(2*a[k]-5*c[k]+4*e[k]-f[k])*t*t+(-a[k]+3*c[k]-3*e[k]+f[k])*t*t*t) for k in (0,1)))
-    points=smooth+[points[-1]]
-    n=(len(points)-1)*min(1,progress);full=int(n)
-    visible=points[:full+1]
-    if full<len(points)-1:
-        a,c=points[full:full+2];f=n-full;visible.append((a[0]+(c[0]-a[0])*f,a[1]+(c[1]-a[1])*f))
-    if len(visible)>1:d.line(visible,fill=color,width=width,joint='curve')
+    samples,lengths=curve(tuple(points));distance=lengths[-1]*min(1,progress)
+    i=min(len(samples)-1,max(1,bisect.bisect_left(lengths,distance)))
+    fraction=(distance-lengths[i-1])/(lengths[i]-lengths[i-1])
+    p,q=samples[i-1:i+1]
+    visible=samples[:i]+[(p[0]+(q[0]-p[0])*fraction,p[1]+(q[1]-p[1])*fraction)]
+    pad=4;x=math.floor(min(p[0] for p in visible)-pad);y=math.floor(min(p[1] for p in visible)-pad)
+    w=math.ceil(max(p[0] for p in visible)-x+pad);h=math.ceil(max(p[1] for p in visible)-y+pad)
+    scale=4;overlay=Image.new('RGBA',(w*scale,h*scale));d=ImageDraw.Draw(overlay)
+    scaled=[((px-x)*scale,(py-y)*scale) for px,py in visible]
+    d.line(scaled,fill=color,width=round(width*scale),joint='curve')
+    radius=width*scale/2
+    for px,py in (scaled[0],scaled[-1]):d.ellipse((px-radius,py-radius,px+radius,py+radius),fill=color)
+    overlay=overlay.resize((w,h),Image.Resampling.LANCZOS);im.paste(overlay,(x,y),overlay)
+
+def connect(im,points,t,delay,color=b.ORANGE,duration=.75):
+    stroke(im,points,b.ease((t-delay)/duration),color)
 
 def note(im,label,box,color,t,delay,direction):
     # These are simple editorial feedback tokens, not screenshots or Belle artwork.
     k=b.ease((t-delay)/.65)
     if k<=0:return
-    w,h=box[2]-box[0],box[3]-box[1];card=Image.new('RGBA',(w+8,h+8),(255,255,255,0));d=ImageDraw.Draw(card)
+    w,h=box[2]-box[0],box[3]-box[1];scale=4
+    card=Image.new('RGBA',((w+8)*scale,(h+8)*scale),(255,255,255,0));d=ImageDraw.Draw(card)
     points=[(3,5),(w-3,2),(w+2,h-2),(7,h+3),(3,5)]
-    d.polygon(points,fill='white');d.line(points,fill=b.INK,width=2)
-    d.text((24,18),label,font=b.font(29,True),fill=color)
+    points=[(x*scale,y*scale) for x,y in points]
+    d.polygon(points,fill='white');d.line(points,fill=b.INK,width=6,joint='curve')
+    d.text((24*scale,18*scale),label,font=b.font(29*scale,True),fill=color)
     for i,length in enumerate([w-75,w-105,w-60]):
-        d.line((26,65+i*22,length,64+i*22),fill=color,width=2)
+        d.line((26*scale,(65+i*22)*scale,length*scale,(64+i*22)*scale),fill=color,width=5)
+    card=card.resize((w+8,h+8),Image.Resampling.LANCZOS)
     card.putalpha(card.getchannel('A').point(lambda a:round(a*k)))
     im.paste(card,(round(box[0]+direction*(1-k)),box[1]),card)
 
@@ -63,26 +88,30 @@ def animate_pain(im,p,t):
     if i==0:
         layer(im,'01-papers',(100,252,1500,691),t,0,(-45,0))
         layer(im,'01-gate',(956,380,1105,650),t,.5,(0,35))
-        # The path grows toward the hand, then toward the blocked access route.
-        points=[(290,420),(368,450),(435,540),(538,570),(656,598),(741,578),(901,577),(978,574),(1102,574),(1170,541),(1262,505),(1370,568)]
-        path(d,points,b.ease((t-1.3)/1.35))
         layer(im,'01-belle',(580,255,923,690),t,.95,(0,28))
+        papers=(100,252,1500,691);belle=(580,255,923,690);gate=(956,380,1105,650)
+        # Each short route meets a real edge; none crosses a page or Belle's body.
+        connect(im,[anchor('01-papers',papers,.155,.466),(421,472),(405,498),anchor('01-papers',papers,.182,.603)],t,1.65,duration=.45)
+        connect(im,[anchor('01-papers',papers,.292,.747),(620,606),(670,612),anchor('01-belle',belle,.399,.784)],t,1.9,duration=.55)
+        connect(im,[anchor('01-belle',belle,.953,.618),(943,529),(948,572),anchor('01-gate',gate,.329,.748)],t,2.2,duration=.55)
     elif i==1:
         note(im,'Code?',(1190,282,1450,430),b.INK,t,0,35)
         layer(im,'02-paper',(445,215,1060,708),t,.5,(0,28))
-        layer(im,'02-belle',(512,390,790,668),t,1.0,(-28,0))
-        path(d,[(1205,409),(1136,438),(1067,488),(1007,555),(916,581),(816,584)],b.ease((t-1.45)/1.0))
-        if t>2:
-            k=b.ease((t-2)/.6);d.arc((777,558,874,611),-30,-30+340*k,fill=b.BLUE,width=3)
-            b.text(d,b.tx('原文在哪里？','Where in the source?'),1120,514,390,27,color=b.BLUE)
+        actor=(540,340,804,650)
+        layer(im,'02-belle-v2',actor,t,1.0,(-28,0))
+        # The lens now sits on the source mark; the route ends at its outer rim.
+        connect(im,[(1194,382),(1064,382),(1033,574),anchor('02-belle-v2',actor,.977,.691)],t,1.7,duration=.85)
+        if t>2.3:b.text(ImageDraw.Draw(im),b.tx('原文在哪里？','Where in the source?'),1104,483,400,27,color=b.BLUE)
     else:
         # Two independent returns enter from opposite directions before comparison.
         note(im,'A',(135,441,455,604),b.BLUE,t,0,-105)
         note(im,'B',(1145,441,1465,604),b.ORANGE,t,.5,105)
-        layer(im,'03-belle-notebook',(538,228,1060,714),t,1.0,(0,30))
-        path(d,[(458,530),(505,530),(558,560),(634,566)],b.ease((t-1.5)/.85),b.BLUE)
-        path(d,[(1141,530),(1092,530),(1041,560),(965,566)],b.ease((t-1.7)/.85))
-        if t>2.15:b.text(d,b.tx('分歧，要回到证据里讨论。','Bring disagreements back to evidence.'),147,652,370,25,color=b.GREY,maxheight=75)
+        book=(520,257,1080,708)
+        layer(im,'03-belle-notebook-v2',book,t,1.0,(0,30))
+        # Feedback lands on the notebook's outer margins, below the character.
+        connect(im,[(456,530),(524,530),(512,641),anchor('03-belle-notebook-v2',book,.092,.852)],t,1.7,color=b.BLUE)
+        connect(im,[(1149,530),(1080,530),(1088,641),anchor('03-belle-notebook-v2',book,.904,.852)],t,1.9)
+        if t>2.35:b.text(ImageDraw.Draw(im),b.tx('分歧，要回到证据里讨论。','Bring disagreements back to evidence.'),147,652,370,25,color=b.GREY,maxheight=75)
 
 def run(args):
     return subprocess.run(args,check=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
@@ -185,7 +214,7 @@ def render(parts,build,lang):
         print(f'{lang} scene {p["index"]+1}/{len(parts)}',flush=True)
     proc.stdin.close()
     if proc.wait():raise RuntimeError('ffmpeg render failed')
-    frame(parts[0],2).save(ROOT/'media'/f'opening.{lang}.jpg',quality=94)
+    frame(parts[0],3).save(ROOT/'media'/f'opening.{lang}.jpg',quality=94)
 
 if __name__=='__main__':
     ap=argparse.ArgumentParser();ap.add_argument('mode',choices=['voice','preview','render']);ap.add_argument('--lang',choices=['en','zh-CN'],required=True);ap.add_argument('--build',type=Path,required=True)

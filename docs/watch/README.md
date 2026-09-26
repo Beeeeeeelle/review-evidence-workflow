@@ -8,7 +8,7 @@ Start with the problem and a real example, then learn the workflow at your own p
 
 Full-text hunting. Repeated trips back to the source. Different answers from colleagues. The opening brings these problems into view through layered Belle animation, then shows the real Pilot workbench at **0:16**. Watch a page reference lead to evidence, followed by Revise and Correct.
 
-https://github.com/user-attachments/assets/7dc7591c-59f1-4c67-b2b7-108c4aae6a5d
+https://github.com/user-attachments/assets/acc855c9-7a52-43a6-8be8-469008d4cb67
 
 [Read the opening transcript](opening/TRANSCRIPT.en.md)
 
@@ -33,7 +33,7 @@ https://github.com/user-attachments/assets/1bc47e8e-7276-4822-9731-5e6af63e3d78
 
 | Film | English | 中文 |
 |---|---|---|
-| Problem-first opening | [1:01](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/problem-first-opening.layered.en.mp4) | [0:55](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/problem-first-opening.layered.zh-CN.mp4) |
+| Problem-first opening | [1:01](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/problem-first-opening.layered-v2.en.mp4) | [0:55](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/problem-first-opening.layered-v2.zh-CN.mp4) |
 | Meet the two skills | [4:57](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.en.mp4) | [5:04](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.zh-CN.mp4) |
 | Inside the workbench | [3:40](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.en.mp4) | [3:36](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.zh-CN.mp4) |
 

@@ -10,7 +10,7 @@
 
 先看这个 55 秒开场：从三个熟悉的痛点，直接进入真实工作台。之后再看详细介绍与操作导览：
 
-https://github.com/user-attachments/assets/19c1eacb-9f9b-45ab-9fdb-a27d7f50d160
+https://github.com/user-attachments/assets/053342e2-b9c2-439d-9d5e-732d117daafc
 
 **想了解具体用法？再看 [五分钟入门导览](docs/intro/README.zh-CN.md)**：从文献清单开始，认识找全文与组织审阅这两个 skill 怎样配合、要提供什么、哪些地方需要人参与。提供中英双版。
 

@@ -23,14 +23,28 @@
       "sha256": "9d5f06b43e84be924468d9899593d08baa7d0b9fccd6306d380892b0d790777a"
     },
     "opening.en": {
-      "url": "https://github.com/user-attachments/assets/7dc7591c-59f1-4c67-b2b7-108c4aae6a5d",
+      "url": "https://github.com/user-attachments/assets/acc855c9-7a52-43a6-8be8-469008d4cb67",
       "source": "media/opening.en.mp4",
-      "sha256": "22fba33466ffca6bfcef47411406f0393438c858d482e73429b7752648f797e1"
+      "sha256": "25603e2cf260ae12a1988538550e097ad3bb4927ed894cfd7525e6f6c210051e"
     },
     "opening.zh-CN": {
-      "url": "https://github.com/user-attachments/assets/19c1eacb-9f9b-45ab-9fdb-a27d7f50d160",
+      "url": "https://github.com/user-attachments/assets/053342e2-b9c2-439d-9d5e-732d117daafc",
       "source": "media/opening.zh-CN.mp4",
-      "sha256": "b0b22da3aa723c12a782fcbff9353b49b5af440b70fe30ba0d676b23b632dcb5"
+      "sha256": "bc72f386354f8a85f344a64386d2af5ef12df386a1732e4aa86228193f2beecf"
+    }
+  },
+  "previous_editions": {
+    "opening.layered-v1": {
+      "opening.en": {
+        "url": "https://github.com/user-attachments/assets/7dc7591c-59f1-4c67-b2b7-108c4aae6a5d",
+        "source": "media/opening.en.mp4",
+        "sha256": "22fba33466ffca6bfcef47411406f0393438c858d482e73429b7752648f797e1"
+      },
+      "opening.zh-CN": {
+        "url": "https://github.com/user-attachments/assets/19c1eacb-9f9b-45ab-9fdb-a27d7f50d160",
+        "source": "media/opening.zh-CN.mp4",
+        "sha256": "b0b22da3aa723c12a782fcbff9353b49b5af440b70fe30ba0d676b23b632dcb5"
+      }
     }
   }
 }

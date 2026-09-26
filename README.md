@@ -8,6 +8,10 @@ A reusable agent skill for full-text screening, appraisal and extraction. Humans
 
 **New visual edition:** [Watch with Belle](docs/watch/README.md) — a lighter 16:9 presentation and chapter player, in English and Chinese. The original edition is retained.
 
+Play the introduction here:
+
+https://github.com/user-attachments/assets/015182cb-25d4-4a7c-bcbd-29c9b64eb867
+
 **First time here? [Watch the five-minute introduction](docs/intro/README.md)** to see how PDF Retrieval and Review Evidence Workflow connect, what to provide, and where people participate. English and Chinese editions are available.
 
 **[When to use it](#is-this-for-your-review) · [Start here](#how-do-i-start) · [Follow the illustrated story](docs/story/README.md) · [Try the runnable demos](#try-it) · [Explore the two cases](#two-cases-one-reusable-workflow) · [See the workflow](#how-humans-stay-in-the-loop) · [Read the guide](review-evidence-workflow/references/getting-started.md)**

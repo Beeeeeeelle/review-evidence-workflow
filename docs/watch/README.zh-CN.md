@@ -4,12 +4,31 @@
 
 Belle 版把入门导览和真实工作台演示放在同一个播放器里。先选视频，再选中文或英文，也可以直接跳到想看的章节。切换语言会保留对应章节。原来的[入门视频](../intro/README.zh-CN.md)和[工作台视频](../demo/README.zh-CN.md)完整保留。
 
-![Belle 版入门导览](media/intro.zh-CN.jpg)
+直接点下方视频即可播放，不用下载，也不用启动本地服务。想看英文版，点击页面顶部的 English。
+
+## 认识两个 skill · 5:04
+
+https://github.com/user-attachments/assets/efba3032-361e-4b46-84ae-61aaa72d460f
+
+[阅读解说](../intro/TRANSCRIPT.zh-CN.md)
+
+## 跟着真实工作台走一遍 · 3:36
+
+https://github.com/user-attachments/assets/e597f1ef-8880-42ca-ad89-cf71f6cf5bee
+
+[阅读解说](../demo/TRANSCRIPT.zh-CN.md)
+
+<details>
+<summary>需要离线观看？下载视频</summary>
 
 | 视频 | 中文 | English |
 |---|---|---|
-| 认识两个 skill | [观看 · 5:04](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.zh-CN.mp4) | [Watch · 4:57](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.en.mp4) |
-| 跟着真实工作台走一遍 | [观看 · 3:36](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.zh-CN.mp4) | [Watch · 3:40](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.en.mp4) |
+| 认识两个 skill | [下载 · 5:04](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.zh-CN.mp4) | [Download · 4:57](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.en.mp4) |
+| 跟着真实工作台走一遍 | [下载 · 3:36](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.zh-CN.mp4) | [Download · 3:40](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.en.mp4) |
+
+</details>
+
+## 可选：使用带章节的本地播放器
 
 在仓库根目录启动：
 

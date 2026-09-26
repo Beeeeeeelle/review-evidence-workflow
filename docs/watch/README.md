@@ -4,12 +4,31 @@
 
 The Belle edition brings the introduction and the real workbench tour into one chapter player. Choose a film, select English or Chinese, and start at any chapter. Language switching keeps the corresponding chapter selected. The approved original films remain in [Introduction](../intro/README.md) and [Workbench](../demo/README.md).
 
-![Belle edition of the introduction](media/intro.en.jpg)
+Play both films directly below—no download or local setup needed. Use the language link at the top for the Chinese edition.
+
+## Meet the two skills · 4:57
+
+https://github.com/user-attachments/assets/015182cb-25d4-4a7c-bcbd-29c9b64eb867
+
+[Read the transcript](../intro/TRANSCRIPT.en.md)
+
+## Inside the real workbench · 3:40
+
+https://github.com/user-attachments/assets/1bc47e8e-7276-4822-9731-5e6af63e3d78
+
+[Read the transcript](../demo/TRANSCRIPT.en.md)
+
+<details>
+<summary>Download a copy for offline viewing</summary>
 
 | Film | English | 中文 |
 |---|---|---|
-| Meet the two skills | [Watch · 4:57](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.en.mp4) | [观看 · 5:04](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.zh-CN.mp4) |
-| Inside the real workbench | [Watch · 3:40](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.en.mp4) | [观看 · 3:36](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.zh-CN.mp4) |
+| Meet the two skills | [Download · 4:57](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.en.mp4) | [下载 · 5:04](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.zh-CN.mp4) |
+| Inside the real workbench | [Download · 3:40](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.en.mp4) | [下载 · 3:36](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.zh-CN.mp4) |
+
+</details>
+
+## Optional: the local chapter player
 
 From the repository root, start the local chapter player:
 

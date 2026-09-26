@@ -1,0 +1,26 @@
+{
+  "purpose": "Native GitHub README video players; the release assets remain available for downloads.",
+  "upload_implementation": "https://github.com/cli/cli/blob/trunk/internal/attachments/client.go",
+  "files": {
+    "intro.en": {
+      "url": "https://github.com/user-attachments/assets/015182cb-25d4-4a7c-bcbd-29c9b64eb867",
+      "source": "media/intro.en.mp4",
+      "sha256": "3e39ca47f96ef7eb8147b9e446482d9e3110d8cd370dc21f623a15ed12236605"
+    },
+    "intro.zh-CN": {
+      "url": "https://github.com/user-attachments/assets/efba3032-361e-4b46-84ae-61aaa72d460f",
+      "source": "media/intro.zh-CN.mp4",
+      "sha256": "f22e894c40e9c31b85c4114e0451be4a63ec23e31b844004ec4a0224c95eb955"
+    },
+    "pilot.en": {
+      "url": "https://github.com/user-attachments/assets/1bc47e8e-7276-4822-9731-5e6af63e3d78",
+      "source": "media/pilot.en.mp4",
+      "sha256": "9a85ebdc5dbca196fdf1c8dba3290c8081d45225de8fedaabe7ac55a9bcece22"
+    },
+    "pilot.zh-CN": {
+      "url": "https://github.com/user-attachments/assets/e597f1ef-8880-42ca-ad89-cf71f6cf5bee",
+      "source": "media/pilot.zh-CN.mp4",
+      "sha256": "9d5f06b43e84be924468d9899593d08baa7d0b9fccd6306d380892b0d790777a"
+    }
+  }
+}

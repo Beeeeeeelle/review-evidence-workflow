@@ -1,5 +1,89 @@
 [
   {
+    "kind": "opening",
+    "lang": "zh-CN",
+    "duration": 54.791666666666664,
+    "src": "media/opening.zh-CN.mp4",
+    "poster": "media/opening.zh-CN.jpg",
+    "transcript": "opening/TRANSCRIPT.zh-CN.md",
+    "guide": "README.zh-CN.md",
+    "captions": "media/opening.zh-CN.vtt",
+    "chapters": [
+      {
+        "number": 1,
+        "start": 0,
+        "title": "三个熟悉的来回"
+      },
+      {
+        "number": 2,
+        "start": 11.25,
+        "title": "先看真实工作台"
+      },
+      {
+        "number": 3,
+        "start": 17.625,
+        "title": "从编码回到原文"
+      },
+      {
+        "number": 4,
+        "start": 28.875,
+        "title": "确认，或提出修改"
+      },
+      {
+        "number": 5,
+        "start": 36.54167,
+        "title": "两个 skill 接起前后"
+      },
+      {
+        "number": 6,
+        "start": 46.70833,
+        "title": "人的判断留在流程里"
+      }
+    ]
+  },
+  {
+    "kind": "opening",
+    "lang": "en",
+    "duration": 61.291666666666664,
+    "src": "media/opening.en.mp4",
+    "poster": "media/opening.en.jpg",
+    "transcript": "opening/TRANSCRIPT.en.md",
+    "guide": "README.md",
+    "captions": "media/opening.en.vtt",
+    "chapters": [
+      {
+        "number": 1,
+        "start": 0,
+        "title": "Three familiar detours"
+      },
+      {
+        "number": 2,
+        "start": 16.20833,
+        "title": "A real workbench, first"
+      },
+      {
+        "number": 3,
+        "start": 22.08333,
+        "title": "From code to source"
+      },
+      {
+        "number": 4,
+        "start": 32.875,
+        "title": "Confirm it, or revise it"
+      },
+      {
+        "number": 5,
+        "start": 42.45833,
+        "title": "Two connected skills"
+      },
+      {
+        "number": 6,
+        "start": 52.875,
+        "title": "People keep the judgments"
+      }
+    ]
+  },
+  {
     "kind": "intro",
     "lang": "zh-CN",
     "duration": 303.75,

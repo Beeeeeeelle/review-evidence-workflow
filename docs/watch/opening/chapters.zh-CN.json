@@ -1,0 +1,42 @@
+{
+  "kind": "opening",
+  "lang": "zh-CN",
+  "duration": 54.791666666666664,
+  "src": "media/opening.zh-CN.mp4",
+  "poster": "media/opening.zh-CN.jpg",
+  "transcript": "opening/TRANSCRIPT.zh-CN.md",
+  "guide": "README.zh-CN.md",
+  "captions": "media/opening.zh-CN.vtt",
+  "chapters": [
+    {
+      "number": 1,
+      "start": 0,
+      "title": "三个熟悉的来回"
+    },
+    {
+      "number": 2,
+      "start": 11.25,
+      "title": "先看真实工作台"
+    },
+    {
+      "number": 3,
+      "start": 17.625,
+      "title": "从编码回到原文"
+    },
+    {
+      "number": 4,
+      "start": 28.875,
+      "title": "确认，或提出修改"
+    },
+    {
+      "number": 5,
+      "start": 36.54167,
+      "title": "两个 skill 接起前后"
+    },
+    {
+      "number": 6,
+      "start": 46.70833,
+      "title": "人的判断留在流程里"
+    }
+  ]
+}

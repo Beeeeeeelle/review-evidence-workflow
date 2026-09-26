@@ -2,44 +2,59 @@
 
 # From papers to judgments
 
-Watch the introduction and the real workbench tour directly on this page. Both films are available in English and Chinese. The approved original films remain in [Introduction](../intro/README.md) and [Workbench](../demo/README.md).
+Start with the problem and a real example, then learn the workflow at your own pace. Three films, in English and Chinese. Play them here without downloading or running a local server.
 
-Play both films directly below—no download or local setup needed. Use the language link at the top for the Chinese edition.
+## 01 · Why this exists · 1:01
 
-## Meet the two skills · 4:57
+Full-text hunting. Repeated trips back to the source. Different answers from colleagues. The opening brings these problems into view through layered Belle animation, then shows the real Pilot workbench at **0:16**. Watch a page reference lead to evidence, followed by Revise and Correct.
+
+https://github.com/user-attachments/assets/7dc7591c-59f1-4c67-b2b7-108c4aae6a5d
+
+[Read the opening transcript](opening/TRANSCRIPT.en.md)
+
+## 02 · Meet the two skills · 4:57
+
+When to use each skill, what to provide, and where people participate.
 
 https://github.com/user-attachments/assets/015182cb-25d4-4a7c-bcbd-29c9b64eb867
 
-[Read the transcript](../intro/TRANSCRIPT.en.md)
+[Read the introduction transcript](../intro/TRANSCRIPT.en.md)
 
-## Inside the real workbench · 3:40
+## 03 · Inside the workbench · 3:40
+
+A closer walkthrough of screening, coding, verification, page navigation and returns.
 
 https://github.com/user-attachments/assets/1bc47e8e-7276-4822-9731-5e6af63e3d78
 
-[Read the transcript](../demo/TRANSCRIPT.en.md)
+[Read the workbench transcript](../demo/TRANSCRIPT.en.md)
 
 <details>
-<summary>Download a copy for offline viewing</summary>
+<summary>Need an offline copy? Download the films</summary>
 
 | Film | English | 中文 |
 |---|---|---|
-| Meet the two skills | [Download · 4:57](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.en.mp4) | [下载 · 5:04](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.zh-CN.mp4) |
-| Inside the real workbench | [Download · 3:40](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.en.mp4) | [下载 · 3:36](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.zh-CN.mp4) |
+| Problem-first opening | [1:01](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/problem-first-opening.layered.en.mp4) | [0:55](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/problem-first-opening.layered.zh-CN.mp4) |
+| Meet the two skills | [4:57](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.en.mp4) | [5:04](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.zh-CN.mp4) |
+| Inside the workbench | [3:40](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.en.mp4) | [3:36](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.zh-CN.mp4) |
 
 </details>
 
-## Optional: the local chapter player
+## Optional: one player with chapters and continuous playback
 
-For a combined player with clickable chapters and language switching that retains the corresponding chapter, start it from the repository root:
+From the repository root:
 
 ```sh
 python3 docs/watch/serve.py --port 8942
 ```
 
-Open [the English introduction](http://127.0.0.1:8942/?video=intro&lang=en) or [the English workbench tour](http://127.0.0.1:8942/?video=pilot&lang=en). The original player remains available through the **Original edition** link. Native playback controls support seeking, volume and fullscreen; optional WebVTT captions are included. Chapter navigation and language switching need JavaScript, while the default video can play without it.
+[Open the English journey](http://127.0.0.1:8942/?video=opening&lang=en). It starts with the opening. “Continue to the next film” follows it with the introduction and workbench tour; uncheck it to stop after the current film. Chapter buttons, previous/next and language switching remain available. Switching language keeps the corresponding chapter. Optional VTT/SRT captions are included; the default Chinese opening also plays without JavaScript.
 
-The edition preserves the original narration, chapter order and timing. It changes composition, type hierarchy, annotation placement and editorial camera movement. The workbench screenshots are authentic; circles, numbered markers, arrows and crops are editorial overlays. Yellow quotation matches come from the functioning PDF reader. Demonstration feedback is separate from research judgments. This is a guided film made from captures, not a continuous screen recording. Narration is synthetic.
+## Visuals, evidence and preserved versions
 
-TALL and Agency images are real-source adaptations, as described in [image provenance](../images/PROVENANCE.md). The independent form uses fictional data. R017 is an illustrative retrieval handoff. Belle illustrations are reused from the [existing story](../story/README.md).
+The opening uses [three new Belle concepts and six transparent layers](../../assets/review-opening-belle黑色彗星/README.md). Papers, access obstacles, characters, feedback tokens and paths enter on separate timelines. The character is not regenerated frame by frame. Typography, A/B/Code tokens, circles and paths are editorial graphics.
 
-The original material remains the starting point for the redesign. See [design decisions and QA](DESIGN.md). To reproduce a film, run `tools/render_belle.py` with its approved narration cache (`timeline.json` and `narration.wav`), using `--kind intro|pilot`, `--lang en|zh-CN`, `--build PATH`, and `--out PATH`. Pillow and ffmpeg are required. Font paths can be set with `BELLE_FONT_EN`, `BELLE_FONT_ZH` and `BELLE_MONO`; the default fonts are macOS Helvetica Neue, Hiragino Sans GB and Menlo. The earlier render tools produce the narration caches. Existing screenshots and codebook content are not regenerated.
+The real Pilot segment uses unchanged public interface captures, with separate demonstration responses. Camera moves and guidance are editorial; yellow quotation highlights come from the functioning reader. These films use synthetic narration and screenshot sequences, not continuous screen recordings. Source traceability supports human checking, not a guarantee of correctness.
+
+The two detailed Belle films retain their approved narration, chapters and timing. The [original introduction](../intro/README.md) and [original workbench edition](../demo/README.md) are also preserved. TALL and Agency adaptations retain their [provenance](../images/PROVENANCE.md); the independent form uses fictional data and R017 is an illustrative access handoff.
+
+[Opening design and checks](opening/DESIGN.md) · [Earlier visual redesign](DESIGN.md). Rebuild the new opening with `tools/render_opening.py`; its narration and six-chapter metadata are in `opening/`. The renderer uses the same font environment as `tools/render_belle.py`.

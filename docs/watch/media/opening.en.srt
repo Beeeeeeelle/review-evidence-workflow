@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:05,500
+Finding the full text. Then checking it is the right paper.
+
+2
+00:00:05,500 --> 00:00:10,458
+Filling one field. Then searching the source again.
+
+3
+00:00:10,458 --> 00:00:16,208
+Different answers from colleagues. Now, reconstructing why.
+
+4
+00:00:16,208 --> 00:00:22,083
+I brought these steps into one workbench. Here is a real example.
+
+5
+00:00:22,083 --> 00:00:26,500
+Click the PDF page number to go back to the source.
+
+6
+00:00:26,500 --> 00:00:32,875
+The highlight helps you find it. Read the context before accepting the code.
+
+7
+00:00:32,875 --> 00:00:38,042
+Need a change? Choose Revise and explain why.
+
+8
+00:00:38,042 --> 00:00:42,458
+Checked and supported? Choose Correct.
+
+9
+00:00:42,458 --> 00:00:47,167
+One skill retrieves full texts and checks their identity.
+
+10
+00:00:47,167 --> 00:00:52,875
+The other prepares review packages from your rules and organizes team returns.
+
+11
+00:00:52,875 --> 00:01:01,292
+People develop rules, verify evidence, and resolve disagreements. Next, see how the two skills work.

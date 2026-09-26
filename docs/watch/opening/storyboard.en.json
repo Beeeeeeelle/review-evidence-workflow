@@ -1,0 +1,177 @@
+[
+  {
+    "kind": "pain",
+    "image": "01-find-the-full-text.png",
+    "active": 0,
+    "headline": "Where is the full text?",
+    "chapter": 1,
+    "title": "Three familiar detours",
+    "speech": "Finding the full text. Then checking it is the right paper."
+  },
+  {
+    "kind": "pain",
+    "image": "02-find-the-evidence.png",
+    "active": 1,
+    "headline": "Where is the evidence?",
+    "chapter": 1,
+    "title": "Three familiar detours",
+    "speech": "Filling one field. Then searching the source again."
+  },
+  {
+    "kind": "pain",
+    "image": "03-reconcile-the-returns.png",
+    "active": 2,
+    "headline": "Why do we disagree?",
+    "chapter": 1,
+    "title": "Three familiar detours",
+    "speech": "Different answers from colleagues. Now, reconstructing why."
+  },
+  {
+    "kind": "ui",
+    "chapter": 2,
+    "title": "A real workbench, first",
+    "frame": "09-included-screening",
+    "label": "Coding and source, together",
+    "box": [
+      234,
+      247,
+      742,
+      628
+    ],
+    "second": [
+      775,
+      131,
+      1270,
+      710
+    ],
+    "second_label": "The source",
+    "speech": "I brought these steps into one workbench. Here is a real example."
+  },
+  {
+    "kind": "ui",
+    "chapter": 3,
+    "title": "From code to source",
+    "frame": "15-page18-highlight",
+    "label": "Click PDF p. 18",
+    "box": [
+      263,
+      425,
+      322,
+      448
+    ],
+    "click": [
+      291,
+      437
+    ],
+    "shape": "circle",
+    "second": [
+      809,
+      239,
+      1241,
+      263
+    ],
+    "second_label": "Source passage",
+    "link": [
+      291,
+      437
+    ],
+    "speech": "Click the PDF page number to go back to the source."
+  },
+  {
+    "kind": "ui",
+    "chapter": 3,
+    "title": "From code to source",
+    "frame": "15-page18-highlight",
+    "label": "Locate it. Read the context.",
+    "box": [
+      809,
+      239,
+      1241,
+      263
+    ],
+    "camera": [
+      180,
+      60,
+      1280,
+      679
+    ],
+    "speech": "The highlight helps you find it. Read the context before accepting the code."
+  },
+  {
+    "kind": "ui",
+    "chapter": 4,
+    "title": "Confirm it, or revise it",
+    "frame": "06-revise",
+    "label": "Revise: explain the change",
+    "box": [
+      654,
+      325,
+      719,
+      359
+    ],
+    "camera": [
+      190,
+      186,
+      1090,
+      692
+    ],
+    "shape": "circle",
+    "click": [
+      687,
+      342
+    ],
+    "second": [
+      588,
+      355,
+      721,
+      430
+    ],
+    "second_label": "Your reason",
+    "speech": "Need a change? Choose Revise and explain why."
+  },
+  {
+    "kind": "ui",
+    "chapter": 4,
+    "title": "Confirm it, or revise it",
+    "frame": "05-correct",
+    "label": "Correct: confirm after checking",
+    "box": [
+      592,
+      371,
+      656,
+      407
+    ],
+    "camera": [
+      195,
+      242,
+      1095,
+      748
+    ],
+    "shape": "circle",
+    "click": [
+      624,
+      389
+    ],
+    "speech": "Checked and supported? Choose Correct."
+  },
+  {
+    "kind": "pair",
+    "chapter": 5,
+    "title": "Two connected skills",
+    "active": 0,
+    "speech": "One skill retrieves full texts and checks their identity."
+  },
+  {
+    "kind": "pair",
+    "chapter": 5,
+    "title": "Two connected skills",
+    "active": 1,
+    "speech": "The other prepares review packages from your rules and organizes team returns."
+  },
+  {
+    "kind": "close",
+    "chapter": 6,
+    "title": "People keep the judgments",
+    "speech": "People develop rules, verify evidence, and resolve disagreements. Next, see how the two skills work."
+  }
+]

@@ -1,0 +1,177 @@
+[
+  {
+    "kind": "pain",
+    "image": "01-find-the-full-text.png",
+    "active": 0,
+    "headline": "全文，到底在哪？",
+    "chapter": 1,
+    "title": "三个熟悉的来回",
+    "speech": "找一篇全文，要换几个入口？"
+  },
+  {
+    "kind": "pain",
+    "image": "02-find-the-evidence.png",
+    "active": 1,
+    "headline": "这条编码，凭什么？",
+    "chapter": 1,
+    "title": "三个熟悉的来回",
+    "speech": "填一条编码，又得翻回原文。"
+  },
+  {
+    "kind": "pain",
+    "image": "03-reconcile-the-returns.png",
+    "active": 2,
+    "headline": "反馈，怎么对得上？",
+    "chapter": 1,
+    "title": "三个熟悉的来回",
+    "speech": "同事的答案不同，分歧还得重新理。"
+  },
+  {
+    "kind": "ui",
+    "chapter": 2,
+    "title": "先看真实工作台",
+    "frame": "09-included-screening",
+    "label": "编码与原文，在同一个地方",
+    "box": [
+      234,
+      247,
+      742,
+      628
+    ],
+    "second": [
+      775,
+      131,
+      1270,
+      710
+    ],
+    "second_label": "原文",
+    "speech": "我把这些来回，整理成了这个工作台。先看一个真实例子。"
+  },
+  {
+    "kind": "ui",
+    "chapter": 3,
+    "title": "从编码回到原文",
+    "frame": "15-page18-highlight",
+    "label": "点 PDF p. 18",
+    "box": [
+      263,
+      425,
+      322,
+      448
+    ],
+    "click": [
+      291,
+      437
+    ],
+    "shape": "circle",
+    "second": [
+      809,
+      239,
+      1241,
+      263
+    ],
+    "second_label": "对应原文",
+    "link": [
+      291,
+      437
+    ],
+    "speech": "点一下 PDF 页码，就能跳到对应原文。"
+  },
+  {
+    "kind": "ui",
+    "chapter": 3,
+    "title": "从编码回到原文",
+    "frame": "15-page18-highlight",
+    "label": "定位之后，读上下文",
+    "box": [
+      809,
+      239,
+      1241,
+      263
+    ],
+    "camera": [
+      180,
+      60,
+      1280,
+      679
+    ],
+    "speech": "高亮帮你定位。是否支持这个编码，还是要读过再判断。"
+  },
+  {
+    "kind": "ui",
+    "chapter": 4,
+    "title": "确认，或提出修改",
+    "frame": "06-revise",
+    "label": "Revise：写下修改理由",
+    "box": [
+      654,
+      325,
+      719,
+      359
+    ],
+    "camera": [
+      190,
+      186,
+      1090,
+      692
+    ],
+    "shape": "circle",
+    "click": [
+      687,
+      342
+    ],
+    "second": [
+      588,
+      355,
+      721,
+      430
+    ],
+    "second_label": "修改理由",
+    "speech": "有问题就点 Revise，写下怎么改。"
+  },
+  {
+    "kind": "ui",
+    "chapter": 4,
+    "title": "确认，或提出修改",
+    "frame": "05-correct",
+    "label": "Correct：核对后确认",
+    "box": [
+      592,
+      371,
+      656,
+      407
+    ],
+    "camera": [
+      195,
+      242,
+      1095,
+      748
+    ],
+    "shape": "circle",
+    "click": [
+      624,
+      389
+    ],
+    "speech": "核对无误，再点 Correct。"
+  },
+  {
+    "kind": "pair",
+    "chapter": 5,
+    "title": "两个 skill 接起前后",
+    "active": 0,
+    "speech": "一个 skill 帮你找全文，核对是不是找对了。"
+  },
+  {
+    "kind": "pair",
+    "chapter": 5,
+    "title": "两个 skill 接起前后",
+    "active": 1,
+    "speech": "另一个按你的规则准备审阅包，再整理团队回传。"
+  },
+  {
+    "kind": "close",
+    "chapter": 6,
+    "title": "人的判断留在流程里",
+    "speech": "人定规则、核验证据、讨论分歧。接下来，再看两个 skill 怎样配合。"
+  }
+]

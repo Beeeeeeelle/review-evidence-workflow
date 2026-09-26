@@ -6,13 +6,13 @@
 
 A reusable agent skill for full-text screening, appraisal and extraction. Humans develop the rules; AI prepares evidence and proposals; reviewers verify or code independently in a browser. Send each person a package, receive their JSON, then resolve differences with the evidence in view.
 
-**New visual edition:** [Watch with Belle](docs/watch/README.md) — a lighter 16:9 presentation and chapter player, in English and Chinese. The original edition is retained.
+**New visual edition:** [Watch with Belle](docs/watch/README.md) — three steps: the problem and a real example → meet the skills → explore the workbench. English and Chinese; original films retained.
 
-Play the introduction here:
+Start here: a one-minute opening, from familiar problems to a real workbench. Then follow the detailed introduction and hands-on tour:
 
-https://github.com/user-attachments/assets/015182cb-25d4-4a7c-bcbd-29c9b64eb867
+https://github.com/user-attachments/assets/7dc7591c-59f1-4c67-b2b7-108c4aae6a5d
 
-**First time here? [Watch the five-minute introduction](docs/intro/README.md)** to see how PDF Retrieval and Review Evidence Workflow connect, what to provide, and where people participate. English and Chinese editions are available.
+**Ready for the details? [Watch the five-minute introduction](docs/intro/README.md)** to see how PDF Retrieval and Review Evidence Workflow connect, what to provide, and where people participate. English and Chinese editions are available.
 
 **[When to use it](#is-this-for-your-review) · [Start here](#how-do-i-start) · [Follow the illustrated story](docs/story/README.md) · [Try the runnable demos](#try-it) · [Explore the two cases](#two-cases-one-reusable-workflow) · [See the workflow](#how-humans-stay-in-the-loop) · [Read the guide](review-evidence-workflow/references/getting-started.md)**
 

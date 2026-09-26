@@ -1,0 +1,42 @@
+{
+  "kind": "opening",
+  "lang": "en",
+  "duration": 61.291666666666664,
+  "src": "media/opening.en.mp4",
+  "poster": "media/opening.en.jpg",
+  "transcript": "opening/TRANSCRIPT.en.md",
+  "guide": "README.md",
+  "captions": "media/opening.en.vtt",
+  "chapters": [
+    {
+      "number": 1,
+      "start": 0,
+      "title": "Three familiar detours"
+    },
+    {
+      "number": 2,
+      "start": 16.20833,
+      "title": "A real workbench, first"
+    },
+    {
+      "number": 3,
+      "start": 22.08333,
+      "title": "From code to source"
+    },
+    {
+      "number": 4,
+      "start": 32.875,
+      "title": "Confirm it, or revise it"
+    },
+    {
+      "number": 5,
+      "start": 42.45833,
+      "title": "Two connected skills"
+    },
+    {
+      "number": 6,
+      "start": 52.875,
+      "title": "People keep the judgments"
+    }
+  ]
+}

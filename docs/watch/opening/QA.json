@@ -1,0 +1,32 @@
+{
+  "media": [
+    {
+      "language": "zh-CN",
+      "duration": 54.791666666666664,
+      "first_real_ui": 11.25,
+      "size": 4802450,
+      "sha256": "b0b22da3aa723c12a782fcbff9353b49b5af440b70fe30ba0d676b23b632dcb5",
+      "full_decode": "pass"
+    },
+    {
+      "language": "en",
+      "duration": 61.291666666666664,
+      "first_real_ui": 16.208333333333332,
+      "size": 4794856,
+      "sha256": "22fba33466ffca6bfcef47411406f0393438c858d482e73429b7752648f797e1",
+      "full_decode": "pass"
+    }
+  ],
+  "original_four_videos": "sha256 matches existing embeds manifest",
+  "animation": "encoded frame samples at 0.25, 0.8, 1.5, 2.8, 4.3, 5.2, 6.1, 7.0, 8.1, 8.7, 9.5, 10.5 seconds visually inspected",
+  "belle": "full illustrations and transparent characters inspected against canonical; rejected generations documented with assets",
+  "browser": [
+    "Chinese opening readyState 4; playback verified",
+    "English language switch preserved From code to source chapter at 22.08333s",
+    "continuous playback opening → introduction verified",
+    "unchecked continuous playback stayed at English opening end 61.291667s",
+    "390px/1024px/1440px no horizontal overflow; episode content fits",
+    "keyboard episode/chapter navigation verified"
+  ],
+  "design_audit": "pass, zero errors or warnings"
+}

@@ -1,0 +1,55 @@
+{
+  "canonical_reference": "belle-black-comet/assets/references/08-belle-current-canonical-reference.jpg",
+  "checks": [
+    "one active Belle per scene",
+    "continuous up-left black hair",
+    "tiny visible dot eyes, neutral face, pale blush",
+    "one four-wing butterfly: blue/rose/green/ochre",
+    "small black body",
+    "concept before mascot; no research findings invented",
+    "white final compositions; transparent assets only for animation"
+  ],
+  "rejected_passes": [
+    "First generation: unintended transparency on a white-background illustration",
+    "First background repair: oversized eyes, smile and excessive hair scribble",
+    "Initial feedback illustration: horizontal hair and stars outside hair"
+  ],
+  "final_assets": {
+    "03-reconcile-the-returns.png": {
+      "sha256": "a0b9367f3424330c948458aa33d3ba5a05b4248b1e8ca2b6a173227431859cd1",
+      "review": "pass after visual inspection"
+    },
+    "01-find-the-full-text.png": {
+      "sha256": "9cfa9a7b923663810b53f37e49b0d9d68c81e52224cc3de069f762bcde8bdf6c",
+      "review": "pass after visual inspection"
+    },
+    "02-find-the-evidence.png": {
+      "sha256": "42595738e1f15ed7f40b2ef86ee25040fa622490ba9b8d8a8bb78aa40589aa3c",
+      "review": "pass after visual inspection"
+    },
+    "layers/01-belle.png": {
+      "sha256": "9a7cd57c26888a3e316bae317ec3952f626889a0762a81a6360d4604b4935c92",
+      "review": "pass after visual inspection"
+    },
+    "layers/01-gate.png": {
+      "sha256": "134d0e7f5ee5b47d3b826fd6fd952c5c33b242ff86c6ca0cfa05aa7230eae9c4",
+      "review": "pass after visual inspection"
+    },
+    "layers/03-belle-notebook.png": {
+      "sha256": "6c081ddddb1f2880008d5a76f33ed950628f0c66b8867a75193711c3fe4bcefc",
+      "review": "pass after visual inspection"
+    },
+    "layers/02-paper.png": {
+      "sha256": "b8297557db41829e1e842ba92f8a895c23fb9943b07027e3649bb6b75c80499d",
+      "review": "pass after visual inspection"
+    },
+    "layers/01-papers.png": {
+      "sha256": "2fc4b0be4942173d4271ec7729b5954faf172a3f544ada6068ceb8170d51578f",
+      "review": "pass after visual inspection"
+    },
+    "layers/02-belle.png": {
+      "sha256": "0f9122103e1b5e1987b1976738fa06d8b8cb230109ba7148844b4bc38e1467f2",
+      "review": "pass after visual inspection"
+    }
+  }
+}

@@ -2,46 +2,61 @@
 
 # 从文献出发，让判断有据可查
 
-这里有两段视频：认识两个 skill 的入门导览，以及真实工作台的操作演示，均提供中英文版。原来的[入门视频](../intro/README.zh-CN.md)和[工作台视频](../demo/README.zh-CN.md)完整保留。
+先认出熟悉的痛点，马上看真实例子，再按自己的节奏了解怎么用。这里有三段视频，均提供中英文版，直接点播放即可，不用下载，也不用启动本地服务。
 
-直接点下方视频即可播放，不用下载，也不用启动本地服务。想看英文版，点击页面顶部的 English。
+## 01 · 为什么需要它 · 0:55
 
-## 认识两个 skill · 5:04
+找全文来回换入口，填编码反复翻原文，收到不同反馈又得重新对齐。开场用分层 Belle 动画带出这三个问题，**第 11 秒就进入真实 Pilot 工作台**：点页码找证据，再看人怎样 Revise 或 Correct。
+
+https://github.com/user-attachments/assets/19c1eacb-9f9b-45ab-9fdb-a27d7f50d160
+
+[阅读开场解说](opening/TRANSCRIPT.zh-CN.md)
+
+## 02 · 认识两个 skill · 5:04
+
+什么时候用、先提供什么材料，以及哪些地方需要人参与。
 
 https://github.com/user-attachments/assets/efba3032-361e-4b46-84ae-61aaa72d460f
 
-[阅读解说](../intro/TRANSCRIPT.zh-CN.md)
+[阅读入门解说](../intro/TRANSCRIPT.zh-CN.md)
 
-## 跟着真实工作台走一遍 · 3:36
+## 03 · 跟着真实工作台走一遍 · 3:36
+
+进一步看筛选、编码、核验、PDF 翻页与反馈回传。
 
 https://github.com/user-attachments/assets/e597f1ef-8880-42ca-ad89-cf71f6cf5bee
 
-[阅读解说](../demo/TRANSCRIPT.zh-CN.md)
+[阅读操作解说](../demo/TRANSCRIPT.zh-CN.md)
 
 <details>
 <summary>需要离线观看？下载视频</summary>
 
 | 视频 | 中文 | English |
 |---|---|---|
-| 认识两个 skill | [下载 · 5:04](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.zh-CN.mp4) | [Download · 4:57](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.en.mp4) |
-| 跟着真实工作台走一遍 | [下载 · 3:36](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.zh-CN.mp4) | [Download · 3:40](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.en.mp4) |
+| 从痛点到真实例子 | [0:55](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/problem-first-opening.layered.zh-CN.mp4) | [1:01](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/problem-first-opening.layered.en.mp4) |
+| 认识两个 skill | [5:04](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.zh-CN.mp4) | [4:57](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/two-skills-introduction.belle.en.mp4) |
+| 跟着真实工作台走一遍 | [3:36](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.zh-CN.mp4) | [3:40](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.belle.en.mp4) |
 
 </details>
 
-## 可选：使用带章节的本地播放器
+## 可选：用一个播放器连续看，并按章节跳转
 
-如果想把两段视频放在一个播放器里、按章节跳转，或切换语言时保留对应章节，可以在仓库根目录启动：
+在仓库根目录启动：
 
 ```sh
 python3 docs/watch/serve.py --port 8942
 ```
 
-打开[中文入门导览](http://127.0.0.1:8942/?video=intro&lang=zh-CN)或[中文工作台演示](http://127.0.0.1:8942/?video=pilot&lang=zh-CN)。页面右上方的“保留的旧版”可以回看原来的版本。
+[打开中文完整导览](http://127.0.0.1:8942/?video=opening&lang=zh-CN)，默认从新开场开始。勾选“连续看下一段”，会依次接上入门介绍和工作台演示；取消勾选，就停在当前视频。
 
-可以点击章节、使用上一章／下一章，或通过视频自带的控件拖动进度、调音量和全屏。附有可选字幕文件，方便使用播放器自己的字幕显示。章节跳转与语言切换需要 JavaScript；默认视频本身仍可直接播放。
+仍可点击章节、使用上一章／下一章，或切换语言并保留对应章节。视频自带音量、进度和全屏控件，另附可选 VTT/SRT 字幕。章节与语言切换需要 JavaScript；默认中文开场本身仍可直接播放。
 
-新版保留了解说、章节顺序和时长，重新处理了排版、字体、标注位置和镜头移动。真实界面截图没有重绘：圈线、编号、箭头和裁切是后期引导，黄色引文高亮来自实际阅读器。演示反馈与正式研究判断分开保存。这是截图序列制作的导览，使用合成解说，并非连续录屏。
+## 画面来源与保留的版本
 
-TALL 和 Agency 是注明来源的适配展示，详见[图片来源](../images/PROVENANCE.md)；独立表单使用模拟资料，R017 是找全文时的交接示例。Belle 插画复用[已有的六幕故事](../story/README.zh-CN.md)。
+新开场使用[三张 Belle 概念图与六个透明图层](../../assets/review-opening-belle黑色彗星/README.md)。文献、访问障碍、Belle、反馈便签分别进入，连线随后展开；角色不会逐帧重新生成。文字、A/B/Code 便签、圈线是后期引导元素。
 
-[设计取舍与验收记录](DESIGN.md)说明本次视觉优化。渲染代码在 `tools/render_belle.py`；用旧版工具生成的 `timeline.json` 与 `narration.wav` 可以重新导出对应视频。
+真实 Pilot 部分使用已有公开界面截图，演示反馈单独保存。镜头移动、圈线和标注是后期引导，黄色引文高亮来自实际阅读器。视频采用合成解说与截图序列，并非连续录屏。可追溯是为了方便人核查，不代表答案自动正确。
+
+后两段 Belle 视频的解说、章节和时长保持原样；更早的[入门视频](../intro/README.zh-CN.md)与[工作台视频](../demo/README.zh-CN.md)也完整保留。TALL 与 Agency 的适配展示保留[来源说明](../images/PROVENANCE.md)；独立表单使用模拟资料，R017 是访问交接示例。
+
+[新开场的设计与检查](opening/DESIGN.md) · [此前的视觉优化](DESIGN.md)。新开场渲染代码为 `tools/render_opening.py`，讲稿和六章元数据放在 `opening/`。

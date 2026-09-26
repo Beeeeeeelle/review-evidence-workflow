@@ -37,10 +37,20 @@
       "source": "release:belle-voice-2026-09-25/from-papers-to-decisions-belle.captioned.en.mp4",
       "sha256": "80e0431ad2930278f1ab20bb05636db9377ba4595608834007a06fd00ae099e9",
       "cover": {
-        "path": "docs/watch/belle-voice/cover.png",
-        "sha256": "b60e9229a8dfa812c1db18bee6c39aef41161dea780414f794af9b7691ebca0c",
-        "presentation": "Image in a closed details summary. Click to reveal the unchanged native GitHub player.",
-        "reason": "GitHub Markdown strips poster attributes from native user-attachment video embeds."
+        "path": "docs/watch/belle-voice/cover-play.en.png",
+        "sha256": "7b759f6da71563d2ffdfa0a3e2ccb7dfa97169566cb2a3422e7b03bcf13d2597",
+        "presentation": "Localized high-contrast play bar, play icon and expansion arrow above the approved overview, inside a closed details summary. Click any part of the cover to reveal the native GitHub player.",
+        "reason": "GitHub Markdown strips poster attributes from native user-attachment video embeds.",
+        "localized_covers": {
+          "en": {
+            "path": "docs/watch/belle-voice/cover-play.en.png",
+            "sha256": "7b759f6da71563d2ffdfa0a3e2ccb7dfa97169566cb2a3422e7b03bcf13d2597"
+          },
+          "zh-CN": {
+            "path": "docs/watch/belle-voice/cover-play.zh-CN.png",
+            "sha256": "7004241650ff7516c77c51a3b0264a846fc83dcd36a8544cf5c043898ddf75af"
+          }
+        }
       }
     }
   },

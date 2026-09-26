@@ -9,7 +9,9 @@ After title-and-abstract screening, how do you find the full texts, apply your c
 Click the cover below to open the inline player, then press Play. English captions are included in the picture, so they also appear in GitHub's player.
 
 <details>
-<summary><strong>▶ Click the cover to open the video · Belle’s walkthrough · 8:31</strong><br/><picture><img src="cover.png" alt="Video cover: human codebook development, PDF retrieval, evidence verification and team feedback" width="100%" /></picture></summary>
+<summary><picture><img src="cover-play.en.png" alt="▶ Watch the video: click this cover to open the player, then press Play. Belle’s walkthrough, English captions, 8:31." width="100%" /></picture></summary>
+
+<strong>↓ The player is open below. Press its ▶ button to start watching.</strong>
 
 https://github.com/user-attachments/assets/3285d16d-d72a-48ec-9d7c-1b256f6b8430
 

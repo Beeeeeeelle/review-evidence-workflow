@@ -25,3 +25,6 @@ Article rights remain with the respective authors and publishers. Existing repos
 `cover.png` is Belle’s approved HCI overview without the large top title or subtitle. It combines an existing Belle illustration, editable conceptual diagrams and an unchanged Agency pilot capture with separate explanatory callouts. The interface contains practice responses, not an evaluation result.
 
 GitHub strips the `poster` attribute from its native video embeds. The cover therefore appears in a closed disclosure: click the image to reveal the same inline player, then press Play. The video, voice, subtitles and chapter times are unchanged.
+
+
+The `cover-play.en` and `cover-play.zh-CN` SVG/PNG derivatives add a black play bar, orange play icon and connected expansion arrow above the approved overview. These are video-entry controls; the title-free research figure remains separate. The diagram, source captures and video are unchanged. Both versions explicitly explain the two actions: open the cover, then press Play in the inline player.

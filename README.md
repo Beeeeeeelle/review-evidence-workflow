@@ -6,6 +6,8 @@
 
 A reusable agent skill for full-text screening, appraisal and extraction. Humans develop the rules; AI prepares evidence and proposals; reviewers verify or code independently in a browser. Send each person a package, receive their JSON, then resolve differences with the evidence in view.
 
+**New visual edition:** [Watch with Belle](docs/watch/README.md) — a lighter 16:9 presentation and chapter player, in English and Chinese. The original edition is retained.
+
 **First time here? [Watch the five-minute introduction](docs/intro/README.md)** to see how PDF Retrieval and Review Evidence Workflow connect, what to provide, and where people participate. English and Chinese editions are available.
 
 **[When to use it](#is-this-for-your-review) · [Start here](#how-do-i-start) · [Follow the illustrated story](docs/story/README.md) · [Try the runnable demos](#try-it) · [Explore the two cases](#two-cases-one-reusable-workflow) · [See the workflow](#how-humans-stay-in-the-loop) · [Read the guide](review-evidence-workflow/references/getting-started.md)**

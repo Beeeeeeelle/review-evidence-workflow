@@ -1,0 +1,88 @@
+{
+  "baseline_commit": "b60d2aa2b2cf2af36dfa77037de1fc9c711a05de",
+  "original_files_checked": 61,
+  "original_files_changed": [],
+  "video_format": "1600x900 H.264/yuv420p, AAC, 24 fps",
+  "films": [
+    {
+      "film": "intro.zh-CN",
+      "duration": 303.75,
+      "size": 9392390,
+      "sha256": "f22e894c40e9c31b85c4114e0451be4a63ec23e31b844004ec4a0224c95eb955",
+      "full_decode": "pass",
+      "caption_cues": 27,
+      "chapters": 12,
+      "narration_cache_sha256": "bdaab74e2d6025ab1a17e54041de29bfb49374a27191fca08c35181beb7223f4",
+      "audio_video_duration_delta": 0.02
+    },
+    {
+      "film": "intro.en",
+      "duration": 296.625,
+      "size": 8961884,
+      "sha256": "3e39ca47f96ef7eb8147b9e446482d9e3110d8cd370dc21f623a15ed12236605",
+      "full_decode": "pass",
+      "caption_cues": 27,
+      "chapters": 12,
+      "narration_cache_sha256": "95d777549004691edfb977d37f93d5f61210e248088900e67e6486f2de382beb",
+      "audio_video_duration_delta": 0.016667
+    },
+    {
+      "film": "pilot.zh-CN",
+      "duration": 216.208333,
+      "size": 21396311,
+      "sha256": "9d5f06b43e84be924468d9899593d08baa7d0b9fccd6306d380892b0d790777a",
+      "full_decode": "pass",
+      "caption_cues": 35,
+      "chapters": 16,
+      "narration_cache_sha256": "bedcf86da7a1be73e8e26b45d3d078307f150b160886210678e77063c36e9ac7",
+      "audio_video_duration_delta": 0.01
+    },
+    {
+      "film": "pilot.en",
+      "duration": 219.708333,
+      "size": 21448923,
+      "sha256": "9a85ebdc5dbca196fdf1c8dba3290c8081d45225de8fedaabe7ac55a9bcece22",
+      "full_decode": "pass",
+      "caption_cues": 35,
+      "chapters": 16,
+      "narration_cache_sha256": "5f8764ca887278708ffddcd42a02c90782da176cc152d1ae83bea5e9d0646cca",
+      "audio_video_duration_delta": 0.011333
+    }
+  ],
+  "visual_review": {
+    "intro_en": "27 beat overview and representative full-size frames checked",
+    "intro_zh-CN": "27 beat overview; Chinese headline wrapping corrected",
+    "pilot": "real source captures retained; numbered annotation rail inspected"
+  },
+  "browser": {
+    "engine": "Codex in-app browser",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "width": 1024,
+        "height": 768
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "completed": [
+      "English introduction: chapter 4 seek and playback",
+      "English Pilot: chapter 12 seek and playback",
+      "Chinese Pilot loads after language switch; corresponding chapter retained",
+      "Mobile page horizontal overflow: none",
+      "Tablet page horizontal overflow: none",
+      "Optional caption track present",
+      "Chinese introduction: chapter 6 seek and playback",
+      "Previous and next chapter buttons verified with keyboard",
+      "Desktop, tablet and mobile layouts visually inspected"
+    ],
+    "remaining": []
+  },
+  "design_audit": "PASS; 0 errors, 0 warnings",
+  "syntax": "JavaScript and Python passed"
+}

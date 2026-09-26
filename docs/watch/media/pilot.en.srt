@@ -1,0 +1,139 @@
+1
+00:00:00,450 --> 00:00:06,426
+When you see a proposed code, the first question is simple: does the source really support it?
+
+2
+00:00:07,450 --> 00:00:13,690
+Click the page number to find the passage on the right. Let’s walk through the review from here.
+
+3
+00:00:14,700 --> 00:00:19,500
+Start with three areas. Choose a report on the left.
+
+4
+00:00:20,533 --> 00:00:25,141
+Check the coding in the middle, with the original text alongside it.
+
+5
+00:00:26,158 --> 00:00:31,942
+Use the list at the top left. All pilot reports shows the whole set.
+
+6
+00:00:32,950 --> 00:00:37,078
+To pick up where you left off, choose Verification pending.
+
+7
+00:00:38,117 --> 00:00:42,149
+You can also focus on included or excluded reports.
+
+8
+00:00:43,158 --> 00:00:47,910
+This report is marked Excluded, so further extraction stops here.
+
+9
+00:00:48,950 --> 00:00:55,430
+The reason and its evidence remain available. You can still check the passage in context.
+
+10
+00:00:56,450 --> 00:01:00,842
+After checking the evidence, choose Correct if this item is right.
+
+11
+00:01:01,867 --> 00:01:05,251
+If something needs changing, choose Revise.
+
+12
+00:01:06,283 --> 00:01:12,499
+A note box opens below. Explain what is wrong and how you think it should change.
+
+13
+00:01:13,533 --> 00:01:18,717
+Once every item has feedback, the report moves to Verification complete.
+
+14
+00:01:19,742 --> 00:01:25,550
+But look: one revision is still recorded. The team needs to resolve it.
+
+15
+00:01:26,575 --> 00:01:32,311
+Now open an included report. These four tabs organize the work.
+
+16
+00:01:33,325 --> 00:01:38,389
+In Screening, expand Foundational conditions and check each requirement.
+
+17
+00:01:39,408 --> 00:01:43,704
+Each judgment includes a reason and a source you can inspect.
+
+18
+00:01:44,742 --> 00:01:51,246
+Next, look at Construct pathways. These conditions come from the team’s codebook.
+
+19
+00:01:52,283 --> 00:01:57,683
+Review profile brings together the question, scope, and methods of this review.
+
+20
+00:01:58,700 --> 00:02:03,284
+Start with that overview, then check the individual items below.
+
+21
+00:02:04,325 --> 00:02:09,677
+In Concepts, compare the source’s definitions with the team’s descriptive coding.
+
+22
+00:02:10,700 --> 00:02:14,828
+Deciding whether that mapping makes sense is a human judgment.
+
+23
+00:02:15,867 --> 00:02:21,099
+This stage captures the claims and conditions reported by this particular review.
+
+24
+00:02:22,117 --> 00:02:29,077
+Check the level of evidence behind each claim. This is not a completed synthesis across reviews.
+
+25
+00:02:30,117 --> 00:02:35,541
+For this example, click PDF page eighteen to find the cited sentence.
+
+26
+00:02:36,575 --> 00:02:43,127
+Yellow helps you locate it. Read the context before deciding whether the code is supported.
+
+27
+00:02:44,158 --> 00:02:48,550
+If the PDF feels cramped, drag the divider to the left.
+
+28
+00:02:49,575 --> 00:02:52,263
+The source now has more space.
+
+29
+00:02:53,283 --> 00:02:57,507
+For small text, use the zoom control at the top right.
+
+30
+00:02:58,533 --> 00:03:03,909
+At one hundred and fifty percent, both the text and its highlight become larger.
+
+31
+00:03:04,950 --> 00:03:11,622
+Scroll inside the PDF to read more context. The coding panel stays in place.
+
+32
+00:03:12,658 --> 00:03:17,986
+Use the arrow to turn the page. The previous highlight clears.
+
+33
+00:03:18,992 --> 00:03:23,816
+When you finish this round, export your feedback and return it to the team.
+
+34
+00:03:24,825 --> 00:03:31,977
+Develop the rules on a sample first. Then AI can prepare the next batch for people to verify.
+
+35
+00:03:32,992 --> 00:03:39,136
+The aim is to make evidence easier to find and compare, so people can make informed judgments.

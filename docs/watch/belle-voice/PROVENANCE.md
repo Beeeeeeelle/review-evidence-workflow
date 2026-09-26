@@ -18,3 +18,10 @@ The workflow retains human-developed rules, source verification and team adjudic
 Both video editions are checked for duration, dimensions and audio-stream identity. Caption timings have positive duration and no overlap. Representative opening, interface and closing frames were reviewed. The GitHub Markdown rendition is checked for a native video player, and release assets are retained for offline access. This media release does not change either skill's code.
 
 Article rights remain with the respective authors and publishers. Existing repository licensing does not relicense article material. Complete research PDFs, private review data, raw transcription diagnostics and machine-local paths are not part of this media release.
+
+
+## GitHub cover · 26 September 2026
+
+`cover.png` is Belle’s approved HCI overview without the large top title or subtitle. It combines an existing Belle illustration, editable conceptual diagrams and an unchanged Agency pilot capture with separate explanatory callouts. The interface contains practice responses, not an evaluation result.
+
+GitHub strips the `poster` attribute from its native video embeds. The cover therefore appears in a closed disclosure: click the image to reveal the same inline player, then press Play. The video, voice, subtitles and chapter times are unchanged.

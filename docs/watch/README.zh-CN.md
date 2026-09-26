@@ -4,9 +4,14 @@
 
 ## Belle 本人讲解 · 英语原声 · 8 分 31 秒
 
-从初筛后找全文，到核对证据、组员回传，再走进 TALL 和 Agency 两个案例。英文字幕直接显示在视频里，点击即可观看。
+从初筛后找全文，到核对证据、组员回传，再走进 TALL 和 Agency 两个案例。英文字幕直接显示在视频里。点击封面展开播放器，再点播放即可观看。
+
+<details>
+<summary><strong>▶ 点击封面展开视频 · Belle 英文讲解 · 8:31</strong><br/><picture><img src="belle-voice/cover.png" alt="视频封面：人的 codebook、全文获取、编码核验与团队反馈" width="100%" /></picture></summary>
 
 https://github.com/user-attachments/assets/3285d16d-d72a-48ec-9d7c-1b256f6b8430
+
+</details>
 
 [讲稿、章节、素材说明与离线文件](belle-voice/README.zh-CN.md)。
 

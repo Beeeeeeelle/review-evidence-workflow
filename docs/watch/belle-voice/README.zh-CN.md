@@ -6,9 +6,14 @@
 
 初筛之后，怎么逐篇找全文？有了 codebook，哪些重复编码可以请 AI 帮忙？组员怎么分工、回传，又怎样核对 AI 的答案？这支视频从这些具体问题开始，先看真实例子，再认识两个 skill，最后走进工作台和 TALL、Agency 两个项目。
 
-直接点下面的视频即可播放，不用下载。英文字幕已放进画面，在 GitHub 播放器里也能看到。
+点击下面的封面展开播放器，再点播放即可观看，不用下载。英文字幕已放进画面，在 GitHub 播放器里也能看到。
+
+<details>
+<summary><strong>▶ 点击封面展开视频 · Belle 英文讲解 · 8:31</strong><br/><picture><img src="cover.png" alt="视频封面：人的 codebook、全文获取、编码核验与团队反馈" width="100%" /></picture></summary>
 
 https://github.com/user-attachments/assets/3285d16d-d72a-48ec-9d7c-1b256f6b8430
+
+</details>
 
 ## 三个部分
 

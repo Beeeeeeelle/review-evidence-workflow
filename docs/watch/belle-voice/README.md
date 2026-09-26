@@ -6,9 +6,14 @@
 
 After title-and-abstract screening, how do you find the full texts, apply your codebook, coordinate colleagues and check AI's work? This walkthrough starts with those tasks, shows a real example, then explains how the workflow works through the TALL and Agency projects.
 
-Play directly below. English captions are included in the picture, so they also appear in GitHub's player.
+Click the cover below to open the inline player, then press Play. English captions are included in the picture, so they also appear in GitHub's player.
+
+<details>
+<summary><strong>▶ Click the cover to open the video · Belle’s walkthrough · 8:31</strong><br/><picture><img src="cover.png" alt="Video cover: human codebook development, PDF retrieval, evidence verification and team feedback" width="100%" /></picture></summary>
 
 https://github.com/user-attachments/assets/3285d16d-d72a-48ec-9d7c-1b256f6b8430
+
+</details>
 
 ## Three parts
 

@@ -35,7 +35,13 @@
     "belle-voice.en": {
       "url": "https://github.com/user-attachments/assets/3285d16d-d72a-48ec-9d7c-1b256f6b8430",
       "source": "release:belle-voice-2026-09-25/from-papers-to-decisions-belle.captioned.en.mp4",
-      "sha256": "80e0431ad2930278f1ab20bb05636db9377ba4595608834007a06fd00ae099e9"
+      "sha256": "80e0431ad2930278f1ab20bb05636db9377ba4595608834007a06fd00ae099e9",
+      "cover": {
+        "path": "docs/watch/belle-voice/cover.png",
+        "sha256": "b60e9229a8dfa812c1db18bee6c39aef41161dea780414f794af9b7691ebca0c",
+        "presentation": "Image in a closed details summary. Click to reveal the unchanged native GitHub player.",
+        "reason": "GitHub Markdown strips poster attributes from native user-attachment video embeds."
+      }
     }
   },
   "previous_editions": {

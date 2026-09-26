@@ -6,7 +6,12 @@
 
 From initial screening to full texts, source checking, team feedback, and the TALL and Agency examples. Narrated by Belle, with English captions visible in the video.
 
+<details>
+<summary><strong>▶ Click the cover to open the video · Belle’s walkthrough · 8:31</strong><br/><picture><img src="belle-voice/cover.png" alt="Video cover: human codebook development, PDF retrieval, evidence verification and team feedback" width="100%" /></picture></summary>
+
 https://github.com/user-attachments/assets/3285d16d-d72a-48ec-9d7c-1b256f6b8430
+
+</details>
 
 [Transcript, chapters, source notes and offline copies](belle-voice/README.md).
 

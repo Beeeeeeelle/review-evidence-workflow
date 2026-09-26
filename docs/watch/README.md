@@ -2,7 +2,7 @@
 
 # From papers to judgments
 
-The Belle edition brings the introduction and the real workbench tour into one chapter player. Choose a film, select English or Chinese, and start at any chapter. Language switching keeps the corresponding chapter selected. The approved original films remain in [Introduction](../intro/README.md) and [Workbench](../demo/README.md).
+Watch the introduction and the real workbench tour directly on this page. Both films are available in English and Chinese. The approved original films remain in [Introduction](../intro/README.md) and [Workbench](../demo/README.md).
 
 Play both films directly below—no download or local setup needed. Use the language link at the top for the Chinese edition.
 
@@ -30,7 +30,7 @@ https://github.com/user-attachments/assets/1bc47e8e-7276-4822-9731-5e6af63e3d78
 
 ## Optional: the local chapter player
 
-From the repository root, start the local chapter player:
+For a combined player with clickable chapters and language switching that retains the corresponding chapter, start it from the repository root:
 
 ```sh
 python3 docs/watch/serve.py --port 8942

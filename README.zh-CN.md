@@ -6,13 +6,11 @@
 
 这是一个支持全文筛选、质量评价和信息提取的可复用 agent skill。人制定和发展规则；AI 整理证据、提出编码建议；审阅者在浏览器中核验，或先独立编码。你发包，他们导出 JSON 发还，再由团队对照证据解决分歧。
 
-**新版视觉导览：[跟着 Belle 看视频](docs/watch/README.zh-CN.md)** — 痛点与真实例子 → 认识两个 skill → 跟着工作台操作；中英双版，原来的版本也完整保留。
+**Belle 本人英文讲解 · 8 分 31 秒 · 英文字幕。** 从初筛后找全文、核对 AI 的答案，到组员分工、回传和两个项目案例，直接点下方视频观看。[讲稿、章节与视频文件](docs/watch/belle-voice/README.zh-CN.md)。
 
-先看这个 55 秒开场：从三个熟悉的痛点，直接进入真实工作台。之后再看详细介绍与操作导览：
+https://github.com/user-attachments/assets/3285d16d-d72a-48ec-9d7c-1b256f6b8430
 
-https://github.com/user-attachments/assets/053342e2-b9c2-439d-9d5e-732d117daafc
-
-**想了解具体用法？再看 [五分钟入门导览](docs/intro/README.zh-CN.md)**：从文献清单开始，认识找全文与组织审阅这两个 skill 怎样配合、要提供什么、哪些地方需要人参与。提供中英双版。
+[此前的中英双版视频](docs/watch/README.zh-CN.md)继续保留。
 
 **[什么时候用](#什么时候用它) · [第一次怎么用](#第一次怎样开始) · [六幕故事图解](docs/story/README.zh-CN.md) · [试用示例](#怎样开始) · [看两个案例](#两个案例复用一套流程) · [看人机分工](#怎样让人持续参与判断) · [逐步使用指南](docs/README.zh-CN.md)**
 

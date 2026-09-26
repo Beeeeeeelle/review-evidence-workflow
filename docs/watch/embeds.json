@@ -31,6 +31,11 @@
       "url": "https://github.com/user-attachments/assets/053342e2-b9c2-439d-9d5e-732d117daafc",
       "source": "media/opening.zh-CN.mp4",
       "sha256": "bc72f386354f8a85f344a64386d2af5ef12df386a1732e4aa86228193f2beecf"
+    },
+    "belle-voice.en": {
+      "url": "https://github.com/user-attachments/assets/3285d16d-d72a-48ec-9d7c-1b256f6b8430",
+      "source": "release:belle-voice-2026-09-25/from-papers-to-decisions-belle.captioned.en.mp4",
+      "sha256": "80e0431ad2930278f1ab20bb05636db9377ba4595608834007a06fd00ae099e9"
     }
   },
   "previous_editions": {

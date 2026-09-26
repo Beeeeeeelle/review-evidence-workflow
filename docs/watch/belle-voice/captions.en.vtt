@@ -1,0 +1,467 @@
+WEBVTT
+
+00:00:02.080 --> 00:00:07.420
+Hi, I'm Belle. Let me show you how AI can
+help with a literature review—and how we
+
+00:00:07.420 --> 00:00:08.580
+check its work.
+
+00:00:09.400 --> 00:00:12.260
+You've screened the titles and abstracts.
+
+00:00:12.260 --> 00:00:13.740
+Now you need the full texts.
+
+00:00:14.380 --> 00:00:19.080
+The titles and DOIs are already in your
+database export.
+
+00:00:19.540 --> 00:00:23.400
+But you're still finding and downloading
+each paper, one by one.
+
+00:00:24.080 --> 00:00:28.480
+Then, once your team has developed a
+codebook, you're finding the same kinds of
+
+00:00:28.480 --> 00:00:32.700
+information and filling in the same coding
+table, paper after paper.
+
+00:00:33.560 --> 00:00:34.880
+And there's the teamwork.
+
+00:00:35.220 --> 00:00:40.840
+We need to divide up the papers or fields,
+send out review files,
+
+00:00:40.880 --> 00:00:42.720
+and collect everyone's feedback.
+
+00:00:43.340 --> 00:00:48.080
+We need to know who's finished and which
+answers we still disagree on.
+
+00:00:49.660 --> 00:00:51.980
+AI could help with all of this.
+
+00:00:52.740 --> 00:00:56.200
+But how do I know it's getting things
+right?
+
+00:00:57.360 --> 00:00:59.060
+Did it find the right paper?
+
+00:00:59.900 --> 00:01:02.460
+Did it understand the text and follow our
+codebook?
+
+00:01:03.160 --> 00:01:06.880
+And how do we check its answers without
+starting from scratch?
+
+00:01:08.560 --> 00:01:12.640
+That's why I wanted a workflow where AI
+prepares the work,
+
+00:01:12.880 --> 00:01:17.360
+and we can see the evidence, check the
+answers, and make corrections.
+
+00:01:19.000 --> 00:01:21.220
+I built two skills around that.
+
+00:01:21.680 --> 00:01:22.940
+Let me show you.
+
+00:01:23.380 --> 00:01:26.900
+Here's one item AI has prepared for me to
+check.
+
+00:01:27.660 --> 00:01:33.040
+I click the page number, and the PDF jumps
+to
+
+00:01:33.040 --> 00:01:38.500
+that page. If it finds the matching quote,
+it highlights
+
+00:01:38.500 --> 00:01:39.380
+it too.
+
+00:01:40.040 --> 00:01:45.000
+I read it, check the context, and decide:
+does this look right,
+
+00:01:45.380 --> 00:01:47.580
+or does something need to change?
+
+00:01:48.440 --> 00:01:52.480
+A skill is a set of instructions an AI
+agent can follow.
+
+00:01:53.660 --> 00:01:57.180
+One helps me find and check PDFs.
+
+00:01:59.880 --> 00:02:03.440
+The other uses our rules to prepare the
+review work,
+
+00:02:04.120 --> 00:02:07.120
+then helps us collect and compare feedback.
+
+00:02:08.360 --> 00:02:10.700
+Let's start with the PDFs.
+
+00:02:11.620 --> 00:02:14.980
+I give the AI the list from our initial
+screening,
+
+00:02:15.100 --> 00:02:20.400
+with the titles, DOIs where available, and
+any PDFs I already have.
+
+00:02:20.640 --> 00:02:25.960
+Then I ask it to find the missing full
+texts and check that each file matches the
+
+00:02:25.960 --> 00:02:27.120
+paper on the list.
+
+00:02:28.020 --> 00:02:33.720
+It tries different places: open-access
+copies, publisher websites,
+
+00:02:33.960 --> 00:02:36.720
+or resources through my university library.
+
+00:02:37.180 --> 00:02:42.400
+It keeps track of what it tried, so we can
+pick up where we left off.
+
+00:02:43.520 --> 00:02:47.620
+In my own work, it found library access I
+didn't know I had.
+
+00:02:48.580 --> 00:02:50.320
+Sometimes I still need to step in.
+
+00:02:50.440 --> 00:02:53.460
+Maybe I need to log in, or download a file
+myself.
+
+00:02:53.700 --> 00:02:59.220
+It tells me which paper, where to go, and
+where to put the file afterward.
+
+00:03:00.100 --> 00:03:03.520
+Once I give it the file, it checks it.
+
+00:03:03.520 --> 00:03:05.400
+Is this the right paper?
+
+00:03:05.960 --> 00:03:08.960
+The right version? Is anything missing?
+
+00:03:09.740 --> 00:03:14.340
+If it's still unsure, that stays on the
+list for us to check.
+
+00:03:15.620 --> 00:03:17.040
+Now we have the papers.
+
+00:03:17.300 --> 00:03:21.460
+Next comes full-text screening and, for the
+papers we keep,
+
+00:03:22.020 --> 00:03:23.680
+coding the information we need.
+
+00:03:25.420 --> 00:03:27.780
+First, we need our own rules.
+
+00:03:27.900 --> 00:03:29.400
+What are we looking for?
+
+00:03:29.540 --> 00:03:32.680
+What counts? What do we need to record?
+
+00:03:34.660 --> 00:03:37.680
+That's our codebook. We develop it
+ourselves.
+
+00:03:39.120 --> 00:03:43.440
+For example, we might start with ten papers
+and work through them together.
+
+00:03:43.780 --> 00:03:46.200
+If a rule is unclear, we change it.
+
+00:03:46.420 --> 00:03:51.560
+Once we're comfortable with the rules, AI
+can find the relevant passages
+
+00:03:52.080 --> 00:03:54.520
+and draft the coding for the next batch.
+
+00:03:54.840 --> 00:03:58.820
+We check the answers against the rules and
+the original text.
+
+00:04:00.380 --> 00:04:01.960
+Ten is just an example.
+
+00:04:03.580 --> 00:04:07.400
+You choose the batch size and how much help
+you want from AI.
+
+00:04:09.720 --> 00:04:11.740
+We can also choose how people review.
+
+00:04:12.360 --> 00:04:15.860
+Sometimes I want a colleague to check the
+AI's suggestions.
+
+00:04:16.040 --> 00:04:19.340
+Other times, I want them to make their own
+judgment first.
+
+00:04:19.760 --> 00:04:24.020
+In that case, I leave out the AI's
+suggestions and everyone else's feedback.
+
+00:04:25.660 --> 00:04:28.460
+I can give each person a specific task.
+
+00:04:29.040 --> 00:04:33.860
+For example, one colleague checks methods,
+while another checks concepts.
+
+00:04:34.040 --> 00:04:36.420
+Or we can assign different sets of papers.
+
+00:04:37.000 --> 00:04:41.600
+Each person gets a review package with
+their papers, fields,
+
+00:04:41.600 --> 00:04:46.840
+and instructions. They open it in their
+browser and send the feedback file back
+
+00:04:46.840 --> 00:04:50.340
+when they're done. They don't need their
+own AI setup.
+
+00:04:51.400 --> 00:04:55.340
+I can then ask AI to check what's been
+returned,
+
+00:04:55.520 --> 00:05:00.600
+flag missing responses, and bring the
+different answers together.
+
+00:05:01.140 --> 00:05:05.340
+Our team goes back to the evidence to work
+through any disagreements.
+
+00:05:06.220 --> 00:05:08.380
+So people are involved throughout.
+
+00:05:08.720 --> 00:05:12.360
+We develop the rules, read the evidence,
+and work through disagreements.
+
+00:05:13.040 --> 00:05:16.900
+AI helps prepare and organize the work
+around that.
+
+00:05:17.900 --> 00:05:19.860
+Now let's look at the actual page.
+
+00:05:20.120 --> 00:05:22.040
+There are three main areas.
+
+00:05:22.200 --> 00:05:23.700
+Papers on the left.
+
+00:05:24.120 --> 00:05:26.800
+The items we're checking in the middle.
+
+00:05:26.800 --> 00:05:28.300
+And the PDF on the right.
+
+00:05:28.820 --> 00:05:31.120
+At the top left, I can filter the list.
+
+00:05:31.120 --> 00:05:35.600
+I can see everything, pick up the papers
+that still need checking,
+
+00:05:35.900 --> 00:05:38.840
+or look at the included and excluded
+papers.
+
+00:05:40.260 --> 00:05:42.900
+Let's open an excluded paper first.
+
+00:05:43.140 --> 00:05:45.040
+We still need to check the reason.
+
+00:05:45.280 --> 00:05:46.760
+Why was it excluded?
+
+00:05:47.060 --> 00:05:49.000
+Does the paper support that decision?
+
+00:05:50.300 --> 00:05:53.600
+Now let's open an included one.
+
+00:05:54.140 --> 00:05:58.420
+Under Screening, I can expand these
+sections and check each requirement.
+
+00:05:58.960 --> 00:06:01.960
+I can see the reason and where it came
+from.
+
+00:06:02.540 --> 00:06:05.280
+These requirements come from our own
+codebook.
+
+00:06:06.240 --> 00:06:09.640
+In this example, we're looking at review
+papers.
+
+00:06:09.980 --> 00:06:13.300
+Review profile gives us the main question
+and methods.
+
+00:06:13.740 --> 00:06:19.140
+Concepts shows how the paper talks about
+the ideas we're interested in.
+
+00:06:19.140 --> 00:06:23.660
+And Review-level synthesis brings together
+what this particular review says.
+
+00:06:24.760 --> 00:06:29.880
+Later, we still need to compare across
+reviews to build our own conclusions.
+
+00:06:30.980 --> 00:06:33.360
+Let's check one item properly.
+
+00:06:34.000 --> 00:06:37.680
+This one points to PDF page eighteen.
+
+00:06:37.680 --> 00:06:39.420
+I click it, and here it is.
+
+00:06:39.420 --> 00:06:41.760
+The highlight helps me find the sentence.
+
+00:06:41.860 --> 00:06:46.120
+I still read around it to see whether we've
+understood it correctly.
+
+00:06:46.940 --> 00:06:50.900
+If I need more room, I drag this divider
+over.
+
+00:06:50.900 --> 00:06:54.260
+I can zoom in, scroll, or turn the page.
+
+00:06:54.280 --> 00:06:56.440
+The item I'm checking stays in view.
+
+00:06:56.980 --> 00:06:59.400
+If it looks right, I click Correct.
+
+00:06:59.760 --> 00:07:03.140
+If I think it needs changing, I click
+Revise.
+
+00:07:03.780 --> 00:07:09.260
+This box opens, and I explain what I would
+change and why.
+
+00:07:10.280 --> 00:07:14.760
+When everything has feedback, it moves to
+Verification complete.
+
+00:07:15.640 --> 00:07:17.860
+That means the feedback is in.
+
+00:07:17.900 --> 00:07:20.480
+We may still have disagreements to work
+through.
+
+00:07:20.680 --> 00:07:24.800
+When I'm done, I export the feedback and
+send the file back.
+
+00:07:24.960 --> 00:07:28.040
+AI can help organize the different
+responses.
+
+00:07:28.260 --> 00:07:31.480
+Then we go back to the evidence and decide
+together.
+
+00:07:32.960 --> 00:07:36.440
+I'm using two of my own review projects as
+examples.
+
+00:07:37.820 --> 00:07:41.820
+TALL looks at how technology supports
+language learning.
+
+00:07:41.880 --> 00:07:45.000
+For that project, we're reviewing original
+studies.
+
+00:07:45.460 --> 00:07:50.520
+The Agency project looks at existing
+reviews of AI in education,
+
+00:07:50.520 --> 00:07:53.980
+focusing on learners' choices and control
+over their learning.
+
+00:07:54.460 --> 00:07:59.980
+The questions and coding rules are
+different, but the steps—finding papers,
+
+00:08:00.080 --> 00:08:03.340
+checking evidence, and collecting
+feedback—can be reused.
+
+00:08:04.640 --> 00:08:08.860
+If you'd like to try it, start with what
+you have: your paper list,
+
+00:08:08.860 --> 00:08:11.400
+your PDFs, and your research question.
+
+00:08:11.820 --> 00:08:14.460
+Bring your codebook too, if you already
+have one.
+
+00:08:14.940 --> 00:08:16.860
+Still missing papers? Start there.
+
+00:08:17.060 --> 00:08:18.640
+Already have the PDFs?
+
+00:08:18.640 --> 00:08:20.860
+Start with the part you want help
+reviewing.
+
+00:08:21.420 --> 00:08:25.500
+That's what I want this to help with: less
+time going back and forth,
+
+00:08:25.620 --> 00:08:29.540
+and more time reading, thinking, and
+talking through the work together.

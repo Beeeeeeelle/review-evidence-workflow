@@ -1,0 +1,314 @@
+[
+  {
+    "id": "00-opening",
+    "title": "Hi, I’m Belle.",
+    "start": 0,
+    "end": 9.375,
+    "duration": 9.375,
+    "part": 1
+  },
+  {
+    "id": "01-find-full-texts",
+    "title": "Find the full texts",
+    "start": 9.375,
+    "end": 24.041666666666668,
+    "duration": 14.666666666666668,
+    "part": 1
+  },
+  {
+    "id": "02-repeat-the-coding",
+    "title": "Apply the codebook",
+    "start": 24.041666666666668,
+    "end": 33.5,
+    "duration": 9.458333333333332,
+    "part": 1
+  },
+  {
+    "id": "03-bring-feedback-together",
+    "title": "Bring the feedback together",
+    "start": 33.5,
+    "end": 49.625,
+    "duration": 16.125,
+    "part": 1
+  },
+  {
+    "id": "04-check-the-source",
+    "title": "Check the source",
+    "start": 49.625,
+    "end": 68.5,
+    "duration": 18.875,
+    "part": 1
+  },
+  {
+    "id": "05-real-evidence",
+    "title": "Let me show you one item.",
+    "start": 68.5,
+    "end": 108.41666666666667,
+    "duration": 39.91666666666667,
+    "part": 1
+  },
+  {
+    "id": "06-two-skills",
+    "title": "Two skills. One review process.",
+    "start": 108.41666666666667,
+    "end": 128.33333333333334,
+    "duration": 19.91666666666667,
+    "part": 1
+  },
+  {
+    "id": "07-starting-materials",
+    "title": "Start with what you already have.",
+    "start": 128.33333333333334,
+    "end": 148.0,
+    "duration": 19.666666666666657,
+    "part": 2
+  },
+  {
+    "id": "08-retrieval-routes",
+    "title": "A blocked route is a reason to adapt.",
+    "start": 148.0,
+    "end": 168.54166666666666,
+    "duration": 20.541666666666657,
+    "part": 2
+  },
+  {
+    "id": "09-human-access",
+    "title": "Some steps need your access.",
+    "start": 168.54166666666666,
+    "end": 180.04166666666666,
+    "duration": 11.5,
+    "part": 2
+  },
+  {
+    "id": "10-identity-check",
+    "title": "Downloaded is not the same as verified.",
+    "start": 180.04166666666666,
+    "end": 195.58333333333334,
+    "duration": 15.541666666666686,
+    "part": 2
+  },
+  {
+    "id": "10b-screening-bridge",
+    "title": "Screening before extraction",
+    "start": 195.58333333333334,
+    "end": 205.375,
+    "duration": 9.791666666666657,
+    "part": 2
+  },
+  {
+    "id": "11-human-codebook",
+    "title": "People develop and clarify the rules.",
+    "start": 205.375,
+    "end": 226.375,
+    "duration": 21.0,
+    "part": 2
+  },
+  {
+    "id": "12-ai-next-batch",
+    "title": "Then AI can help with the next batch.",
+    "start": 226.375,
+    "end": 249.66666666666666,
+    "duration": 23.291666666666657,
+    "part": 2
+  },
+  {
+    "id": "13-assisted-mode",
+    "title": "Check an AI proposal against its source.",
+    "start": 249.66666666666666,
+    "end": 256.0,
+    "duration": 6.333333333333343,
+    "part": 2
+  },
+  {
+    "id": "14-independent-mode",
+    "title": "Make your own judgment first.",
+    "start": 256.0,
+    "end": 265.625,
+    "duration": 9.625,
+    "part": 2
+  },
+  {
+    "id": "15-assign-tasks",
+    "title": "Give each person a clear task.",
+    "start": 265.625,
+    "end": 276.9583333333333,
+    "duration": 11.333333333333314,
+    "part": 2
+  },
+  {
+    "id": "16-package-and-return",
+    "title": "Open the package. Return the feedback.",
+    "start": 276.9583333333333,
+    "end": 291.375,
+    "duration": 14.416666666666686,
+    "part": 2
+  },
+  {
+    "id": "17-check-coverage",
+    "title": "What has come back—and what is missing?",
+    "start": 291.375,
+    "end": 301.0833333333333,
+    "duration": 9.708333333333314,
+    "part": 2
+  },
+  {
+    "id": "18-resolve-differences",
+    "title": "A difference is a question to discuss.",
+    "start": 301.0833333333333,
+    "end": 306.1666666666667,
+    "duration": 5.083333333333371,
+    "part": 2
+  },
+  {
+    "id": "19-human-ai-roles",
+    "title": "People are involved throughout.",
+    "start": 306.1666666666667,
+    "end": 317.875,
+    "duration": 11.708333333333314,
+    "part": 2
+  },
+  {
+    "id": "20-three-areas",
+    "title": "Three places to look.",
+    "start": 317.875,
+    "end": 328.7916666666667,
+    "duration": 10.916666666666686,
+    "part": 3
+  },
+  {
+    "id": "21-filters",
+    "title": "Pick up the work you need to check.",
+    "start": 328.7916666666667,
+    "end": 340.2083333333333,
+    "duration": 11.416666666666629,
+    "part": 3
+  },
+  {
+    "id": "22-excluded",
+    "title": "An exclusion still needs a reason.",
+    "start": 340.2083333333333,
+    "end": 350.25,
+    "duration": 10.041666666666686,
+    "part": 3
+  },
+  {
+    "id": "23-foundations",
+    "title": "Start with the screening rules.",
+    "start": 350.25,
+    "end": 358.9166666666667,
+    "duration": 8.666666666666686,
+    "part": 3
+  },
+  {
+    "id": "24-pathways",
+    "title": "Check which pathway the evidence supports.",
+    "start": 358.9166666666667,
+    "end": 366.2083333333333,
+    "duration": 7.291666666666629,
+    "part": 3
+  },
+  {
+    "id": "25-profile",
+    "title": "How was this review conducted?",
+    "start": 366.2083333333333,
+    "end": 373.7083333333333,
+    "duration": 7.5,
+    "part": 3
+  },
+  {
+    "id": "26-concepts",
+    "title": "Check how the ideas are being mapped.",
+    "start": 373.7083333333333,
+    "end": 379.0833333333333,
+    "duration": 5.375,
+    "part": 3
+  },
+  {
+    "id": "27-review-synthesis",
+    "title": "What does this particular review say?",
+    "start": 379.0833333333333,
+    "end": 390.9583333333333,
+    "duration": 11.875,
+    "part": 3
+  },
+  {
+    "id": "28-page-evidence",
+    "title": "A page link takes you back to the passage.",
+    "start": 390.9583333333333,
+    "end": 406.9166666666667,
+    "duration": 15.958333333333371,
+    "part": 3
+  },
+  {
+    "id": "29-reader-controls",
+    "title": "Make room. Zoom. Keep reading.",
+    "start": 406.9166666666667,
+    "end": 416.9583333333333,
+    "duration": 10.041666666666629,
+    "part": 3
+  },
+  {
+    "id": "30-correct",
+    "title": "Confirm the item you have checked.",
+    "start": 416.9583333333333,
+    "end": 419.7083333333333,
+    "duration": 2.75,
+    "part": 3
+  },
+  {
+    "id": "31-revise",
+    "title": "Explain what you would change.",
+    "start": 419.7083333333333,
+    "end": 430.25,
+    "duration": 10.541666666666686,
+    "part": 3
+  },
+  {
+    "id": "32-complete-and-export",
+    "title": "Feedback complete. Ready to return.",
+    "start": 430.25,
+    "end": 452.9166666666667,
+    "duration": 22.666666666666686,
+    "part": 3
+  },
+  {
+    "id": "33-tall-case",
+    "title": "TALL: technology and language learning.",
+    "start": 452.9166666666667,
+    "end": 465.4166666666667,
+    "duration": 12.5,
+    "part": 3
+  },
+  {
+    "id": "34-agency-case",
+    "title": "Agency: AI in education and learner agency.",
+    "start": 465.4166666666667,
+    "end": 474.4166666666667,
+    "duration": 9.0,
+    "part": 3
+  },
+  {
+    "id": "34b-case-comparison",
+    "title": "What can be reused across the cases?",
+    "start": 474.4166666666667,
+    "end": 484.5833333333333,
+    "duration": 10.166666666666629,
+    "part": 3
+  },
+  {
+    "id": "35-try-it",
+    "title": "Start with the part you need help with.",
+    "start": 484.5833333333333,
+    "end": 501.375,
+    "duration": 16.791666666666686,
+    "part": 3
+  },
+  {
+    "id": "36-closing",
+    "title": "AI can help. People still decide.",
+    "start": 501.375,
+    "end": 510.792,
+    "duration": 9.416999999999973,
+    "part": 3
+  }
+]

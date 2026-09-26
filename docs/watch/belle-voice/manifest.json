@@ -1,0 +1,30 @@
+{
+  "title": "From papers to decisions — with Belle",
+  "narrator": "Belle Li",
+  "language": "en",
+  "duration_seconds": 510.791667,
+  "edition": "Original voice with English captions",
+  "embed_url": "https://github.com/user-attachments/assets/3285d16d-d72a-48ec-9d7c-1b256f6b8430",
+  "release_tag": "belle-voice-2026-09-25",
+  "files": {
+    "from-papers-to-decisions-belle.captioned.en.mp4": {
+      "size_bytes": 22512719,
+      "sha256": "80e0431ad2930278f1ab20bb05636db9377ba4595608834007a06fd00ae099e9"
+    },
+    "from-papers-to-decisions-belle.mp4": {
+      "size_bytes": 21832357,
+      "sha256": "22ebfc6720b283bb8920f34aae94c1cb5f7fd3cfce0acfdc4d7acd6c5ff26f04"
+    },
+    "captions.en.srt": {
+      "size_bytes": 10871,
+      "sha256": "a188e718338045dc58972f330298b338c84ae03775912f148674d47eff79ce78"
+    },
+    "captions.en.vtt": {
+      "size_bytes": 10467,
+      "sha256": "47038e6d3ec2686e2fab0ecd2442c7bf03db869b4a35888e05292fd5fdb6d561"
+    }
+  },
+  "audio_preserved": true,
+  "audio_aac_sha256": "d1fc85c77a8d74f86d49931788d1b63db568f6dd0af4c92911181e6a65072dcd",
+  "caption_layout": "Original composition fitted proportionally above a dedicated caption area; no source content cropped."
+}

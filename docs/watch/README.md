@@ -2,7 +2,17 @@
 
 # From papers to judgments
 
-Start with the problem and a real example, then learn the workflow at your own pace. Three films, in English and Chinese. Play them here without downloading or running a local server.
+## Belle's own walkthrough · English · 8:31
+
+From initial screening to full texts, source checking, team feedback, and the TALL and Agency examples. Narrated by Belle, with English captions visible in the video.
+
+https://github.com/user-attachments/assets/3285d16d-d72a-48ec-9d7c-1b256f6b8430
+
+[Transcript, chapters, source notes and offline copies](belle-voice/README.md).
+
+## Earlier bilingual sequence
+
+The following three films remain available in English and Chinese.
 
 ## 01 · Why this exists · 1:01
 

@@ -6,6 +6,8 @@
 
 A reusable agent skill for full-text screening, appraisal and extraction. Humans develop the rules; AI prepares evidence and proposals; reviewers verify or code independently in a browser. Send each person a package, receive their JSON, then resolve differences with the evidence in view.
 
+**First time here? [Watch the five-minute introduction](docs/intro/README.md)** to see how PDF Retrieval and Review Evidence Workflow connect, what to provide, and where people participate. English and Chinese editions are available.
+
 **[When to use it](#is-this-for-your-review) · [Start here](#how-do-i-start) · [Follow the illustrated story](docs/story/README.md) · [Try the runnable demos](#try-it) · [Explore the two cases](#two-cases-one-reusable-workflow) · [See the workflow](#how-humans-stay-in-the-loop) · [Read the guide](review-evidence-workflow/references/getting-started.md)**
 
 ## Is this for your review?
@@ -44,13 +46,13 @@ The independent **[Literature PDF Retrieval skill](https://github.com/Beeeeeeell
 
 ## Watch the real workbench in use
 
-**[▶ Real Pilot walkthrough with Chinese narration](docs/demo/README.md)**: excluded and included reports, four coding stages, Correct/Revise, source-page jumps, quotation highlights, resizing and zoom.
+**[▶ Real Pilot walkthrough — English / 中文](docs/demo/README.md)**: excluded and included reports, four coding stages, Correct/Revise, source-page jumps, quotation highlights, resizing and zoom.
 
 ![The actual Pilot full-text coding interface](docs/demo/frames/09-included-screening.jpg)
 
 ![An actual quotation highlighted on PDF page 18, with the reader widened and zoomed](docs/demo/frames/17-zoom150.jpg)
 
-This is the original Agency project UI, with demonstration responses saved separately. The video combines genuine browser captures and synthetic Chinese narration. The comet panels below explain the method; [synthetic portable examples](docs/TRY_DEMOS.md) provide practice.
+This is the original Agency project UI, with demonstration responses saved separately. The videos combine genuine browser captures and synthetic English or Chinese narration. The comet panels below explain the method; [synthetic portable examples](docs/TRY_DEMOS.md) provide practice.
 
 ## Follow Belle through a review
 

@@ -16,6 +16,9 @@ W,H,FPS,TOP = 1280,900,24,70
 BG='#172026'; INK='#f4f1e9'; MUTED='#bac4c8'; ORANGE='#ffac73'; TEAL='#79d8cc'
 FONT_PATH=os.environ.get('GUIDE_FONT','/System/Library/Fonts/Hiragino Sans GB.ttc')
 FONTS={n:ImageFont.truetype(FONT_PATH,n) for n in (16,18,20,22,25,27,29)}
+LANG='zh-CN'
+VOICE='zh-CN-XiaoxiaoNeural'
+RATE='-2%'
 SCENES=json.loads((ROOT.parent/'storyboard.json').read_text())
 PARTS=[dict(part,chapter=i+1,title=scene['title'],stage=scene['stage']) for i,scene in enumerate(SCENES) for part in scene['parts']]
 for i,p in enumerate(PARTS):
@@ -30,14 +33,14 @@ async def voices():
     sem=asyncio.Semaphore(3)
     async def one(i,p):
         target=OUT/f'voice-{i:02}.mp3'
-        digest=hashlib.sha256(p['speech'].encode()).hexdigest()
+        digest=hashlib.sha256((VOICE+'|'+RATE+'|'+p['speech']).encode()).hexdigest()
         stamp=target.with_suffix('.sha256')
         if target.exists() and stamp.exists() and stamp.read_text()==digest:
             return
         async with sem:
             for attempt in range(3):
                 try:
-                    await asyncio.wait_for(edge_tts.Communicate(p['speech'],'zh-CN-XiaoxiaoNeural',rate='-2%').save(str(target)),45)
+                    await asyncio.wait_for(edge_tts.Communicate(p['speech'],VOICE,rate=RATE).save(str(target)),45)
                     stamp.write_text(digest)
                     print(f'Voice {i+1}/{len(PARTS)} ready',flush=True)
                     return
@@ -76,6 +79,15 @@ def camera(p,t,dur):
     return [a+(b-a)*k for a,b in zip(initial,[x0,y0,x1,y1])]
 
 def lines(text,font,width,draw):
+    if LANG=='en':
+        result=[];current=''
+        for word in text.split():
+            candidate=(current+' '+word).strip()
+            if current and draw.textlength(candidate,font=font)>width:
+                result.append(current);current=word
+            else:current=candidate
+        if current:result.append(current)
+        return result
     result=[]; current=''
     for ch in text:
         if draw.textlength(current+ch,font=font)>width and current:
@@ -110,9 +122,11 @@ def render(p,t,source):
         if b[2]>b[0] and b[3]>b[1]:md.rounded_rectangle(b,12,fill=0)
     canvas=Image.composite(Image.new('RGB',(W,H),'#0b1218'),canvas,mask)
     d=ImageDraw.Draw(canvas)
-    d.text((25,16),p['title'],font=FONTS[29],fill=INK)
     meta=f"{p['chapter']:02d} / {len(SCENES):02d}   ·   {p['stage']}"
-    mw=d.textlength(meta,font=FONTS[18]);d.text((W-mw-24,23),meta,font=FONTS[18],fill=ORANGE)
+    mw=d.textlength(meta,font=FONTS[18])
+    title_font=next((FONTS[n] for n in (29,27,25,22) if d.textlength(p['title'],font=FONTS[n])<W-mw-75),FONTS[22])
+    d.text((25,16),p['title'],font=title_font,fill=INK)
+    d.text((W-mw-24,23),meta,font=FONTS[18],fill=ORANGE)
     d.line((0,TOP-1,W,TOP-1),fill='#36434b',width=1)
     # Original DEMO badge stays visible in the capture; editorial identification also stays outside it.
     label_bounds=[]
@@ -123,7 +137,7 @@ def render(p,t,source):
             d.arc(b,start=-80,end=-80+359*progress,fill=color,width=4)
         else:
             d.rounded_rectangle(b,10,outline=color,width=3)
-        label=p['label'] if idx==0 else p.get('second_label','对应原文')
+        label=p['label'] if idx==0 else p.get('second_label','Source passage' if LANG=='en' else '对应原文')
         lw=d.textlength(label,font=FONTS[22])+30
         lx=max(12,min(W-lw-12,b[0]));ly=b[1]-48
         if ly<TOP+10:ly=b[3]+14
@@ -158,14 +172,15 @@ def render(p,t,source):
         d.ellipse((x-8,y-70+125*f,x+8,y-54+125*f),fill=ORANGE)
     d.rectangle((0,790,W,H),fill=BG)
     subtitles=lines(p['speech'],FONTS[27],1140,d)
+    if len(subtitles)>2:raise ValueError('Split this narration beat into shorter parts: '+p['speech'])
     for j,line in enumerate(subtitles):
         tw=d.textlength(line,font=FONTS[27]);d.text(((W-tw)/2,801+j*35),line,font=FONTS[27],fill=INK)
-    d.text((24,874),'真实界面 · 后期引导标注 · 演示反馈单独保存',font=FONTS[16],fill=MUTED)
-    d.text((1060,874),'人核验 · AI 协助',font=FONTS[16],fill=MUTED)
+    d.text((24,874),'Real UI · Editorial guidance · Separate demo responses' if LANG=='en' else '真实界面 · 后期引导标注 · 演示反馈单独保存',font=FONTS[16],fill=MUTED)
+    d.text((1060,874),'You judge · AI helps' if LANG=='en' else '人核验 · AI 协助',font=FONTS[16],fill=MUTED)
     return canvas
 
 def preview():
-    for i in [0,1,3,6,10,11,12,13,18,23,26,28,30,31,33]:
+    for i in range(len(PARTS)):
         if i>=len(PARTS):continue
         p=PARTS[i];img=Image.open(FRAMES/(p['frame']+'.jpg')).convert('RGB')
         render(p,2,img).save(OUT/f'preview-{i:02}.jpg',quality=94)
@@ -185,7 +200,18 @@ def film(segments,limit=None):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('mode',choices=['voice','preview','proof','render'])
-    mode=parser.parse_args().mode
+    parser.add_argument('--lang',choices=['zh-CN','en'],default='zh-CN')
+    parser.add_argument('--out-dir',type=Path)
+    args=parser.parse_args();mode=args.mode;LANG=args.lang
+    if LANG=='en':
+        VOICE='en-US-JennyNeural';RATE='-2%'
+        FONT_PATH=os.environ.get('GUIDE_FONT','/System/Library/Fonts/Supplemental/Arial.ttf')
+        FONTS={n:ImageFont.truetype(FONT_PATH,n) for n in (16,18,20,22,25,27,29)}
+        SCENES=json.loads((ROOT.parent/'storyboard.en.json').read_text())
+        PARTS=[dict(part,chapter=i+1,title=scene['title'],stage=scene['stage']) for i,scene in enumerate(SCENES) for part in scene['parts']]
+        for i,p in enumerate(PARTS):
+            if i and PARTS[i-1]['chapter']==p['chapter']:p['start_camera']=PARTS[i-1].get('camera',[0,0,1280,720])
+    OUT=args.out_dir or ROOT/'.build'/LANG;OUT.mkdir(parents=True,exist_ok=True)
     if mode=='voice':asyncio.run(voices())
     elif mode=='preview':preview()
     else:film(timing(),2 if mode=='proof' else None)

@@ -50,4 +50,8 @@ python3 docs/demo/tools/render_guided_video.py proof
 python3 docs/demo/tools/render_guided_video.py render
 ```
 
-生成结果保存在 `docs/demo/tools/.build/`。先检查预览和短片，再渲染完整视频。更换项目时，要重新截图、标记坐标、校准讲解时间；不要直接套用本案例的界面坐标和研究判断。
+生成结果保存在 `docs/demo/tools/.build/zh-CN/`。先检查预览和短片，再渲染完整视频。更换项目时，要重新截图、标记坐标、校准讲解时间；不要直接套用本案例的界面坐标和研究判断。
+
+英文版使用 `storyboard.en.json`，在相同命令后加 `--lang en`。字幕按英文词组换行，标题和标注按实际宽度排版；配音与章节时间独立生成，不能沿用中文字幕的时间轴。用 `tools/export_media.py` 从完成的渲染中导出 MP4、SRT、VTT、章节与解说全文。
+
+两支全流程入门视频的 [制作与素材说明](../intro/PROVENANCE.md) 另列：它们把解释性流程图、Belle 插画与真实界面连接起来，帮助观众先认识两项 skill 的分工。

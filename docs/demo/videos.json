@@ -1,0 +1,326 @@
+[
+  {
+    "kind": "intro",
+    "lang": "zh-CN",
+    "duration": 303.7500033333333,
+    "src": "../intro/two-skills-introduction.zh-CN.mp4",
+    "poster": "../intro/poster.zh-CN.jpg",
+    "transcript": "../intro/TRANSCRIPT.zh-CN.md",
+    "guide": "../intro/README.zh-CN.md",
+    "chapters": [
+      {
+        "number": 1,
+        "start": 0,
+        "title": "手上有文献，下一步呢？"
+      },
+      {
+        "number": 2,
+        "start": 18.91667,
+        "title": "先把手头材料交给它"
+      },
+      {
+        "number": 3,
+        "start": 40.20833,
+        "title": "找不到，就有依据地换路径"
+      },
+      {
+        "number": 4,
+        "start": 62.58333,
+        "title": "需要人时，把这一小步说清楚"
+      },
+      {
+        "number": 5,
+        "start": 84.5,
+        "title": "拿到文件，还要确认拿对了"
+      },
+      {
+        "number": 6,
+        "start": 119.04167,
+        "title": "规则由人发展，轮次由你决定"
+      },
+      {
+        "number": 7,
+        "start": 140.45833,
+        "title": "审阅方式可以选"
+      },
+      {
+        "number": 8,
+        "start": 163.70833,
+        "title": "把一条判断带回原文"
+      },
+      {
+        "number": 9,
+        "start": 195.16667,
+        "title": "每个人可以有自己的任务"
+      },
+      {
+        "number": 10,
+        "start": 219.54167,
+        "title": "回传之后，人来解决分歧"
+      },
+      {
+        "number": 11,
+        "start": 240.625,
+        "title": "两个案例，看到什么能复用"
+      },
+      {
+        "number": 12,
+        "start": 266.04167,
+        "title": "选一个入口，开始你的第一轮"
+      }
+    ]
+  },
+  {
+    "kind": "intro",
+    "lang": "en",
+    "duration": 296.625,
+    "src": "../intro/two-skills-introduction.en.mp4",
+    "poster": "../intro/poster.en.jpg",
+    "transcript": "../intro/TRANSCRIPT.en.md",
+    "guide": "../intro/README.md",
+    "chapters": [
+      {
+        "number": 1,
+        "start": 0,
+        "title": "You have a study list. What next?"
+      },
+      {
+        "number": 2,
+        "start": 17.20833,
+        "title": "Start with the materials you have"
+      },
+      {
+        "number": 3,
+        "start": 36.45833,
+        "title": "Change routes when the evidence calls for it"
+      },
+      {
+        "number": 4,
+        "start": 58.91667,
+        "title": "Make the human access step specific"
+      },
+      {
+        "number": 5,
+        "start": 83.0,
+        "title": "Obtaining a file is only the first check"
+      },
+      {
+        "number": 6,
+        "start": 117.83333,
+        "title": "People develop the rules and choose the rounds"
+      },
+      {
+        "number": 7,
+        "start": 139.33333,
+        "title": "Choose how reviewers work"
+      },
+      {
+        "number": 8,
+        "start": 163.58333,
+        "title": "Follow one judgment back to the source"
+      },
+      {
+        "number": 9,
+        "start": 194.95833,
+        "title": "Give each reviewer the right task"
+      },
+      {
+        "number": 10,
+        "start": 218.41667,
+        "title": "People resolve differences after returns arrive"
+      },
+      {
+        "number": 11,
+        "start": 238.5,
+        "title": "Two cases show what can transfer"
+      },
+      {
+        "number": 12,
+        "start": 262.29167,
+        "title": "Choose an entry point and start your first round"
+      }
+    ]
+  },
+  {
+    "kind": "pilot",
+    "lang": "zh-CN",
+    "duration": 216.208,
+    "src": "pilot-guided-walkthrough.zh-CN.mp4",
+    "poster": "guided-preview-evidence.jpg",
+    "transcript": "TRANSCRIPT.zh-CN.md",
+    "guide": "README.zh-CN.md",
+    "chapters": [
+      {
+        "number": 1,
+        "start": 0,
+        "title": "这条编码，原文真的支持吗？"
+      },
+      {
+        "number": 2,
+        "start": 15.79167,
+        "title": "先认三个地方"
+      },
+      {
+        "number": 3,
+        "start": 26.41667,
+        "title": "先挑出这轮要看的文献"
+      },
+      {
+        "number": 4,
+        "start": 41.75,
+        "title": "排除了，也要留下依据"
+      },
+      {
+        "number": 5,
+        "start": 54.875,
+        "title": "没问题，就确认；有问题，就说明"
+      },
+      {
+        "number": 6,
+        "start": 71.95833,
+        "title": "已核验，不等于分歧已解决"
+      },
+      {
+        "number": 7,
+        "start": 84.20833,
+        "title": "纳入之后，分四步继续"
+      },
+      {
+        "number": 8,
+        "start": 97.58333,
+        "title": "规则要清楚，判断要有出处"
+      },
+      {
+        "number": 9,
+        "start": 111.125,
+        "title": "这篇综述，具体怎么做的？"
+      },
+      {
+        "number": 10,
+        "start": 122.20833,
+        "title": "原文的概念，和我们的编码对得上吗？"
+      },
+      {
+        "number": 11,
+        "start": 134.04167,
+        "title": "先看这一篇综述说了什么"
+      },
+      {
+        "number": 12,
+        "start": 146.04167,
+        "title": "从页码，直接回到那句话"
+      },
+      {
+        "number": 13,
+        "start": 158.70833,
+        "title": "原文太窄？把中间这条线往左拖"
+      },
+      {
+        "number": 14,
+        "start": 169.0,
+        "title": "放大一点，再往下读"
+      },
+      {
+        "number": 15,
+        "start": 186.33333,
+        "title": "读完这一页，再把反馈交回去"
+      },
+      {
+        "number": 16,
+        "start": 197.91667,
+        "title": "AI 帮你准备，人把判断握在手里"
+      }
+    ]
+  },
+  {
+    "kind": "pilot",
+    "lang": "en",
+    "duration": 219.708333,
+    "src": "pilot-guided-walkthrough.en.mp4",
+    "poster": "guided-preview.en.jpg",
+    "transcript": "TRANSCRIPT.en.md",
+    "guide": "README.md",
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Does the source support this code?",
+        "start": 0
+      },
+      {
+        "number": 2,
+        "title": "Three places to look",
+        "start": 14.25
+      },
+      {
+        "number": 3,
+        "title": "Choose what to review next",
+        "start": 25.70833
+      },
+      {
+        "number": 4,
+        "title": "An exclusion still needs evidence",
+        "start": 42.70833
+      },
+      {
+        "number": 5,
+        "title": "Confirm it, or explain the change",
+        "start": 56.0
+      },
+      {
+        "number": 6,
+        "title": "Feedback complete; decisions still open",
+        "start": 73.08333
+      },
+      {
+        "number": 7,
+        "title": "Four stages for included reports",
+        "start": 86.125
+      },
+      {
+        "number": 8,
+        "title": "Follow the rule back to its evidence",
+        "start": 98.95833
+      },
+      {
+        "number": 9,
+        "title": "How was this review conducted?",
+        "start": 111.83333
+      },
+      {
+        "number": 10,
+        "title": "Does the concept mapping fit?",
+        "start": 123.875
+      },
+      {
+        "number": 11,
+        "title": "What does this review conclude?",
+        "start": 135.41667
+      },
+      {
+        "number": 12,
+        "title": "From a page number to the sentence",
+        "start": 149.66667
+      },
+      {
+        "number": 13,
+        "title": "Need more room for the PDF?",
+        "start": 163.70833
+      },
+      {
+        "number": 14,
+        "title": "Zoom in, then keep reading",
+        "start": 172.83333
+      },
+      {
+        "number": 15,
+        "title": "Turn the page, then return your feedback",
+        "start": 192.20833
+      },
+      {
+        "number": 16,
+        "title": "AI prepares; people make the judgments",
+        "start": 204.375
+      }
+    ]
+  }
+]

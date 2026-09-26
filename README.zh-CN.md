@@ -6,6 +6,8 @@
 
 这是一个支持全文筛选、质量评价和信息提取的可复用 agent skill。人制定和发展规则；AI 整理证据、提出编码建议；审阅者在浏览器中核验，或先独立编码。你发包，他们导出 JSON 发还，再由团队对照证据解决分歧。
 
+**第一次接触？先看 [五分钟入门导览](docs/intro/README.zh-CN.md)**：从文献清单开始，认识找全文与组织审阅这两个 skill 怎样配合、要提供什么、哪些地方需要人参与。提供中英双版。
+
 **[什么时候用](#什么时候用它) · [第一次怎么用](#第一次怎样开始) · [六幕故事图解](docs/story/README.zh-CN.md) · [试用示例](#怎样开始) · [看两个案例](#两个案例复用一套流程) · [看人机分工](#怎样让人持续参与判断) · [逐步使用指南](docs/README.zh-CN.md)**
 
 ## 什么时候用它？
@@ -44,13 +46,13 @@ Agent 交付**来源清单、个人审阅包、分歧比较和决策台账**；c
 
 ## 看真实工作台怎样运行
 
-**[▶ 真实 Pilot 界面分步演示＋中文解说](docs/demo/README.zh-CN.md)**：从排除与纳入，到四阶段编码、Correct／Revise、页码跳转、原文高亮和 PDF 拖动缩放。
+**[▶ 真实 Pilot 界面分步演示 · 中文／English](docs/demo/README.zh-CN.md)**：从排除与纳入，到四阶段编码、Correct／Revise、页码跳转、原文高亮和 PDF 拖动缩放。
 
 ![真实的 Pilot full-text coding：纳入文献与四个阶段](docs/demo/frames/09-included-screening.jpg)
 
 ![真实原文第十八页的引文高亮，PDF 已加宽并放大](docs/demo/frames/17-zoom150.jpg)
 
-这是实际 Agency 项目界面；演示反馈独立保存。视频使用真实操作后的截图序列和中文合成解说。下面的彗星图解释方法；[通用模拟包](docs/TRY_DEMOS.md)用于练习。
+这是实际 Agency 项目界面；演示反馈独立保存。视频使用真实操作后的截图序列，提供中英文合成解说。下面的彗星图解释方法；[通用模拟包](docs/TRY_DEMOS.md)用于练习。
 
 ## 跟着 Belle，走完一次 review
 

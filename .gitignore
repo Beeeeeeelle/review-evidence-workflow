@@ -4,3 +4,4 @@ __pycache__/
 .demo-output/
 .private/
 docs/demo/tools/.build/
+docs/intro/tools/.build/

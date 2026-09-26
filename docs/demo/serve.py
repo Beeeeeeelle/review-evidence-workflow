@@ -5,8 +5,21 @@ from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 import re
+from urllib.parse import unquote, urlsplit
 
 class Handler(SimpleHTTPRequestHandler):
+    def translate_path(self, path):
+        # Mount the sibling introduction without exposing the rest of the project.
+        parts = [part for part in unquote(urlsplit(path).path).split('/') if part not in ('', '.', '..')]
+        root = Path(self.directory).resolve()
+        if parts and parts[0] == 'intro':
+            root = root.parent / 'intro'
+            parts = parts[1:]
+        elif parts and parts[0] == 'demo':
+            parts = parts[1:]
+        candidate = root.joinpath(*parts).resolve()
+        return str(candidate if candidate.is_relative_to(root.resolve()) else root / '.unavailable')
+
     def send_head(self):
         self.remaining = None
         path = Path(self.translate_path(self.path))

@@ -1,0 +1,82 @@
+WEBVTT
+
+00:00:00.450 --> 00:00:07.674
+You have a study list and some papers. How do you turn them into a review that people can actually check?
+
+00:00:08.700 --> 00:00:16.620
+These two skills help prepare full texts and organize review. Use them together, or start with the step you need.
+
+00:00:17.658 --> 00:00:25.938
+Bring your question, study list and existing PDFs. Include your protocol or codebook if you have one; a draft is fine.
+
+00:00:26.950 --> 00:00:35.878
+For example: find the missing full texts in this list and preserve the IDs. Tell me exactly what to do when you need my help.
+
+00:00:36.908 --> 00:00:47.828
+The agent checks what you already have, fills metadata gaps, and tries available public, publisher or repository sources. Failed attempts stay in the log.
+
+00:00:48.867 --> 00:00:58.347
+If you have institutional access, it can inspect library resources and access routes. A direct paywall may not be the only route.
+
+00:00:59.367 --> 00:01:10.455
+Sometimes the remaining step is sign-in, authentication, or saving a file you can open. The handoff names the article, page, action and return location.
+
+00:01:11.492 --> 00:01:22.412
+Return the file, and validation resumes. Other accessible papers can continue meanwhile. A manually saved PDF gets the same checks.
+
+00:01:23.450 --> 00:01:34.706
+A readable PDF is not automatically the right report. Check the article or chapter, DOI, version and completeness, and record its pages and file hash.
+
+00:01:35.742 --> 00:01:46.566
+If text extraction is unreliable, use another check. If identity remains uncertain, keep it pending. A filename is not identity evidence.
+
+00:01:47.575 --> 00:01:57.247
+This stage delivers checked sources, attempt history and a remaining queue. If your full texts are already ready, start at the next stage.
+
+00:01:58.283 --> 00:02:08.195
+Before coding, the team develops the rules. You might start with a small sample, perhaps ten reports, and discuss definitions that need work.
+
+00:02:09.200 --> 00:02:18.752
+Once the rules are usable, AI can prepare the next batch for people to verify. You can return to calibration or choose independent review.
+
+00:02:19.783 --> 00:02:31.471
+Assisted mode shows proposals and evidence. Independent mode gives reviewers the rules, sources and blank forms, without AI suggestions or other people’s feedback.
+
+00:02:32.492 --> 00:02:43.004
+Here is the independent form in the fictional portable example. People can code first and return their answers. The team chooses the mode for each round.
+
+00:02:44.033 --> 00:02:53.801
+Now look at the actual Pilot workbench. The item is in the middle, with the source on the right. Click a citation to reach its page.
+
+00:02:54.825 --> 00:03:03.201
+When a quotation matches, the reader highlights it. Then read the context and decide whether the passage supports the code.
+
+00:03:04.242 --> 00:03:14.394
+After checking, confirm the item or choose Revise and explain the change. These demonstration responses are stored separately from research judgments.
+
+00:03:15.408 --> 00:03:27.456
+Assign reports, fields, instructions and review modes by person. One reviewer might check methods, another concepts. The agent prepares the configuration.
+
+00:03:28.492 --> 00:03:37.828
+Reviewers open their own package in a browser, then export a JSON file to return. They do not need an AI account or a shared login.
+
+00:03:38.867 --> 00:03:48.515
+The agent checks round bindings and coverage, then organizes differences. The research team returns to the evidence and decides what to accept.
+
+00:03:49.533 --> 00:03:57.933
+If a PDF or rule changes later, preserve the old version, identify affected work, and start the round that needs to be redone.
+
+00:03:58.950 --> 00:04:09.630
+TALL worked with primary studies; Agency works at review level. Their units and rules differ, while source links, feedback and adjudication can transfer.
+
+00:04:10.658 --> 00:04:21.722
+For your review, supply your own question, codebook and assignments. The cases are at different stages; they are not a controlled demonstration of time savings.
+
+00:04:22.742 --> 00:04:34.550
+Both GitHub pages include installation instructions and examples. Coordinators install the skill folder in a compatible agent; reviewers can first explore a fictional demo.
+
+00:04:35.575 --> 00:04:45.799
+With full texts and draft rules, ask: prepare review packages for our chosen sample, explain the gaps, and identify the decisions our team must make.
+
+00:04:46.825 --> 00:04:56.065
+The aim is to reduce searching, copying and repeated navigation, while people retain control of the rules, interpretation and conclusions.

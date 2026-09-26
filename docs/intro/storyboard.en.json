@@ -1,0 +1,307 @@
+[
+  {
+    "title": "You have a study list. What next?",
+    "parts": [
+      {
+        "kind": "story",
+        "speech": "You have a study list and some papers. How do you turn them into a review that people can actually check?",
+        "image": "../../assets/review-evidence-story-belle黑色彗星/01-the-question.png",
+        "headline": "From a study list\nto a review you can check",
+        "points": [
+          "How do you prepare the sources?",
+          "How do judgments connect to evidence?"
+        ]
+      },
+      {
+        "kind": "pair",
+        "speech": "These two skills help prepare full texts and organize review. Use them together, or start with the step you need.",
+        "active": 0
+      }
+    ]
+  },
+  {
+    "title": "Start with the materials you have",
+    "parts": [
+      {
+        "kind": "intake",
+        "speech": "Bring your question, study list and existing PDFs. Include your protocol or codebook if you have one; a draft is fine.",
+        "headline": "Start with what you have",
+        "nodes": [
+          "Question",
+          "Study list",
+          "Existing PDFs",
+          "Current rules"
+        ],
+        "active": 1
+      },
+      {
+        "kind": "prompt",
+        "speech": "For example: find the missing full texts in this list and preserve the IDs. Tell me exactly what to do when you need my help.",
+        "headline": "Your first request",
+        "prompt": "Use $literature-pdf-retrieval.\nFind missing full texts for this list; preserve IDs and originals.\nGive me a specific access step when my help is needed.",
+        "tag": "Example prompt · adapt it to your materials"
+      }
+    ]
+  },
+  {
+    "title": "Change routes when the evidence calls for it",
+    "parts": [
+      {
+        "kind": "flow",
+        "speech": "The agent checks what you already have, fills metadata gaps, and tries available public, publisher or repository sources. Failed attempts stay in the log.",
+        "headline": "The agent tries available routes first",
+        "nodes": [
+          "Check the list",
+          "Enrich metadata",
+          "Try sources"
+        ],
+        "active": 2,
+        "footer": "Keep each attempt so the next session can resume"
+      },
+      {
+        "kind": "flow",
+        "speech": "If you have institutional access, it can inspect library resources and access routes. A direct paywall may not be the only route.",
+        "headline": "Adapt to your access conditions",
+        "nodes": [
+          "Direct route fails",
+          "Inspect library routes",
+          "Try authorized access"
+        ],
+        "active": 1,
+        "footer": "A library link still needs an actual access check"
+      }
+    ]
+  },
+  {
+    "title": "Make the human access step specific",
+    "parts": [
+      {
+        "kind": "handoff",
+        "speech": "Sometimes the remaining step is sign-in, authentication, or saving a file you can open. The handoff names the article, page, action and return location.",
+        "active": 0
+      },
+      {
+        "kind": "handoff",
+        "speech": "Return the file, and validation resumes. Other accessible papers can continue meanwhile. A manually saved PDF gets the same checks.",
+        "active": 1
+      }
+    ]
+  },
+  {
+    "title": "Obtaining a file is only the first check",
+    "parts": [
+      {
+        "kind": "checks",
+        "speech": "A readable PDF is not automatically the right report. Check the article or chapter, DOI, version and completeness, and record its pages and file hash.",
+        "active": 0
+      },
+      {
+        "kind": "checks",
+        "speech": "If text extraction is unreliable, use another check. If identity remains uncertain, keep it pending. A filename is not identity evidence.",
+        "active": 1
+      },
+      {
+        "kind": "outputs",
+        "speech": "This stage delivers checked sources, attempt history and a remaining queue. If your full texts are already ready, start at the next stage."
+      }
+    ]
+  },
+  {
+    "title": "People develop the rules and choose the rounds",
+    "parts": [
+      {
+        "kind": "story",
+        "speech": "Before coding, the team develops the rules. You might start with a small sample, perhaps ten reports, and discuss definitions that need work.",
+        "image": "../../assets/review-evidence-story-belle黑色彗星/02-people-write-the-rules.png",
+        "headline": "People develop the codebook",
+        "points": [
+          "Sample → discuss → revise",
+          "The project chooses the sample size"
+        ]
+      },
+      {
+        "kind": "pair",
+        "speech": "Once the rules are usable, AI can prepare the next batch for people to verify. You can return to calibration or choose independent review.",
+        "active": 1
+      }
+    ]
+  },
+  {
+    "title": "Choose how reviewers work",
+    "parts": [
+      {
+        "kind": "modes",
+        "speech": "Assisted mode shows proposals and evidence. Independent mode gives reviewers the rules, sources and blank forms, without AI suggestions or other people’s feedback."
+      },
+      {
+        "kind": "ui",
+        "speech": "Here is the independent form in the fictional portable example. People can code first and return their answers. The team chooses the mode for each round.",
+        "frame": "../images/workbench-independent.jpg",
+        "box": [
+          232,
+          135,
+          735,
+          625
+        ],
+        "label": "Independent blank form · fictional data",
+        "source_note": "Actual portable workbench · fictional report and PDF"
+      }
+    ]
+  },
+  {
+    "title": "Follow one judgment back to the source",
+    "parts": [
+      {
+        "kind": "ui",
+        "speech": "Now look at the actual Pilot workbench. The item is in the middle, with the source on the right. Click a citation to reach its page.",
+        "frame": "../demo/frames/15-page18-highlight.jpg",
+        "box": [
+          263,
+          425,
+          322,
+          448
+        ],
+        "shape": "circle",
+        "click": [
+          291,
+          437
+        ],
+        "label": "Start with the page citation"
+      },
+      {
+        "kind": "ui",
+        "speech": "When a quotation matches, the reader highlights it. Then read the context and decide whether the passage supports the code.",
+        "frame": "../demo/frames/15-page18-highlight.jpg",
+        "box": [
+          809,
+          239,
+          1241,
+          263
+        ],
+        "link": [
+          291,
+          437
+        ],
+        "label": "Find the passage; read the context"
+      },
+      {
+        "kind": "ui",
+        "speech": "After checking, confirm the item or choose Revise and explain the change. These demonstration responses are stored separately from research judgments.",
+        "frame": "../demo/frames/06-revise.jpg",
+        "box": [
+          588,
+          355,
+          721,
+          430
+        ],
+        "camera": [
+          190,
+          186,
+          1090,
+          692
+        ],
+        "label": "Explain your revision"
+      }
+    ]
+  },
+  {
+    "title": "Give each reviewer the right task",
+    "parts": [
+      {
+        "kind": "assign",
+        "speech": "Assign reports, fields, instructions and review modes by person. One reviewer might check methods, another concepts. The agent prepares the configuration."
+      },
+      {
+        "kind": "ui",
+        "speech": "Reviewers open their own package in a browser, then export a JSON file to return. They do not need an AI account or a shared login.",
+        "frame": "../demo/frames/19-next-page.jpg",
+        "box": [
+          1119,
+          7,
+          1271,
+          50
+        ],
+        "shape": "circle",
+        "label": "Export and return the file"
+      }
+    ]
+  },
+  {
+    "title": "People resolve differences after returns arrive",
+    "parts": [
+      {
+        "kind": "flow",
+        "speech": "The agent checks round bindings and coverage, then organizes differences. The research team returns to the evidence and decides what to accept.",
+        "headline": "From feedback to an authorized judgment",
+        "nodes": [
+          "Reviewer returns",
+          "Check and compare",
+          "People adjudicate"
+        ],
+        "active": 2,
+        "footer": "Completed feedback does not mean every disagreement is resolved"
+      },
+      {
+        "kind": "flow",
+        "speech": "If a PDF or rule changes later, preserve the old version, identify affected work, and start the round that needs to be redone.",
+        "headline": "Changes can affect later work",
+        "nodes": [
+          "Source or rule changes",
+          "Check linked work",
+          "Recode or reverify"
+        ],
+        "active": 1,
+        "footer": "Software flags registered dependencies; people inspect the rest"
+      }
+    ]
+  },
+  {
+    "title": "Two cases show what can transfer",
+    "parts": [
+      {
+        "kind": "case",
+        "speech": "TALL worked with primary studies; Agency works at review level. Their units and rules differ, while source links, feedback and adjudication can transfer.",
+        "image": "../images/tall-workbench.jpg",
+        "case": "TALL",
+        "headline": "Primary empirical studies",
+        "points": [
+          "Project-specific eligibility and appraisal",
+          "Retained judgments and change records"
+        ]
+      },
+      {
+        "kind": "case",
+        "speech": "For your review, supply your own question, codebook and assignments. The cases are at different stages; they are not a controlled demonstration of time savings.",
+        "image": "../images/agency-workbench.jpg",
+        "case": "Agency",
+        "headline": "Review-level evidence",
+        "points": [
+          "Source reporting, team coding, synthesis",
+          "Keep the three levels distinct"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Choose an entry point and start your first round",
+    "parts": [
+      {
+        "kind": "start",
+        "speech": "Both GitHub pages include installation instructions and examples. Coordinators install the skill folder in a compatible agent; reviewers can first explore a fictional demo.",
+        "active": 0
+      },
+      {
+        "kind": "prompt",
+        "speech": "With full texts and draft rules, ask: prepare review packages for our chosen sample, explain the gaps, and identify the decisions our team must make.",
+        "headline": "Once the sources are ready",
+        "prompt": "Use $review-evidence-workflow.\nHere are the full texts, draft codebook and chosen sample.\nPrepare review packages and identify gaps and human decisions.",
+        "tag": "Example prompt · choose your mode, fields and sample"
+      },
+      {
+        "kind": "start",
+        "speech": "The aim is to reduce searching, copying and repeated navigation, while people retain control of the rules, interpretation and conclusions.",
+        "active": 1
+      }
+    ]
+  }
+]

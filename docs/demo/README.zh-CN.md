@@ -2,7 +2,9 @@
 
 这里展示的是 Belle 实际使用的 **Pilot full-text coding** 界面、真实项目编码提案和对应 PDF。此前的黑色彗星图是概念插画；通用试用包使用模拟资料。它们与这里的真实界面演示分别标注。
 
-**[▶ 播放／下载新版中文引导视频](pilot-guided-walkthrough.zh-CN.mp4)** · [直接下载](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.zh-CN.mp4) · [English guide](README.md)
+**[▶ 中文操作导览 · 3:36](pilot-guided-walkthrough.zh-CN.mp4)** · [直接下载](https://github.com/Beeeeeeelle/review-evidence-workflow/releases/download/v1.2.0/pilot-guided-walkthrough.zh-CN.mp4) · [English video · 3:40](README.md)
+
+第一次认识这套流程？先看 **[两个 skill 的五分钟入门导览](../intro/README.zh-CN.md)**，再回到这里了解具体按钮。已有的中文操作视频保留，英文版使用同一批真实画面，配有英文解说、标注与独立计时的字幕。
 
 跟着一篇文献，看看怎样找证据、留下判断，再把反馈交回团队。新版约 **3 分 36 秒**，把过程分成 16 章、35 个讲解步骤，配有更口语化的中文解说、合成配音和同步字幕。
 
@@ -14,7 +16,7 @@
 
 底图来自实际浏览器操作后的截图，界面和原文没有重绘。圈线、指示点和镜头放大是后期讲解层；这是**剪辑导览，不是连续录屏**。Correct／Revise 使用隔离演示反馈，不代表正式研究核验。原始画面保留在 [frames](frames/) 中。
 
-本地查看带章节跳转的播放器：在仓库目录运行 `python3 docs/demo/serve.py --port 8940`，然后打开 [本地导览](http://127.0.0.1:8940/)。
+本地查看带章节跳转的播放器：在仓库目录运行 `python3 docs/demo/serve.py --port 8940`，然后打开 [本地导览](http://127.0.0.1:8940/?video=pilot&lang=zh-CN)。同一播放器可以切换总览／操作和中文／English。
 
 ## 什么时候用，怎么开始？
 

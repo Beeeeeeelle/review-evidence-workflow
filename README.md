@@ -4,6 +4,8 @@
 
 **For research teams preparing full texts, developing a codebook, or coordinating human screening, appraisal and extraction—with source evidence and traceable decisions.**
 
+> **Latest update · v1.3.0 · October 6, 2026:** full-text eligibility can now route one independent reviewer directly to either quality/coding or one exclusion reason, with branch-aware progress and exports. [Read what changed](CHANGELOG.md#130--2026-10-06).
+
 A reusable agent skill for full-text screening, appraisal and extraction. Humans develop the rules; AI prepares evidence and proposals; reviewers verify or code independently in a browser. Send each person a package, receive their JSON, then resolve differences with the evidence in view.
 
 **Watch Belle explain the two skills · 8:31 · English, with captions.** From finding full texts to checking AI's work and coordinating a review team. [Transcript, chapters and video files](docs/watch/belle-voice/README.md).
@@ -19,7 +21,7 @@ https://github.com/user-attachments/assets/3285d16d-d72a-48ec-9d7c-1b256f6b8430
 
 [Earlier English and Chinese films](docs/watch/README.md) remain available.
 
-**[When to use it](#is-this-for-your-review) · [Start here](#how-do-i-start) · [Follow the illustrated story](docs/story/README.md) · [Try the runnable demos](#try-it) · [Explore the three cases](#three-cases-one-reusable-workflow) · [See the workflow](#how-humans-stay-in-the-loop) · [Read the guide](review-evidence-workflow/references/getting-started.md)**
+**[When to use it](#is-this-for-your-review) · [Start here](#how-do-i-start) · [What’s new](CHANGELOG.md) · [Follow the illustrated story](docs/story/README.md) · [Try the runnable demos](#try-it) · [Explore the three cases](#three-cases-one-reusable-workflow) · [See the workflow](#how-humans-stay-in-the-loop) · [Read the guide](review-evidence-workflow/references/getting-started.md)**
 
 ## Is this for your review?
 

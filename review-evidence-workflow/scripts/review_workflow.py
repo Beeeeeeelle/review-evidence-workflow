@@ -15,7 +15,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '1.2.0'
+VERSION = '1.3.0'
 ACTIONS = {'accept', 'revise', 'unclear'}
 LAYERS = {'source_extraction', 'descriptive_coding', 'synthesis'}
 

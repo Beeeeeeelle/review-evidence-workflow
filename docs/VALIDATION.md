@@ -1,4 +1,4 @@
-# Validation record — v1.1.0 baseline and v1.2.0 reader
+# Validation record — v1.1.0 baseline, v1.2.0 reader and v1.3.0 routing
 
 Validation date: 2026-09-25. This report concerns reusable software behavior and guided
 workflow execution. It does not establish scientific validity, reviewer independence,

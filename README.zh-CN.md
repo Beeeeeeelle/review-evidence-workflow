@@ -4,7 +4,7 @@
 
 **当你的文献综述进入全文准备、codebook 校准、人工筛选、质量评价或信息提取阶段，用它组织证据与团队审阅，让每个判断有出处、每次修订有记录。**
 
-> **最新更新 · v1.3.0 · 2026 年 10 月 6 日：** 现在可以让一位独立 reviewer 从全文 eligibility 直接进入质量检查／coding，或只填写一个排除理由；进度和导出会按当前分支计算。[查看详细更新](CHANGELOG.zh-CN.md#130--2026-10-06)。
+> **最新更新 · v1.3.1 · 2026 年 10 月 6 日：** 代码现使用 Apache License 2.0；原创文档与 workflow 材料使用 CC BY 4.0。新增 NOTICE 和机器可读的引用文件，让使用者更容易保留归属信息。[查看详细更新](CHANGELOG.zh-CN.md#131--2026-10-06)。
 
 这是一个支持全文筛选、质量评价和信息提取的可复用 agent skill。人制定和发展规则；AI 整理证据、提出编码建议；审阅者在浏览器中核验，或先独立编码。你发包，他们导出 JSON 发还，再由团队对照证据解决分歧。
 
@@ -198,7 +198,19 @@ python3 -m unittest discover -s tests -v
 node --check review-evidence-workflow/assets/app.js
 ```
 
-贡献测试和示例时请使用模拟资料；报告问题时提供最小匿名样例及预期、实际结果。代码、说明和模拟示例使用 MIT 许可；第三方原文摘录保留原权利。该许可不授予项目所用 PDF 的再分发权。
+贡献测试和示例时请使用模拟资料；报告问题时提供最小匿名样例及预期、实际结果。
+
+## 许可与引用
+
+- **软件：** 源代码、脚本、浏览器 UI、测试、自动化与机器可读配置使用 [Apache License 2.0](LICENSE)。
+- **原创内容：** 文档、skill 指令、workflow 说明、作为研究材料的模板、图表、插图和原创媒体使用 [CC BY 4.0](LICENSE-CONTENT.md)。
+- **归属：** 再分发软件时请保留仓库的 [NOTICE](NOTICE)；在学术或专业工作中提及本项目时，请使用 [`CITATION.cff`](CITATION.cff) 中的建议引用。GitHub 会通过 **Cite this repository** 生成 APA 和 BibTeX。
+
+建议引用：
+
+> Li, B. (2026). *Review Evidence Workflow* (Version 1.3.1) [Computer software]. GitHub. https://github.com/Beeeeeeelle/review-evidence-workflow
+
+这套许可适用于 v1.3.1 及以后版本。v1.3.0 及更早版本仍按各自发布时附带的 MIT License 使用。第三方摘录和原始材料保留原权利；仓库许可不授予项目中后续加入的 PDF 或私有 review 数据任何权利。具体条款与范围以许可文件为准。
 
 ---
 

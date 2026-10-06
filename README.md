@@ -4,7 +4,7 @@
 
 **For research teams preparing full texts, developing a codebook, or coordinating human screening, appraisal and extraction—with source evidence and traceable decisions.**
 
-> **Latest update · v1.3.0 · October 6, 2026:** full-text eligibility can now route one independent reviewer directly to either quality/coding or one exclusion reason, with branch-aware progress and exports. [Read what changed](CHANGELOG.md#130--2026-10-06).
+> **Latest update · v1.3.1 · October 6, 2026:** code now uses Apache License 2.0; original documentation and workflow materials use CC BY 4.0. A NOTICE and machine-readable citation file make attribution easier to retain. [Read what changed](CHANGELOG.md#131--2026-10-06).
 
 A reusable agent skill for full-text screening, appraisal and extraction. Humans develop the rules; AI prepares evidence and proposals; reviewers verify or code independently in a browser. Send each person a package, receive their JSON, then resolve differences with the evidence in view.
 
@@ -198,7 +198,19 @@ python3 -m unittest discover -s tests -v
 node --check review-evidence-workflow/assets/app.js
 ```
 
-Keep contributed tests and examples synthetic. Include a minimal anonymized fixture and expected/actual result in bug reports. MIT covers the code, documentation and synthetic fixtures; third-party source excerpts retain their original rights. The license grants no rights to PDFs added to a project.
+Keep contributed tests and examples synthetic. Include a minimal anonymized fixture and expected/actual result in bug reports.
+
+## License and citation
+
+- **Software:** source code, scripts, browser UI, tests, automation and machine-readable configuration are licensed under the [Apache License 2.0](LICENSE).
+- **Original content:** documentation, skill instructions, workflow descriptions, templates intended as research materials, diagrams, illustrations and original media are licensed under [CC BY 4.0](LICENSE-CONTENT.md).
+- **Attribution:** retain the repository [NOTICE](NOTICE) when redistributing the software, and use the preferred citation in [`CITATION.cff`](CITATION.cff) when referring to the project in scholarly or professional work. GitHub can render that file as APA or BibTeX through **Cite this repository**.
+
+Suggested citation:
+
+> Li, B. (2026). *Review Evidence Workflow* (Version 1.3.1) [Computer software]. GitHub. https://github.com/Beeeeeeelle/review-evidence-workflow
+
+These licenses apply to version 1.3.1 and later. Versions through v1.3.0 remain available under the MIT License supplied with those versions. Third-party excerpts and source materials retain their original rights; the repository licenses grant no rights to PDFs or private review data added to a project. See the license files for the controlling terms and scope.
 
 ---
 

@@ -4,6 +4,19 @@ This file records user-visible changes to Review Evidence Workflow. Version numb
 describe the reusable skill and coordinator tooling; a new version does not imply that
 any review's scientific findings have been validated.
 
+## 1.3.1 — 2026-10-06
+
+### Licensing and citation
+
+- Licensed the software code, scripts, browser UI, tests, automation and machine-readable
+  configuration under Apache License 2.0 beginning with this version.
+- Licensed original documentation, skill instructions, workflow materials, diagrams,
+  illustrations and original media under CC BY 4.0 beginning with this version.
+- Added an Apache `NOTICE` file and a machine-readable `CITATION.cff` with a suggested
+  project citation.
+- Clarified that third-party excerpts, added PDFs and private review data are outside the
+  repository licenses. Versions through v1.3.0 retain their original MIT terms.
+
 ## 1.3.0 — 2026-10-06
 
 ### Added

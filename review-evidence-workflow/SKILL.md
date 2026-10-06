@@ -29,8 +29,11 @@ Read [getting started and example prompts](references/getting-started.md) for un
 users, [contracts](references/contracts.md) for data/configuration, [rounds and personalized
 packages](references/rounds.md) for assignment choices, and [human workflow](references/human-workflow.md)
 for roles/UI/evaluation. Read [PDF handoff](references/pdf-handoff.md) when sources are missing,
-unverified or replaced. [TALL](references/cases/tall.md) and [Agency](references/cases/agency.md)
-are case adaptations; their scientific rules are not global defaults.
+unverified or replaced. [TALL](references/cases/tall.md), [Agency](references/cases/agency.md),
+and [combined full-text screening plus coding](references/cases/combined-screening-coding.md)
+are case adaptations; their scientific rules are not global defaults. Read the combined
+case whenever one reviewer should route each report from eligibility directly into either
+an exclusion reason or downstream appraisal/coding.
 
 Python 3.9+ runs the main helper. Poppler is required for PDF identity/text checks and
 optional page rendering. Reviewer packages need only a browser. Check installed tools
@@ -58,6 +61,12 @@ before choosing commands; an unavailable retrieval skill does not block verified
    blank; build-time projection removes AI values, reasons, evidence hints and all other
    reviewer feedback from the shipped data. Humans may code before any AI proposals exist.
    Record actual model/settings when known. Completion: schema/file checks and source checks.
+   For a one-pass independent screen-and-code task, use configuration-driven
+   `applies_when` rules rather than duplicated questions or hard-coded field IDs: Include
+   opens applicable appraisal/coding stages; Exclude shows one reason and closes those
+   stages. Route selection may change the UI before the controller answer is evidentially
+   complete. This conditional mode supports one required reviewer per field; adjudicate
+   multi-reviewer eligibility before opening a downstream coding round.
 4. **Build and inspect personalized packages.** Generate one package per reviewer; select
    records/fields/mode/instructions/labels/groups in profiles. Prefer `--render-pages`.
    The reader supports a draggable/keyboard-adjustable PDF divider and independent
@@ -145,3 +154,5 @@ round/reviewer. It hides AI/peer feedback, not author identities in original PDF
 NR, NA and Unclear differ from negative findings. Cross-review synthesis requires a
 separate multi-source evidence map; the single-source UI does not validate causal claims.
 No LLM accuracy or time savings can be inferred from Correct clicks or activity estimates.
+Do not count fields hidden by a screening route as missing work, and do not treat
+different reviewer branches as equivalent multi-reviewer coverage.

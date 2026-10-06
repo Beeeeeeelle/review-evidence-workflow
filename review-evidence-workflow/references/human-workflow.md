@@ -36,6 +36,13 @@ the displayed proposal. Resolved = authorized adjudication/release. They are dif
 states. A reviewer who challenges everything has processed the assignment but has not
 approved its evidence. Unclear/defer remains visible for human resolution.
 
+For a conditional full-text route, selection and completion are also different states.
+A selected Include value may open quality/coding immediately, while the eligibility field
+still remains incomplete until its rationale and evidence are valid. Exclude reveals one
+configured reason and makes later stages not applicable. Counts and exported responses
+must use the active branch, not every field physically present in the bundle. See the
+[combined screening/coding case](cases/combined-screening-coding.md).
+
 ## What may accelerate work
 
 Candidate mechanisms: pre-organized full texts, page-linked evidence, consistent coding
@@ -59,8 +66,9 @@ conditions if needed. Do not derive AI accuracy from the number of Correct click
 ## Case status and novelty boundary
 
 TALL is a retrospective completed-project implementation trace; Agency is a pilot
-adaptation at another unit of analysis. They demonstrate design transfer, not equivalent
-completed validation datasets. Version 1 adds generic configuration,
+adaptation at another unit of analysis. The combined screening/coding case is an
+interaction-pattern adaptation from a later coauthor calibration package. They
+demonstrate design transfer, not equivalent completed validation datasets. Version 1 adds generic configuration,
 strict return binding and dependency checking; do not retrospectively attribute these
 to the original cases. Literature-review skills, audit ledgers, human gates and annotation
 UIs already exist. The defensible contribution to investigate is their operational

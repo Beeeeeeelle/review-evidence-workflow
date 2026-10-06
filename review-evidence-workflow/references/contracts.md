@@ -13,6 +13,33 @@ Fields use `source_extraction` for what a source reports and `descriptive_coding
 review-team classification. `synthesis` is rejected in the single-source UI. UI groups
 only organize fields; one human action applies to exactly one atomic field.
 
+## Conditional single-pass routing
+
+For a one-reviewer independent workflow that combines full-text screening with later
+appraisal/coding, a stage or field may have:
+
+```json
+"applies_when": {"field_id": "eligibility", "values": ["Include"]}
+```
+
+The controller must be an unconditional `required: true` field with configured options.
+Every listed route value must be one of those options. Put the condition on a stage when
+all its fields share a route; put it on a field for an exclusion reason or another
+branch-specific item inside a shared stage. `allow_missingness: false` removes NR/NA/
+Unclear from routing questions where only the explicit options are valid.
+
+The browser evaluates the selected controller value immediately, including a local draft,
+so the person can continue without first satisfying all evidence requirements. Completion
+is separate: the controller still needs a valid submitted answer. Progress, export,
+comparison and finalization use only the active branch. The final ledger lists inactive
+bundle fields under `not_applicable_fields`; outputs depending on them receive status
+`not_applicable`.
+
+Conditional routing currently requires `independent_review` and one required reviewer
+per field. Multiple reviewers may handle disjoint records, but if two people screen the
+same report, adjudicate eligibility before a later coding round. Assisted proposals and
+divergent reviewer routes are not valid branch controllers in this contract.
+
 `derived_rules` defaults to empty. The supported operation `all_equal` has `id`,
 `fields`, `required_value`, `failure_values`, `success`, `failure`, `unresolved`.
 It is for explicitly authorized project logic. TALL's historical rule, for example:

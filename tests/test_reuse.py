@@ -29,6 +29,28 @@ class Reuse(unittest.TestCase):
         path=self.p/'sources/R1.pdf';pdf(path,['Synthetic classroom study of learning feedback','Intact classes received a feedback intervention.']);self.b['records'][0]['source']['sha256']=rw.sha(path);self.write()
     def independent_return(self,reviewer='reviewer-a',value='Yes'):
         return {**rw.package_binding(self.c,self.b,self.items,reviewer),'reviewer_id':reviewer,'exported_at':'TEST','responses':[dict(key=k,action='submit',committed=True,value=value,missingness=None,rationale='Synthetic interpretation',comment='',reviewed_at='TEST',evidence=[dict(pdf_page=1,section='Fixture',quote='Synthetic evidence.')]) for k in rw.assigned_keys(self.c,self.b,self.items,reviewer)]}
+    def configure_conditional(self):
+        self.c['verification'].update(mode='independent_review',reviewers=['reviewer-a'],min_reviewers=1,reviewer_profiles={})
+        self.c['ui']['stages']=[
+            dict(id='screening',label='Full-text eligibility'),
+            dict(id='coding',label='Coding',applies_when=dict(field_id='eligibility',values=['Include']))]
+        self.c['fields']=[
+            dict(id='eligibility',label='Eligibility',definition='Include or exclude the report.',stage='screening',layer='descriptive_coding',required=True,options=['Include','Exclude']),
+            dict(id='exclusion_reason',label='Exclusion reason',definition='Complete only for excluded reports.',stage='screening',layer='descriptive_coding',required=False,options=['Wrong construct','No measure'],applies_when=dict(field_id='eligibility',values=['Exclude'])),
+            dict(id='instrument',label='Instrument',definition='Code the instrument for included reports.',stage='coding',layer='source_extraction',required=False)]
+        self.c['derived_rules']=[]
+        self.b['records'][0]['items']=[dict(field_id=f['id'],status='not_assessed',value=None,rationale='Awaiting independent coding.',evidence=[]) for f in self.c['fields']]
+        self.b['outputs']=[dict(id='table1',depends_on=['R1/instrument'])]
+        self.write();self.c,self.b,self.items=rw.load_project(self.p)
+    def routed_return(self,decision,branch_field,branch_value,eligibility_draft=False):
+        def answer(key,value):
+            return dict(key=key,action='submit',committed=True,value=value,missingness=None,rationale='Synthetic routing test',comment='',reviewed_at='TEST',evidence=[dict(pdf_page=1,section='Fixture',quote='Synthetic evidence.')])
+        eligibility=answer('R1/eligibility',decision)
+        ret={**rw.package_binding(self.c,self.b,self.items,'reviewer-a'),'reviewer_id':'reviewer-a','exported_at':'TEST','responses':[answer('R1/'+branch_field,branch_value)]}
+        if eligibility_draft:
+            eligibility['committed']=False;ret['draft_responses']=[eligibility]
+        else:ret['responses'].insert(0,eligibility)
+        return ret
     def test_independent_blank_codebook_development(self):
         self.configure(blank=True);self.assertEqual(len(rw.assigned_keys(self.c,self.b,self.items,'reviewer-a')),2)
         r=self.independent_return();self.assertEqual(rw.validate_return(r,self.c,self.b,self.items)['responded'],2)
@@ -75,6 +97,29 @@ class Reuse(unittest.TestCase):
         with self.assertRaises(ValueError):rw.build(dest,self.p/'package','reviewer-a')
     def test_independent_package_only_copies_assigned_pdfs(self):
         self.configure();self.actual_source();second=copy.deepcopy(self.b['records'][0]);second['record_id']='R2';second['items'][1]['depends_on']=['R2/a'];self.b['records'].append(second);self.c['verification']['min_reviewers']=1;self.c['verification']['reviewer_profiles']={'reviewer-a':{'record_ids':['R1']},'reviewer-b':{'record_ids':['R2']}};self.write();out=self.p/'package';rw.build(self.p,out,'reviewer-a');self.assertEqual([p.name for p in (out/'sources').iterdir()],['R1.pdf'])
+    def test_conditional_config_projects_route_rules(self):
+        self.configure_conditional();payload=rw.package_payload(self.c,self.b,self.items,'reviewer-a',False)
+        self.assertEqual(payload['config']['ui']['stages'][1]['applies_when']['field_id'],'eligibility')
+        self.assertEqual(payload['config']['fields'][1]['applies_when']['values'],['Exclude'])
+    def test_conditional_include_omits_exclusion_reason(self):
+        self.configure_conditional();ret=self.routed_return('Include','instrument','Synthetic scale');summary=rw.validate_return(ret,self.c,self.b,self.items)
+        self.assertEqual(summary['assigned'],2);comp=rw.comparison_from_returns(self.c,self.b,self.items,[ret],[])
+        self.assertEqual({x['key'] for x in comp['items']},{'R1/eligibility','R1/instrument'})
+        events=[dict(key=x['key'],disposition='select_review',reviewer_id='reviewer-a',rationale='Synthetic selection') for x in comp['items']]
+        result=rw.finalize(self.c,self.b,self.items,comp,self.decisions(comp,events));self.assertTrue(result['complete']);self.assertEqual(result['not_applicable_fields'],['R1/exclusion_reason'])
+    def test_conditional_exclude_skips_coding(self):
+        self.configure_conditional();ret=self.routed_return('Exclude','exclusion_reason','No measure');rw.validate_return(ret,self.c,self.b,self.items)
+        comp=rw.comparison_from_returns(self.c,self.b,self.items,[ret],[]);self.assertEqual({x['key'] for x in comp['items']},{'R1/eligibility','R1/exclusion_reason'})
+        events=[dict(key=x['key'],disposition='select_review',reviewer_id='reviewer-a',rationale='Synthetic selection') for x in comp['items']]
+        result=rw.finalize(self.c,self.b,self.items,comp,self.decisions(comp,events));self.assertTrue(result['complete']);self.assertEqual(result['not_applicable_fields'],['R1/instrument']);self.assertEqual(result['outputs'][0]['status'],'not_applicable')
+    def test_conditional_draft_controller_opens_branch_without_counting_as_complete(self):
+        self.configure_conditional();ret=self.routed_return('Include','instrument','Synthetic scale',eligibility_draft=True);summary=rw.validate_return(ret,self.c,self.b,self.items)
+        self.assertEqual(summary['assigned'],2);self.assertEqual(summary['pending'],['R1/eligibility'])
+        comp=rw.comparison_from_returns(self.c,self.b,self.items,[ret],[]);self.assertEqual(comp['counts']['pending'],1);self.assertEqual(comp['counts']['concordant_independent_values'],1)
+    def test_conditional_flow_rejects_assisted_or_dual_required_review(self):
+        self.configure_conditional();self.c['verification']['mode']='assisted_verification';self.invalid()
+        self.configure_conditional();self.c['verification']['reviewers']=['reviewer-a','reviewer-b'];self.c['verification']['min_reviewers']=2;self.invalid()
+        self.configure_conditional();self.c['verification']['reviewers']=['reviewer-a','reviewer-b'];self.invalid()
 
 class Sources(unittest.TestCase):
     def setUp(self):self.tmp=tempfile.TemporaryDirectory();self.p=Path(self.tmp.name)

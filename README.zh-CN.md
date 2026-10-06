@@ -19,7 +19,7 @@ https://github.com/user-attachments/assets/3285d16d-d72a-48ec-9d7c-1b256f6b8430
 
 [此前的中英双版视频](docs/watch/README.zh-CN.md)继续保留。
 
-**[什么时候用](#什么时候用它) · [第一次怎么用](#第一次怎样开始) · [六幕故事图解](docs/story/README.zh-CN.md) · [试用示例](#怎样开始) · [看两个案例](#两个案例复用一套流程) · [看人机分工](#怎样让人持续参与判断) · [逐步使用指南](docs/README.zh-CN.md)**
+**[什么时候用](#什么时候用它) · [第一次怎么用](#第一次怎样开始) · [六幕故事图解](docs/story/README.zh-CN.md) · [试用示例](#怎样开始) · [看三个案例](#三个案例复用一套流程) · [看人机分工](#怎样让人持续参与判断) · [逐步使用指南](docs/README.zh-CN.md)**
 
 ## 什么时候用它？
 
@@ -83,7 +83,7 @@ Agent 交付**来源清单、个人审阅包、分歧比较和决策台账**；c
 
 **[展开阅读六幕图解 →](docs/story/README.zh-CN.md)** 每幕都有简短解释，并连接到实际操作。这里是概念插画，上方是实际工作台。
 
-## 两个案例，复用一套流程
+## 三个案例，复用一套流程
 
 案例展示这个 skill 从哪里来，以及研究单位改变后，哪些东西要重新配置。点击图片可以看具体过程。
 
@@ -94,6 +94,8 @@ Agent 交付**来源清单、个人审阅包、分歧比较和决策台账**；c
 | 技术辅助二语学习中的历史实施案例。 | AI 支持教育与学习者 agency 的试点适配。 |
 | [展开 TALL 案例 →](docs/cases/tall.zh-CN.md) | [展开 Agency 案例 →](docs/cases/agency.zh-CN.md) |
 
+**新的操作流案例——[在同一轮里完成全文筛选与 coding](docs/cases/combined-screening-coding.zh-CN.md)。** 选 Include 就打开质量检查和 coding；选 Exclude 只要填一个主要理由，后续阶段显示为不适用。选择分支后界面立即变化，但仍需理由与原文证据才算完成。内置条件分支只用于每个字段要求一位 reviewer 的独立工作；如果要做双人独立筛选，先裁决 eligibility，再开启 coding 轮次。
+
 *案例图把真实来源资料呈现在可复用的 v1.1 工作台中，公开原文区显示带出处的短摘录。这是案例适配展示，并非历史审阅现场截图。[图片来源说明](docs/images/PROVENANCE.md)。*
 
 | 区别 | TALL | Agency |
@@ -103,7 +105,7 @@ Agent 交付**来源清单、个人审阅包、分歧比较和决策台账**；c
 | 关键判断边界 | 纳入、质量评价、是否进入提取 | 原文报告、描述性编码、跨 review 综合 |
 | 当前证据状态 | 回顾性的实施案例 | 已实施的试点，综合尚待继续 |
 
-**可以复用：** PDF 核对、字段与原文关联、可配置 UI、个人回传、人裁决和版本记录。**由新项目重新制定：** 纳入标准、codebook、评价规则、分析单位和覆盖要求。这是两个有不同进度的案例，不是两个已经完成的同等验证实验。
+**可以复用：** PDF 核对、字段与原文关联、可配置 UI、个人回传、人裁决和版本记录。**由新项目重新制定：** 纳入标准、codebook、评价规则、分析单位和覆盖要求。这是三种有不同来源和进度的适配，不是已经完成的同等验证实验。
 
 ## 怎样让人持续参与判断？
 
@@ -137,7 +139,7 @@ Agent 交付**来源清单、个人审阅包、分歧比较和决策台账**；c
 
 </details>
 
-Agent 可以按轮次或审阅者配置**文献、字段、顺序、阶段、分组、标签、说明、模式和覆盖要求**。v1.1 通过配置文件调整，尚无可视化设置编辑器。审阅者拿到自己的包，完成后发还文件。[模式、设置与轮次转换](review-evidence-workflow/references/rounds.md)。
+Agent 可以按轮次或审阅者配置**文献、字段、顺序、阶段、分组、标签、说明、模式、条件分支和覆盖要求**。v1.1 通过配置文件调整，尚无可视化设置编辑器。审阅者拿到自己的包，完成后发还文件。[模式、设置与轮次转换](review-evidence-workflow/references/rounds.md)。
 
 ## 怎样开始？
 
@@ -167,6 +169,10 @@ python3 examples/make_examples.py --out /tmp/review-workflow-demo --render-pages
 
 > 我们已经校准了 codebook v2。请处理其余 PDF，把方法和测量分给 A，其他字段分给 B，做成有原文定位的核验包。保留不确定项。
 
+**全文筛选与 coding 一次完成**
+
+> 按我们的 eligibility 规则和 codebook，为每位 reviewer 制作独立工作台。选 Include 就开启质量评价和 coding；选 Exclude 只要一个主要理由并结束该报告。进度和导出只计算当前适用的分支。
+
 **收到反馈后继续**
 
 > 这些是返回的 JSON。请核对版本和覆盖，把分歧与原文证据列在一起，说明哪些需要我们决定，再形成获授权的结果台账。
@@ -175,7 +181,7 @@ python3 examples/make_examples.py --out /tmp/review-workflow-demo --render-pages
 
 ## 验证到了什么程度？
 
-已完成 **40 项不同的自动测试**、本地 Python 3.9/3.12 检查、一次独立新上下文执行、浏览器交互检查，以及三个领域的六份模拟包。[发布提交的 CI](https://github.com/Beeeeeeelle/review-evidence-workflow/actions/runs/36187005213) 也在 Ubuntu/Python 3.11 通过。[完整验证记录与边界](docs/VALIDATION.md)。
+已完成 **47 项不同的自动测试**、本地 Python 3.9/3.12 检查、一次独立新上下文执行、浏览器交互检查，以及三个领域的六份模拟包。新的条件筛选／coding 分支还在浏览器中分别检查了未选择、Include 和 Exclude 状态。[v1.2.0 发布提交的 CI](https://github.com/Beeeeeeelle/review-evidence-workflow/actions/runs/36187005213) 在 Ubuntu/Python 3.11 通过；新的条件分支检查另行记录。[完整验证记录与边界](docs/VALIDATION.md)。
 
 这些检查验证了特定软件行为，例如拒绝版本不匹配的回传、独立包移除建议、更换来源后处理受影响字段，以及保留未解决状态。它们不等于证明 AI 准确率、所有综述都适用，或已经测得节省多少时间。减少准备工作、帮助人更快核验是设计目标，效率仍需比较研究来测量。
 

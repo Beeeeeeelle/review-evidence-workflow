@@ -74,6 +74,6 @@ Belle 把个人包发给审阅者。每个人保存进度、导出 JSON，再把
 
 > 用 $review-evidence-workflow。这是我们的文献清单、codebook 初稿和已有 PDF。先列出来源与规则的缺口，再为我们选定的样本准备个人审阅包。由我们决定本轮的模式和需要修改的规则。
 
-[试用示例](../README.zh-CN.md#运行示例与本地预览) · [看两个真实案例](../../README.zh-CN.md#两个案例复用一套流程) · [验证记录](../VALIDATION.md) · [插画制作与来源](PRODUCTION.md)
+[试用示例](../README.zh-CN.md#运行示例与本地预览) · [看三个案例](../../README.zh-CN.md#三个案例复用一套流程) · [验证记录](../VALIDATION.md) · [插画制作与来源](PRODUCTION.md)
 
 **AI in learning. Humans in charge.**

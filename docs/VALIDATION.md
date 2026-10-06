@@ -160,3 +160,25 @@ coauthor package rendered its own page image and quote overlay without a PDF ser
 These are functional checks, not accuracy, agreement, or time-saving estimates.
 The public video uses real browser captures and synthetic Chinese narration; it
 contains demonstration responses, not human coauthor returns.
+
+## Conditional screen-and-code route (2026-10-06)
+
+The suite now contains 47 distinct tests. Five conditional-flow tests cover config
+projection, Include routing, Exclude routing, a draft controller that opens a branch
+without counting as complete, and rejection of assisted, overlapping-reviewer or
+dual-required-review configurations. Existing source, return-binding, comparison,
+finalization and reader checks continued to pass; the optional pdfplumber integration
+was not installed in this run and remained skipped.
+
+A fresh package was built from ten locally verified calibration PDFs and the generic
+template, then exercised in the in-app browser. Observed states:
+
+- before a decision: one eligibility field applicable; Quality and Coding locked;
+- draft `Include - primary`: 28 applicable fields; Quality (3) and Coding (24) open;
+- draft `Exclude`: two applicable fields; one exclusion reason visible; Quality and
+  Coding disabled as Not applicable.
+
+The route changed before eligibility evidence was complete, as designed. Backend tests
+separately confirmed that only the active branch is accepted into comparison/finalization
+and that inactive fields appear in `not_applicable_fields`. These checks establish routing
+behavior, not the scientific validity of any eligibility or coding rule.

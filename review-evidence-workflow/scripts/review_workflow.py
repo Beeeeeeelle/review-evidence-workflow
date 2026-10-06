@@ -85,8 +85,27 @@ def load_project(project, check_files=False, ready=True):
         require(safe_id(f.get('id')) and nonempty(f.get('label')) and nonempty(f.get('definition')), 'Invalid field definition')
         require(f.get('stage') in stage_ids and f.get('layer') in LAYERS, 'Invalid field stage/layer')
         require(f.get('layer') != 'synthesis', 'Cross-review synthesis requires a separate multi-source package')
+        require('allow_missingness' not in f or isinstance(f['allow_missingness'], bool), 'allow_missingness must be true or false')
         if 'options' in f:
             require(isinstance(f['options'], list) and f['options'], 'Options must be a nonempty list')
+    stage_map = {s['id']: s for s in stages}
+    conditioned = []
+    for owner, condition in [(('stage', s['id']), s.get('applies_when')) for s in stages] + [(('field', f['id']), f.get('applies_when')) for f in fields]:
+        if condition is None:
+            continue
+        require(isinstance(condition, dict) and set(condition) == {'field_id', 'values'}, f'{owner[0]} {owner[1]}: invalid applies_when')
+        controller = field_map.get(condition.get('field_id'))
+        values = condition.get('values')
+        require(controller is not None and isinstance(values, list) and values, f'{owner[0]} {owner[1]}: invalid applies_when controller/values')
+        require(controller.get('required') is True and not controller.get('applies_when') and not stage_map[controller['stage']].get('applies_when'), f'{owner[0]} {owner[1]}: route controller must be an unconditional required field')
+        require('options' in controller and all(v in controller['options'] for v in values), f'{owner[0]} {owner[1]}: applies_when values must use controller options')
+        require(not (owner == ('field', controller['id'])), f'{owner[0]} {owner[1]}: route controller cannot depend on itself')
+        conditioned.append((owner, condition))
+    if conditioned:
+        require(c['verification']['min_reviewers'] == 1, 'Conditional single-pass routing supports one required reviewer; adjudicate multi-reviewer eligibility before coding')
+        require(all(f.get('min_reviewers', 1) == 1 for f in fields), 'Conditional single-pass routing requires one reviewer per field')
+        profiles = c['verification'].get('reviewer_profiles', {})
+        require(all(profiles.get(reviewer, {}).get('mode', c['verification']['mode']) == 'independent_review' for reviewer in reviewers), 'Conditional single-pass routing is supported only for independent review')
     require(type(c.get('evidence', {}).get('quote_word_limit')) is int and c['evidence']['quote_word_limit'] > 0, 'Quote limit required')
     ids, keys, item_map = set(), set(), {}
     records = b.get('records', [])
@@ -189,6 +208,55 @@ def assigned_keys(c, b, items, reviewer):
     independent = review_mode(c, reviewer) == 'independent_review'
     return [k for k, (r, it, _) in items.items() if r['record_id'] in rids and it['field_id'] in fids and (independent or it['status'] == 'proposed')]
 
+def applicability_conditions(c, definition):
+    stage = next(s for s in c['ui']['stages'] if s['id'] == definition['stage'])
+    return [x for x in (stage.get('applies_when'), definition.get('applies_when')) if x]
+
+def has_conditional_flow(c):
+    return any(s.get('applies_when') for s in c['ui']['stages']) or any(f.get('applies_when') for f in c['fields'])
+
+def return_value_map(ret):
+    values = {}
+    if not ret:
+        return values
+    for x in list(ret.get('responses', [])) + list(ret.get('draft_responses', [])):
+        if nonempty(x.get('key')):
+            values[x['key']] = x.get('value')
+    return values
+
+def item_applicable(c, record_id, definition, ret=None):
+    values = return_value_map(ret)
+    return all(values.get(record_id+'/'+condition['field_id']) in condition['values'] for condition in applicability_conditions(c, definition))
+
+def applicable_assigned_keys(c, b, items, reviewer, ret=None):
+    return [key for key in assigned_keys(c, b, items, reviewer) if item_applicable(c, items[key][0]['record_id'], items[key][2], ret)]
+
+def routed_target_items(c, b, items, returns):
+    if not has_conditional_flow(c):
+        return target_items(c, b, items)
+    by_reviewer = {r['reviewer_id']: r for r in returns}
+    keys = set()
+    for reviewer in c['verification']['reviewers']:
+        ret = by_reviewer.get(reviewer)
+        keys.update(applicable_assigned_keys(c, b, items, reviewer, ret))
+    return {k: items[k] for k in items if k in keys}
+
+def routed_scope_items(c, b, items, returns):
+    if not has_conditional_flow(c):
+        return items
+    by_reviewer = {r['reviewer_id']: r for r in returns}
+    scope = {}
+    for key, value in items.items():
+        record, _, definition = value
+        conditions = applicability_conditions(c, definition)
+        if not conditions:
+            scope[key] = value
+            continue
+        reviewers = [reviewer for reviewer in c['verification']['reviewers'] if key in assigned_keys(c, b, items, reviewer)]
+        if any(item_applicable(c, record['record_id'], definition, by_reviewer.get(reviewer)) for reviewer in reviewers):
+            scope[key] = value
+    return scope
+
 def target_items(c, b, items):
     keys = {k for reviewer in c['verification']['reviewers'] for k in assigned_keys(c,b,items,reviewer)}
     return {k:v for k,v in items.items() if k in keys}
@@ -206,6 +274,16 @@ def validate_profiles(c, b, items):
             if name in p:
                 require(isinstance(p[name],list) and p[name] and len(set(p[name]))==len(p[name]) and set(p[name])<=allowed, 'Invalid personalized '+name)
         require(isinstance(p.get('ui',{}),dict), 'Invalid personalized UI')
+        assigned = set(assigned_keys(c, b, items, reviewer))
+        for key in assigned:
+            record, _, definition = items[key]
+            for condition in applicability_conditions(c, definition):
+                require(review_mode(c,reviewer) == 'independent_review', 'Conditional single-pass routing is supported only for independent review')
+                require(record['record_id']+'/'+condition['field_id'] in assigned, key+': route controller must be assigned to the same reviewer')
+    if has_conditional_flow(c):
+        for record in b['records']:
+            reviewers_for_record = [reviewer for reviewer in c['verification']['reviewers'] if any(key.startswith(record['record_id']+'/') for key in assigned_keys(c,b,items,reviewer))]
+            require(len(reviewers_for_record) <= 1, record['record_id']+': conditional single-pass records must be assigned to only one reviewer')
     for key, (_,_,definition) in target_items(c,b,items).items():
         n=required_reviews(c,definition)
         require(type(n) is int and n>0, 'Invalid field review coverage')
@@ -222,6 +300,7 @@ def validate_human_value(x, rec, field, c):
     require(nonempty(x.get('rationale')), 'Independent answer needs a rationale')
     missing=x.get('missingness')
     require(missing in (None,'NR','NA','Unclear'), 'Invalid independent missingness')
+    require(field.get('allow_missingness', True) or missing is None, 'Missingness is not allowed for this routing field')
     value=x.get('value')
     if missing: require(value==missing, 'Missingness code and value differ')
     else:
@@ -247,11 +326,20 @@ def validate_return(ret, c, b, items):
     expected=binding(c,b) if legacy else package_binding(c,b,items,reviewer)
     for k,v in expected.items(): require(ret.get(k)==v, 'Return binding mismatch: '+k)
     require(nonempty(ret.get('exported_at')), 'Export timestamp missing')
-    allowed=set(assigned_keys(c,b,items,reviewer)); seen=set()
+    assigned=set(assigned_keys(c,b,items,reviewer)); seen=set()
     require(isinstance(ret.get('responses'),list), 'Return responses missing')
+    drafts=ret.get('draft_responses',[])
+    require(isinstance(drafts,list), 'Draft responses must be a list')
+    draft_seen=set()
+    for x in drafts:
+        key=x.get('key')
+        require(key in assigned and key not in draft_seen, 'Unknown/duplicate/unassigned draft field');draft_seen.add(key)
+        require(nonempty(x.get('reviewed_at')) and isinstance(x.get('comment'),str), 'Invalid draft metadata')
+        require(x.get('action') in (('submit','defer') if review_mode(c,reviewer)=='independent_review' else ACTIONS), 'Invalid draft action')
+    allowed=set(applicable_assigned_keys(c,b,items,reviewer,ret))
     for x in ret['responses']:
         key=x.get('key')
-        require(key in allowed and key not in seen, 'Unknown/duplicate/unassigned returned field');seen.add(key)
+        require(key in assigned and key not in seen, 'Unknown/duplicate/unassigned returned field');seen.add(key)
         require(nonempty(x.get('reviewed_at')) and isinstance(x.get('comment'),str), 'Invalid response metadata')
         if review_mode(c,reviewer)=='independent_review':
             require(x.get('committed') is True, 'Draft answers are not submitted human review')
@@ -261,7 +349,9 @@ def validate_return(ret, c, b, items):
         else:
             require(x.get('action') in ACTIONS, 'Invalid assisted response')
             if x['action']!='accept': require(nonempty(x['comment']), 'Challenge/uncertainty requires explanation')
-    return {'reviewer_id':reviewer,'review_mode':review_mode(c,reviewer),'responded':len(seen),'assigned':len(allowed),'pending':sorted(allowed-seen)}
+    require(not (seen & draft_seen), 'A field cannot be both submitted and draft')
+    require(seen <= allowed, 'Return contains a field that is not applicable under its routing answer')
+    return {'reviewer_id':reviewer,'review_mode':review_mode(c,reviewer),'responded':len(seen),'assigned':len(allowed),'assigned_total':len(assigned),'pending':sorted(allowed-seen)}
 
 def compare(c, b, items, return_paths):
     returns, reviewer_ids = [], set()
@@ -279,7 +369,7 @@ def comparison_from_returns(c, b, items, returns, return_hashes):
         reviewer_ids.add(r['reviewer_id'])
     rows = []
     states=('pending','needs_adjudication','accepted_by_required_reviewers','concordant_independent_values')
-    for key, (_,it,f) in target_items(c,b,items).items():
+    for key, (_,it,f) in routed_target_items(c,b,items,returns).items():
         responses=[dict(x,reviewer_id=r['reviewer_id'],review_mode=review_mode(c,r['reviewer_id'])) for r in returns for x in r['responses'] if x['key']==key]
         if len(responses)<required_reviews(c,f): state='pending'
         elif all(x['review_mode']=='assisted_verification' and x['action']=='accept' for x in responses): state='accepted_by_required_reviewers'
@@ -301,7 +391,8 @@ def finalize(c, b, items, comparison, decisions):
     require(decisions.get('comparison_sha256') == digest(comparison), 'Decisions refer to another comparison')
     events = decisions.get('decisions', [])
     dmap = {x.get('key'): x for x in events}
-    require(len(dmap) == len(events) and set(dmap) <= set(target_items(c,b,items)), 'Unknown/duplicate adjudication item')
+    comparison_keys = {x['key'] for x in comparison['items']}
+    require(len(dmap) == len(events) and set(dmap) <= comparison_keys, 'Unknown/duplicate adjudication item')
     result, changed = [], set()
     for row in comparison['items']:
         key = row['key']; rec, it, definition = items[key]
@@ -365,12 +456,14 @@ def finalize(c, b, items, comparison, decisions):
             elif any(v in rule.get('failure_values', []) for v in values): state = rule['failure']
             else: state = rule['unresolved']
             derived.append({'record_id': r['record_id'], 'rule_id': rule['id'], 'value': state, 'inputs': values})
-    blocked = {x['key'] for x in result if x['status'] != 'authorized'} | (set(items)-set(final_map))
-    outputs = [{**x, 'status': 'stale_requires_recompute' if set(x['depends_on']) & (affected | blocked) else 'inputs_unchanged_not_semantically_validated'} for x in b.get('outputs', [])]
+    scope = set(routed_scope_items(c,b,items,comparison.get('returns',[])))
+    inactive = set(items)-scope
+    blocked = {x['key'] for x in result if x['status'] != 'authorized'} | (scope-set(final_map))
+    outputs = [{**x, 'status': 'not_applicable' if set(x['depends_on']) & inactive else ('stale_requires_recompute' if set(x['depends_on']) & (affected | blocked) else 'inputs_unchanged_not_semantically_validated')} for x in b.get('outputs', [])]
     return {**binding(c, b), 'generated_at': now(), 'authorized_by': decisions['authorized_by'],
             'authorization_record_sha256': digest(decisions), 'items': result, 'derived': derived, 'outputs': outputs,
             'complete': bool(result) and not blocked,
-            'unassessed_fields': sorted(set(items)-set(final_map)),
+            'unassessed_fields': sorted(scope-set(final_map)), 'not_applicable_fields': sorted(inactive),
             'limitations': 'Authorization metadata records an asserted human action, not identity authentication or scientific truth. Unregistered dependencies cannot be invalidated.'}
 
 def validate_in_memory(c, b):
@@ -383,7 +476,7 @@ def package_payload(c,b,items,reviewer,render_pages):
     keys=assigned_keys(c,b,items,reviewer); p=profile(c,reviewer); mode=review_mode(c,reviewer)
     # Whitelist serialization. Never ship hidden proposal fields, source annotations or another reviewer's feedback.
     ui={k:copy.deepcopy(c['ui'][k]) for k in ('stages','title','instructions','stage_labels','action_labels','collapsed_groups','expand_all_groups') if k in c['ui']}
-    ui['stages']=[{k:s[k] for k in ('id','label')} for s in ui['stages']]
+    ui['stages']=[{k:copy.deepcopy(s[k]) for k in ('id','label','applies_when') if k in s} for s in ui['stages']]
     for k in ('title','instructions','stage_labels','action_labels','collapsed_groups','expand_all_groups'):
         if k in p.get('ui',{}):ui[k]=p['ui'][k]
     if ui.get('stage_labels'):
@@ -393,7 +486,7 @@ def package_payload(c,b,items,reviewer,render_pages):
     for fid in field_order:
         if not any(k.endswith('/'+fid) for k in keys):continue
         f=next(f for f in c['fields'] if f['id']==fid)
-        fc.append({k:copy.deepcopy(f[k]) for k in ('id','label','definition','stage','layer','options','group','required') if k in f})
+        fc.append({k:copy.deepcopy(f[k]) for k in ('id','label','definition','stage','layer','options','group','required','applies_when','allow_missingness') if k in f})
     records=[]
     for rid in p.get('record_ids',[r['record_id'] for r in b['records']]):
         r=next(r for r in b['records'] if r['record_id']==rid)
@@ -538,7 +631,6 @@ def main():
         else:
             comparison = read(args.comparison)
             for k, v in binding(c, b).items():require(comparison.get(k) == v, 'Comparison no longer matches project')
-            require(set(x['key'] for x in comparison['items']) == set(target_items(c,b,items)), 'Comparison coverage mismatch')
             result = finalize(c, b, items, comparison, read(args.decisions));save(args.out, result)
     print(json.dumps(result, ensure_ascii=False, indent=2))
 

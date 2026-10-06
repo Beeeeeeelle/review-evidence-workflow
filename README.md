@@ -19,7 +19,7 @@ https://github.com/user-attachments/assets/3285d16d-d72a-48ec-9d7c-1b256f6b8430
 
 [Earlier English and Chinese films](docs/watch/README.md) remain available.
 
-**[When to use it](#is-this-for-your-review) · [Start here](#how-do-i-start) · [Follow the illustrated story](docs/story/README.md) · [Try the runnable demos](#try-it) · [Explore the two cases](#two-cases-one-reusable-workflow) · [See the workflow](#how-humans-stay-in-the-loop) · [Read the guide](review-evidence-workflow/references/getting-started.md)**
+**[When to use it](#is-this-for-your-review) · [Start here](#how-do-i-start) · [Follow the illustrated story](docs/story/README.md) · [Try the runnable demos](#try-it) · [Explore the three cases](#three-cases-one-reusable-workflow) · [See the workflow](#how-humans-stay-in-the-loop) · [Read the guide](review-evidence-workflow/references/getting-started.md)**
 
 ## Is this for your review?
 
@@ -83,7 +83,7 @@ A team begins with scattered papers and developing rules. Follow Belle through s
 
 **[Read the illustrated story →](docs/story/README.md)** Each scene has a short explanation and a link to the real workflow. These are conceptual illustrations; the workbench above is the actual application.
 
-## Two cases, one reusable workflow
+## Three cases, one reusable workflow
 
 The cases show why the skill exists and what changes when the research unit changes. Click either image for its walkthrough.
 
@@ -94,6 +94,8 @@ The cases show why the skill exists and what changes when the research unit chan
 | Historical implementation in technology-assisted L2 learning. | Pilot adaptation for AI-supported education and learner agency. |
 | [Read the TALL case →](docs/cases/tall.md) | [Read the Agency case →](docs/cases/agency.md) |
 
+**New workflow case — [combine full-text screening and coding in one pass](docs/cases/combined-screening-coding.md).** Include opens quality/coding; Exclude requests one primary reason and makes later stages not applicable. Route selection updates the UI immediately, while evidence requirements still determine completion. The built-in conditional route is deliberately limited to independent work with one required reviewer per field; teams doing dual independent screening should adjudicate eligibility before the coding round.
+
 *Case images render real source material in the reusable v1.1 workbench. The public source pane uses attributed excerpts. These are illustrative adaptations, not historical reviewer-session screenshots. [Image provenance](docs/images/PROVENANCE.md).*
 
 | What differs | TALL | Agency |
@@ -103,7 +105,7 @@ The cases show why the skill exists and what changes when the research unit chan
 | Main reasoning boundary | Eligibility, appraisal and extraction membership | Source wording, descriptive coding and synthesis |
 | Evidence status | Retrospective implementation case | Implemented pilot; synthesis still to follow |
 
-**What transfers:** PDF checks, source-linked fields, configurable UI, separate reviewer returns, human adjudication and version tracking. **What you define again:** eligibility, codebook, appraisal rules, unit of analysis and review coverage. These are two motivating cases, not two equivalent completed validation experiments.
+**What transfers:** PDF checks, source-linked fields, configurable UI, separate reviewer returns, human adjudication and version tracking. **What you define again:** eligibility, codebook, appraisal rules, unit of analysis and review coverage. These are three motivating adaptations, not equivalent completed validation experiments.
 
 ## How humans stay in the loop
 
@@ -137,7 +139,7 @@ Start with ten papers, five, or another useful sample. Continue with AI coding p
 
 </details>
 
-The agent can configure **records, fields, order, stages, groups, labels, instructions, mode and coverage requirements** per round or reviewer. Settings are supplied through configuration files; there is no visual settings editor in v1.1. Reviewers receive their own package and return files to the coordinator. [Modes, settings and round transitions](review-evidence-workflow/references/rounds.md).
+The agent can configure **records, fields, order, stages, groups, labels, instructions, mode, conditional routes and coverage requirements** per round or reviewer. Settings are supplied through configuration files; there is no visual settings editor in v1.1. Reviewers receive their own package and return files to the coordinator. [Modes, settings and round transitions](review-evidence-workflow/references/rounds.md).
 
 ## Try it
 
@@ -167,6 +169,10 @@ Use a new output directory. Try `primary-study-assisted/OPEN_ME.html` or `review
 
 > Our team has calibrated codebook v2. Apply it to the remaining PDFs. Assign methods and measures to reviewer A, other fields to reviewer B, and prepare source-linked verification packages. Keep uncertain cases visible.
 
+**Screen and code in one pass**
+
+> Use our eligibility rules and codebook to build one independent workbench per reviewer. Include should open quality appraisal and coding; Exclude should ask for exactly one primary reason and stop that report. Count and export only the applicable branch.
+
 **Resume after feedback**
 
 > These are the returned JSON files. Check versions and coverage, show disagreements with their source evidence, and list what needs our decision before producing the authorized ledger.
@@ -175,7 +181,7 @@ Use a new output directory. Try `primary-study-assisted/OPEN_ME.html` or `review
 
 ## What has been checked?
 
-**40 distinct automated tests**, local Python 3.9/3.12 checks, a fresh-context workflow trial, browser interactions, and six synthetic packages across three domains. The [release-commit CI run](https://github.com/Beeeeeeelle/review-evidence-workflow/actions/runs/36187005213) also passed on Ubuntu/Python 3.11. [Validation record and limits](docs/VALIDATION.md).
+**47 distinct automated tests**, local Python 3.9/3.12 checks, a fresh-context workflow trial, browser interactions, and six synthetic packages across three domains. The conditional screening/coding route was additionally exercised in the browser for pending, Include and Exclude states. The [v1.2.0 release-commit CI run](https://github.com/Beeeeeeelle/review-evidence-workflow/actions/runs/36187005213) passed on Ubuntu/Python 3.11; the new conditional-route checks are recorded separately. [Validation record and limits](docs/VALIDATION.md).
 
 These checks establish specific software behaviors, including mismatched-return rejection, independent-package omission, source replacement handling and unresolved-state preservation. They do not establish AI accuracy, universal scientific validity or measured time savings. The intended benefit is less manual preparation and easier verification; that efficiency claim still needs a comparative study.
 

@@ -74,6 +74,6 @@ That is the intended practical value. How much time or error it saves still requ
 
 > Use $review-evidence-workflow. Here are our study list, draft codebook and available PDFs. Identify source and rule gaps, then prepare personal packages for our chosen sample. Our team will choose this round's mode and decide any rule changes.
 
-[Try the demos](../TRY_DEMOS.md) · [Explore the real cases](../../README.md#two-cases-one-reusable-workflow) · [Validation](../VALIDATION.md) · [Illustration production and provenance](PRODUCTION.md)
+[Try the demos](../TRY_DEMOS.md) · [Explore the cases](../../README.md#three-cases-one-reusable-workflow) · [Validation](../VALIDATION.md) · [Illustration production and provenance](PRODUCTION.md)
 
 **AI in learning. Humans in charge.**

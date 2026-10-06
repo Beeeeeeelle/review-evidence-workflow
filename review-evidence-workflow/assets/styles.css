@@ -5,3 +5,5 @@
 .evidence-row{border:1px solid #d9dde2;border-radius:6px;padding:12px;margin-bottom:10px}.evidence-row [data-remove-evidence]{font-size:11px;margin-top:8px}.independent-form [data-add-evidence]{justify-self:start}
 
 @media(min-width:1051px) and (max-width:1120px){.workspace{grid-template-columns:220px minmax(0,1fr) minmax(320px,40vw)}}
+
+.stages button{display:flex;align-items:center;gap:8px;flex:1 1 145px;text-align:left;min-height:48px}.stages button:disabled{opacity:1;background:#e5e9ed;color:#737d87}.step-number{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#e8edf1;font-weight:700;flex:0 0 auto}.stages button.active .step-number{background:white;color:var(--ink)}.step-copy{display:flex;flex-direction:column;line-height:1.25}.step-copy strong{font-size:11px}.step-copy small{font-size:9px;margin-top:3px;color:inherit;opacity:.78}.route-state{padding:10px 12px;margin:-6px 0 14px;border:1px solid #c9d4de;border-radius:6px;background:#f7fafc;color:#4d5c69;font-size:11px}.route-state.resolved{border-color:#a9cabc;background:#eef7f2;color:#285745}
